@@ -435,13 +435,26 @@ footer strong { color:var(--ink); }
   
     const images = {
       cancunHero: 'https://images.unsplash.com/photo-1745874589259-768dcc79a0ef?auto=format&fit=crop&w=1400&q=78',
-      chichen: 'https://images.unsplash.com/photo-1657203863967-0bc1c41827db?auto=format&fit=crop&w=1200&q=78',
-      cenote: 'https://images.unsplash.com/photo-1719941463960-f3310fe64e46?auto=format&fit=crop&w=1200&q=78',
+      cancunWater: 'https://commons.wikimedia.org/wiki/Special:FilePath/Personas%20practicando%20snorkel%20en%20arrecife%20de%20Puerto%20Morelos%201.jpg?width=1200',
+      cancunWildlife: 'https://commons.wikimedia.org/wiki/Special:FilePath/Green%20Sea%20Turtle%20grazing%20seagrass.jpg?width=1200',
+      cancunIsland: 'https://commons.wikimedia.org/wiki/Special:FilePath/Isla%20Mujeres%20aerial%20%2829729604048%29.jpg?width=1200',
+      chichen: 'https://commons.wikimedia.org/wiki/Special:FilePath/Chichen-Itza.jpg?width=1200',
+      cenote: 'https://commons.wikimedia.org/wiki/Special:FilePath/Rio%20Secreto%20Quintana%20Roo%20visit%2020%20June%202024%20-%2005.jpg?width=1200',
+      cancunCulture: 'https://commons.wikimedia.org/wiki/Special:FilePath/Valladolid%20Yucatan.JPG?width=1200',
       rioHero: 'https://images.unsplash.com/photo-1743443924554-9b7630c2ff46?auto=format&fit=crop&w=1400&q=78',
-      rioMountain: 'https://images.unsplash.com/photo-1589394760151-b4c9890765fe?auto=format&fit=crop&w=1200&q=78',
-      rioCulture: 'https://images.unsplash.com/photo-1660699936111-7b73cd664028?auto=format&fit=crop&w=1200&q=78',
-      tacos: 'https://images.unsplash.com/photo-1568127305183-bec960a6c5ea?auto=format&fit=crop&w=1200&q=78',
-      drink: 'https://images.unsplash.com/photo-1766566676250-d27ef8ccdd82?auto=format&fit=crop&w=1200&q=78'
+      rioMountain: 'https://commons.wikimedia.org/wiki/Special:FilePath/Dois%20Irmaos%2C%20Rio%20%2820160307%20171536%29.jpg?width=1200',
+      rioCulture: 'https://commons.wikimedia.org/wiki/Special:FilePath/Carnival%20Rehearsal%20at%20a%20Samba%20School.jpg?width=1200',
+      rioForest: 'https://commons.wikimedia.org/wiki/Special:FilePath/Rio%20de%20Janeiro%20Tijuca%20Forest%20%282%29.jpg?width=1200',
+      rioWater: 'https://commons.wikimedia.org/wiki/Special:FilePath/Sailboats%20in%20a%20bay%20of%20Rio%20de%20Janeiro%2C%20Brazil.jpg?width=1200',
+      rioBeach: 'https://commons.wikimedia.org/wiki/Special:FilePath/Arpoador%20-%20Rio.jpg?width=1200',
+      rioFootball: 'https://commons.wikimedia.org/wiki/Special:FilePath/Maracana%20Stadium.jpg?width=1200',
+      cancunFood: 'https://commons.wikimedia.org/wiki/Special:FilePath/Cochinita%20pibil.jpg?width=1200',
+      cancunDessert: 'https://commons.wikimedia.org/wiki/Special:FilePath/Marquesitas.jpg?width=1200',
+      cancunDrink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Xtabent%C3%BAn.jpg?width=1200',
+      rioFood: 'https://commons.wikimedia.org/wiki/Special:FilePath/FeijoadaBrasileira.jpg?width=1200',
+      rioSnack: 'https://commons.wikimedia.org/wiki/Special:FilePath/Coxinha.jpg?width=1200',
+      rioDrink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Caipirinha.jpg?width=1200',
+      rioBeachFood: 'https://commons.wikimedia.org/wiki/Special:FilePath/Vendedor%20de%20Mate%20do%20Rio%20de%20Janeiro.jpg?width=1200'
     };
   
     const featured = {
@@ -529,17 +542,36 @@ footer strong { color:var(--ink); }
       if (raw.image_url) return raw.image_url;
       const id = raw.id || '';
       const tags = [...(raw.tags || []), ...(raw.categories || []), ...(raw.vibe || [])].join(' ').toLowerCase();
+      const hay = id + ' ' + tags;
+
       if (state.content === 'eat') {
-        if (/bar|drink|cach|rooftop|beer|samba|night/.test(id+' '+tags)) return images.drink;
-        return images.tacos;
+        if (state.destination === 'cancun-yucatan') {
+          if (/marques|dessert|sweet/.test(hay)) return images.cancunDessert;
+          if (/drink|xtab|bar|rooftop|beer|cocktail|night/.test(hay)) return images.cancunDrink;
+          return images.cancunFood;
+        }
+        if (/beach|kiosk|mate|acai|juice/.test(hay)) return images.rioBeachFood;
+        if (/drink|cach|caip|bar|rooftop|beer|cocktail|night/.test(hay)) return images.rioDrink;
+        if (/snack|boteco|coxinha|pastel/.test(hay)) return images.rioSnack;
+        return images.rioFood;
       }
+
       if (state.destination === 'cancun-yucatan') {
-        if (/chichen|coba|ek-balam|ichkabal|maya-ancient/.test(id+' '+tags)) return images.chichen;
-        if (/cenote|secreto|cav|dos-ojos|underground|xplor/.test(id+' '+tags)) return images.cenote;
+        if (/chichen|coba|ek-balam|ichkabal|maya-ancient/.test(hay)) return images.chichen;
+        if (/cenote|secreto|cav|dos-ojos|underground|xplor/.test(hay)) return images.cenote;
+        if (/wildlife|turtle|monkey|bird|crocodile/.test(hay)) return images.cancunWildlife;
+        if (/island|holbox|cozumel|contoy/.test(hay)) return images.cancunIsland;
+        if (/snork|diving|reef|water|kayak|paddl|kitesurf|fishing/.test(hay)) return images.cancunWater;
+        if (/culture|hands-on|workshop|local|history/.test(hay)) return images.cancunCulture;
         return images.cancunHero;
       }
-      if (/hike|pedra|morro|mountain|gávea|gavea|dois|corcovado|serra/.test(id+' '+tags)) return images.rioMountain;
-      if (/carnival|samba|capoeira|africa|maracana|santa|culture/.test(id+' '+tags)) return images.rioCulture;
+
+      if (/maracana|football/.test(hay)) return images.rioFootball;
+      if (/tijuca|forest|waterfall/.test(hay)) return images.rioForest;
+      if (/surf|beach|arpoador|sup|footvolley/.test(hay)) return images.rioBeach;
+      if (/sail|water|canoe|island|dive|cagarras/.test(hay)) return images.rioWater;
+      if (/hike|pedra|morro|mountain|gávea|gavea|dois|corcovado|serra/.test(hay)) return images.rioMountain;
+      if (/carnival|samba|capoeira|africa|santa|culture|museum/.test(hay)) return images.rioCulture;
       return images.rioHero;
     }
   
