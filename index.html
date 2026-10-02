@@ -823,7 +823,12 @@ footer strong { color:var(--ink); }
   
     } catch (err) {
       console.error(err);
-      document.body.innerHTML = '<main style="font-family:system-ui;padding:2rem;max-width:720px;margin:auto"><h1>Could not load the travel data</h1><p>This version needs to be served from GitHub Pages (or another web server), not opened directly as a local file.</p></main>';
+      const localFile = location.protocol === 'file:';
+      const title = localFile ? 'CANCÚNIO needs a web server' : 'CANCÚNIO hit a JavaScript error';
+      const message = localFile
+        ? 'Open the GitHub Pages version, or run the local repository through a small local web server.'
+        : 'The travel data loaded, but the interface crashed. Error: ' + (err?.message || String(err));
+      document.body.innerHTML = '<main style="font-family:system-ui;padding:2rem;max-width:760px;margin:auto"><h1>' + title + '</h1><p>' + message + '</p></main>';
     }
   })();
   </script>
