@@ -80,7 +80,11 @@
           "url": "https://riotur.rio/es/destaque/lo-que-hace-que-rio-sea-especial/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vendedor%20de%20Mate%20do%20Rio%20de%20Janeiro.jpg?width=1400",
+      "image_position": "center 35%",
+      "image_credit": "DiegoL569 · CC BY-SA 4.0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Vendedor_de_Mate_do_Rio_de_Janeiro.jpg"
     },
     {
       "id": "feijoada-hunt",
@@ -148,7 +152,11 @@
           "url": "https://riotur.rio/onde_comer/bar-do-momo-4/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/FeijoadaBrasileira.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Operoxido · CC BY-SA 4.0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:FeijoadaBrasileira.jpg"
     },
     {
       "id": "boteco-snack-hunt",
@@ -219,7 +227,11 @@
           "url": "https://riotur.rio/editorial/patrimonio-cultural-carioca-bares/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coxinha.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Tom B · Public domain",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Coxinha.jpg"
     },
     {
       "id": "acai-juice-hunt",
@@ -358,7 +370,11 @@
           "url": "https://riotur.rio/onde_comer/academia-da-cachaca/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Caipirinha.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Mario Trefz · Public domain",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Caipirinha.jpg"
     },
     {
       "id": "mureta-urca",
@@ -430,7 +446,11 @@
           "url": null,
           "source_kind": "business-listing"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mureta%20da%20Urca%2C%20Rio%20de%20Janeiro.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Defreitasime · CC BY-SA 3.0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Mureta_da_Urca,_Rio_de_Janeiro.jpg"
     },
     {
       "id": "adega-perola",
@@ -1235,7 +1255,11 @@
           "url": "https://riotur.rio/editorial/premio-sabores-da-orla-2026/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vendedor%20de%20Mate%20do%20Rio%20de%20Janeiro.jpg?width=1400",
+      "image_position": "center 40%",
+      "image_credit": "DiegoL569 · CC BY-SA 4.0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Vendedor_de_Mate_do_Rio_de_Janeiro.jpg"
     },
     {
       "id": "rio-barcia",
