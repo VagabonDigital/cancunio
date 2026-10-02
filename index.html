@@ -513,6 +513,7 @@ footer strong { color:var(--ink); }
         typeLabel: isDo ? labelize(raw.mission_type || 'experience') : labelize(raw.record_type || 'food'),
         priceText: getPrice(raw),
         image: getImage(raw),
+        fallbackImage: getFallbackImage(raw),
         imagePosition: raw.image_position || 'center',
         imageCredit: raw.image_credit || null,
         imageCreditUrl: raw.image_credit_url || null
@@ -538,8 +539,7 @@ footer strong { color:var(--ink); }
       return labelize(b.band || 'Variable');
     }
   
-    function getImage(raw) {
-      if (raw.image_url) return raw.image_url;
+    function getFallbackImage(raw) {
       const id = raw.id || '';
       const tags = [...(raw.tags || []), ...(raw.categories || []), ...(raw.vibe || [])].join(' ').toLowerCase();
       const hay = id + ' ' + tags;
@@ -573,6 +573,10 @@ footer strong { color:var(--ink); }
       if (/hike|pedra|morro|mountain|gávea|gavea|dois|corcovado|serra/.test(hay)) return images.rioMountain;
       if (/carnival|samba|capoeira|africa|santa|culture|museum/.test(hay)) return images.rioCulture;
       return images.rioHero;
+    }
+
+    function getImage(raw) {
+      return raw.image_url || getFallbackImage(raw);
     }
   
     function prefKey(id, profile=state.profile) { return `${profile}:${state.content}:${state.destination}:${id}`; }
@@ -622,7 +626,7 @@ footer strong { color:var(--ink); }
       const meta = `${item.typeLabel} · ${item.area}`;
       return `
         <article class="card ${feature ? 'feature-card' : ''}" data-id="${item.id}">
-          <div class="card-image" data-open="${item.id}" style="background-image:url('${item.image}');background-position:${item.imagePosition}">
+          <div class="card-image" data-open="${item.id}" data-image="${encodeURIComponent(item.image)}" data-fallback="${encodeURIComponent(item.fallbackImage)}" style="background-image:url('${item.fallbackImage}');background-position:${item.imagePosition}">
             <div class="card-badges">
               <span class="badge budget-${item.budgetBand}">${badge}</span>
               <span class="preference-mark">${pref === 'want' ? '🔥' : pref === 'maybe' ? '🤔' : pref === 'skip' ? '❌' : bothWant(item.id) ? '💥' : '＋'}</span>
@@ -710,9 +714,18 @@ footer strong { color:var(--ink); }
     }
   
     function bindDynamic() {
-      $$('[data-pref]').forEach(btn=>btn.onclick = (e)=>{ e.stopPropagation(); setPref(btn.dataset.id,btn.dataset.pref); });
-      $$('[data-open]').forEach(el=>el.onclick = ()=>openDetail(el.dataset.open));
-      $$('[data-quick]').forEach(btn=>btn.onclick = ()=>{
+      $('[data-image]').forEach(el=>{
+        const src = decodeURIComponent(el.dataset.image || '');
+        const fallback = decodeURIComponent(el.dataset.fallback || '');
+        if (!src || src === fallback) return;
+        const probe = new Image();
+        probe.onload = ()=>{ el.style.backgroundImage = 'url("' + src.replace(/"/g,'\\\"') + '")'; };
+        probe.onerror = ()=>{ el.style.backgroundImage = 'url("' + fallback.replace(/"/g,'\\\"') + '")'; };
+        probe.src = src;
+      });
+      $('[data-pref]').forEach(btn=>btn.onclick = (e)=>{ e.stopPropagation(); setPref(btn.dataset.id,btn.dataset.pref); });
+      $('[data-open]').forEach(el=>el.onclick = ()=>openDetail(el.dataset.open));
+      $('[data-quick]').forEach(btn=>btn.onclick = ()=>{
         const k=btn.dataset.quick;
         state.quick.has(k) ? state.quick.delete(k) : state.quick.add(k);
         render();
@@ -724,9 +737,19 @@ footer strong { color:var(--ink); }
       if (!raw) return;
       const item = normalize(raw);
       const pref = getPref(id);
-      $('#sheetImage').style.backgroundImage = `url('${item.image}')`;
-      $('#sheetImage').style.backgroundPosition = item.imagePosition;
-      $('#sheetImage').innerHTML = item.imageCredit ? `<a class="sheet-photo-credit" href="${item.imageCreditUrl || '#'}" ${item.imageCreditUrl ? 'target="_blank" rel="noopener"' : ''}>📷 ${item.imageCredit}</a>` : '';
+      const sheetImage = $('#sheetImage');
+      sheetImage.style.backgroundImage = `url('${item.fallbackImage}')`;
+      sheetImage.style.backgroundPosition = item.imagePosition;
+      sheetImage.innerHTML = '';
+      if (item.image && item.image !== item.fallbackImage) {
+        const probe = new Image();
+        probe.onload = ()=>{
+          sheetImage.style.backgroundImage = 'url("' + item.image.replace(/"/g,'\\\"') + '")';
+          sheetImage.innerHTML = item.imageCredit ? `<a class="sheet-photo-credit" href="${item.imageCreditUrl || '#'}" ${item.imageCreditUrl ? 'target="_blank" rel="noopener"' : ''}>📷 ${item.imageCredit}</a>` : '';
+        };
+        probe.onerror = ()=>{ sheetImage.innerHTML = ''; };
+        probe.src = item.image;
+      }
       const isDo = state.content==='do';
       const details = [];
       if (isDo) {
