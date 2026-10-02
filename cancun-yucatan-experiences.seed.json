@@ -128,7 +128,11 @@
           "label": "Cancún Kayak",
           "url": "https://www.cancunkayak.com/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Laguna%20Nichupt%C3%A9.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Isabel A01706197 · Wikimedia Commons",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Laguna_Nichupt%C3%A9.jpg"
     },
     {
       "id": "nichupte-speedboat",
@@ -287,7 +291,11 @@
           "label": "MUSA México",
           "url": "https://musamexico.org/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Musa%2002.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "ImTurismo · CC0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Musa_02.jpg"
     },
     {
       "id": "isla-mujeres",
@@ -1324,7 +1332,11 @@
           "label": "INAH Muyil",
           "url": "https://lugares.inah.gob.mx/es/node/5811"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Reserva%20de%20la%20Biosfera%20Sian%20Ka'an.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Wikimedia Commons · Sian Ka’an / Muyil",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Reserva_de_la_Biosfera_Sian_Ka%27an.jpg"
     },
     {
       "id": "punta-allen",
@@ -1488,7 +1500,11 @@
           "label": "INAH Cobá",
           "url": "https://www.inah.gob.mx/zonas/515-zona-arqueologica-de-coba"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coba%20pyramid%20(QUINTANA%20ROO%2C%20Mexico).png?width=1400",
+      "image_position": "center 45%",
+      "image_credit": "Act6789 · CC0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Coba_pyramid_(QUINTANA_ROO,_Mexico).png"
     },
     {
       "id": "punta-laguna",
@@ -1591,7 +1607,11 @@
           "label": "Punta Laguna Monkey Reserve",
           "url": "https://puntalagunamonkeyreserve.com/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Guatemalan%20howler%20monkey%20(Alouatta%20pigra)%20Mexico.jpg?width=1400",
+      "image_position": "center 35%",
+      "image_credit": "Umberto Nicoletti · CC BY-SA 2.0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Guatemalan_howler_monkey_(Alouatta_pigra)_Mexico.jpg"
     },
     {
       "id": "chichen-valladolid-cenote",
@@ -1936,7 +1956,11 @@
           "label": "Reserva Natura Xyaat",
           "url": "https://reservanatura.org/areas-naturales/xyaat/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Quintana%20Roo%20MX%20Mayan%20Village.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Mike Sharp · representative Quintana Roo Maya village",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Quintana_Roo_MX_Mayan_Village.jpg"
     },
     {
       "id": "xaanil-naj",
