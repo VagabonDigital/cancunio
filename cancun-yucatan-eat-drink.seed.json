@@ -79,7 +79,11 @@
           "url": "https://yucatan.travel/gastronomy/la-cocina-tradicional-yucateca-y-sus-sabores-regionales/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cochinita%20pibil.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Jon Sullivan · Public domain",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Cochinita_pibil.jpg"
     },
     {
       "id": "panuchos-salbutes-hunt",
@@ -149,7 +153,11 @@
           "url": "https://yucatan.travel/en/flavor/245-traditional-yucatecan-snacks-salbutes-and-panuchos/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panuchos.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Adelarosam · CC BY-SA 4.0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Panuchos.jpg"
     },
     {
       "id": "sopa-lima-relleno-negro",
@@ -217,7 +225,11 @@
           "url": "https://yucatan.travel/gastronomy/la-cocina-tradicional-yucateca-y-sus-sabores-regionales/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/SopadeLima.JPG?width=1400",
+      "image_position": "center",
+      "image_credit": "AlejandroLinaresGarcia · Wikimedia Commons",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:SopadeLima.JPG"
     },
     {
       "id": "tikin-xic-hunt",
@@ -354,7 +366,11 @@
           "url": "https://www.turismocancun.mx/restaurantes",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marquesitas.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Mike & Lara Wolfe · Wikimedia Commons",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Marquesitas.jpg"
     },
     {
       "id": "xtabentun-hunt",
@@ -421,7 +437,11 @@
           "url": "https://yucatan.travel/en/gastronomy/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Xtabent%C3%BAn.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "मल्ल · CC0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Xtabent%C3%BAn.jpg"
     },
     {
       "id": "parque-palapas-food-night",
@@ -500,7 +520,11 @@
           "url": "https://www.turismocancun.mx/restaurantes",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Parque%20de%20las%20Palapas%201.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "City Foodsters · CC BY 2.0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Parque_de_las_Palapas_1.jpg"
     },
     {
       "id": "market-23",
