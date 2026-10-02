@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#12b8a6" />
+  <meta name="description" content="A bright, interactive Cancún to Rio adventure index." />
+  <title>Cancún → Rio · Adventure Index</title>
+  <style>
+:root {
+  --bg: #f8f7f1;
+  --paper: #ffffff;
+  --ink: #142120;
+  --muted: #66706e;
+  --line: rgba(20,33,32,.12);
+  --accent: #10b9a5;
+  --accent-2: #ffd75e;
+  --accent-3: #ff725e;
+  --deep: #093a39;
+  --soft: #e8fbf7;
+  --shadow: 0 18px 50px rgba(20,33,32,.10);
+  --radius-xl: 28px;
+  --radius-lg: 22px;
+  --radius-md: 16px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 10% 0%, rgba(255,215,94,.18), transparent 24rem),
+    var(--bg);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+button, input { font: inherit; }
+button { color: inherit; }
+button:focus-visible, input:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 40%, transparent); outline-offset: 2px; }
+
+.destination-rio {
+  --accent: #43b74a;
+  --accent-2: #ffb84d;
+  --accent-3: #2d8bea;
+  --deep: #173a27;
+  --soft: #edf8e9;
+}
+
+.page-shell { min-height: 100vh; }
+.topbar {
+  height: 76px;
+  padding: 0 clamp(18px, 4vw, 64px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(248,247,241,.88);
+  backdrop-filter: blur(18px);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  border-bottom: 1px solid rgba(20,33,32,.06);
+}
+.brand { display:flex; gap:11px; align-items:center; text-decoration:none; color:var(--ink); }
+.brand-mark { width:36px; height:36px; display:grid; place-items:center; border-radius:12px; background:var(--ink); color:white; font-size:21px; }
+.brand strong { display:block; font-size:15px; letter-spacing:-.02em; }
+.brand small { display:block; color:var(--muted); margin-top:1px; font-size:11px; text-transform:uppercase; letter-spacing:.14em; }
+.topbar-actions { display:flex; align-items:center; gap:10px; }
+.profile-switch { display:flex; background:#ecebe5; padding:4px; border-radius:999px; }
+.profile-btn { border:0; background:transparent; padding:8px 12px; border-radius:999px; cursor:pointer; font-size:13px; }
+.profile-btn.active { background:white; box-shadow:0 2px 8px rgba(0,0,0,.08); font-weight:700; }
+.ghost-btn { border:1px solid var(--line); background:white; border-radius:999px; padding:9px 13px; cursor:pointer; font-weight:700; display:flex; gap:6px; align-items:center; }
+.ghost-btn b { background:var(--ink); color:white; min-width:20px; height:20px; border-radius:99px; display:grid; place-items:center; font-size:11px; }
+
+.hero {
+  margin: 18px clamp(14px, 3vw, 44px) 0;
+  min-height: clamp(410px, 58vw, 610px);
+  border-radius: 34px;
+  overflow: hidden;
+  position: relative;
+  display:flex;
+  align-items:flex-end;
+  box-shadow: var(--shadow);
+  isolation:isolate;
+}
+.hero-image, .hero-overlay { position:absolute; inset:0; }
+.hero-image {
+  background-image: url('https://images.unsplash.com/photo-1745874589259-768dcc79a0ef?auto=format&fit=crop&w=1800&q=82');
+  background-size:cover;
+  background-position:center;
+  transform:scale(1.02);
+  transition: background-image .3s ease;
+}
+.destination-rio .hero-image { background-image:url('https://images.unsplash.com/photo-1743443924554-9b7630c2ff46?auto=format&fit=crop&w=1800&q=82'); }
+.hero-overlay {
+  background:
+    linear-gradient(180deg, rgba(3,20,24,.05) 10%, rgba(3,20,24,.1) 40%, rgba(4,24,25,.82) 100%),
+    linear-gradient(90deg, rgba(4,24,25,.25), transparent 65%);
+}
+.hero-content { position:relative; z-index:2; color:white; width:min(820px, 92%); padding:clamp(28px,5vw,66px); }
+.eyebrow, .kicker { text-transform:uppercase; font-weight:800; letter-spacing:.16em; font-size:11px; }
+.eyebrow { color:var(--accent-2); margin-bottom:13px; }
+.hero h1 { margin:0; font-size:clamp(44px,8vw,94px); line-height:.92; letter-spacing:-.065em; max-width:780px; }
+.hero h1 span { color:var(--accent-2); font-weight:400; }
+.hero p { font-size:clamp(16px,2vw,20px); line-height:1.55; max-width:690px; margin:20px 0 22px; color:rgba(255,255,255,.9); }
+.hero-stats { display:flex; flex-wrap:wrap; gap:9px; }
+.hero-stat { padding:9px 12px; border-radius:999px; background:rgba(255,255,255,.14); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,.16); font-size:13px; }
+.hero-stat strong { font-weight:800; }
+
+.control-dock {
+  width:min(1050px, calc(100% - 28px));
+  margin:-24px auto 0;
+  position:relative;
+  z-index:5;
+  padding:12px;
+  border:1px solid rgba(20,33,32,.08);
+  background:rgba(255,255,255,.94);
+  box-shadow:0 16px 44px rgba(20,33,32,.12);
+  border-radius:22px;
+  display:grid;
+  grid-template-columns:1.4fr .8fr;
+  gap:10px;
+  backdrop-filter:blur(15px);
+}
+.segmented { display:grid; grid-auto-flow:column; grid-auto-columns:1fr; gap:4px; padding:4px; background:#f0efe9; border-radius:15px; }
+.segment { border:0; background:transparent; min-height:45px; border-radius:12px; cursor:pointer; font-weight:750; font-size:14px; }
+.segment.active { background:var(--ink); color:white; box-shadow:0 4px 14px rgba(20,33,32,.18); }
+
+.explore-wrap { width:min(1240px, calc(100% - 34px)); margin:62px auto 90px; }
+.section-heading, .list-head { display:flex; justify-content:space-between; align-items:end; gap:20px; }
+.section-heading h2 { margin:7px 0 0; font-size:clamp(27px,4vw,46px); letter-spacing:-.045em; line-height:1.02; }
+.kicker { color:var(--accent); }
+.text-btn { border:0; background:transparent; color:var(--muted); cursor:pointer; text-decoration:underline; text-underline-offset:4px; }
+.search-row { display:grid; grid-template-columns:1fr auto; gap:14px; margin:26px 0 22px; }
+.search-box { min-height:58px; display:flex; align-items:center; gap:12px; background:white; border:1px solid var(--line); border-radius:18px; padding:0 18px; box-shadow:0 8px 24px rgba(20,33,32,.04); }
+.search-box span { font-size:28px; color:var(--muted); transform:rotate(-15deg); }
+.search-box input { border:0; outline:0; background:transparent; width:100%; min-width:0; font-size:16px; color:var(--ink); }
+.cheap-toggle { display:flex; align-items:center; gap:10px; cursor:pointer; background:white; padding:8px 14px; border:1px solid var(--line); border-radius:18px; min-width:250px; }
+.cheap-toggle input { position:absolute; opacity:0; pointer-events:none; }
+.toggle-ui { width:42px; height:24px; border-radius:999px; background:#d9ddd9; position:relative; flex:0 0 auto; transition:.2s; }
+.toggle-ui::after { content:""; position:absolute; top:3px; left:3px; width:18px; height:18px; border-radius:50%; background:white; box-shadow:0 2px 5px rgba(0,0,0,.15); transition:.2s; }
+.cheap-toggle input:checked + .toggle-ui { background:var(--accent); }
+.cheap-toggle input:checked + .toggle-ui::after { transform:translateX(18px); }
+.cheap-toggle strong { display:block; font-size:13px; }
+.cheap-toggle small { display:block; color:var(--muted); font-size:10px; margin-top:2px; }
+
+.filter-block { display:flex; align-items:flex-start; gap:16px; margin:15px 0; }
+.filter-label { width:88px; flex:0 0 auto; padding-top:8px; color:var(--muted); font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.08em; }
+.chip-row { display:flex; flex-wrap:wrap; gap:8px; }
+.chip { border:1px solid var(--line); background:rgba(255,255,255,.72); padding:8px 12px; border-radius:999px; cursor:pointer; font-size:13px; transition:.15s; }
+.chip:hover { transform:translateY(-1px); border-color:color-mix(in srgb, var(--accent) 55%, var(--line)); }
+.chip.active { background:var(--soft); border-color:color-mix(in srgb, var(--accent) 45%, transparent); color:var(--deep); font-weight:800; }
+
+.featured-section { margin:48px 0 54px; }
+.list-head { margin-bottom:17px; }
+.list-head h3 { margin:5px 0 0; font-size:26px; letter-spacing:-.035em; }
+.muted { color:var(--muted); font-size:13px; }
+.featured-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; }
+.card-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; }
+
+.card {
+  background:white;
+  border:1px solid rgba(20,33,32,.08);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:0 8px 24px rgba(20,33,32,.05);
+  transition:transform .18s ease, box-shadow .18s ease;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+}
+.card:hover { transform:translateY(-3px); box-shadow:0 18px 36px rgba(20,33,32,.10); }
+.feature-card:first-child { grid-column:span 2; }
+.card-image { height:190px; position:relative; background:#dfe8e4 center/cover no-repeat; cursor:pointer; }
+.feature-card:first-child .card-image { height:275px; }
+.card-image::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 55%,rgba(9,25,25,.28)); }
+.card-badges { position:absolute; top:12px; left:12px; right:12px; z-index:2; display:flex; gap:7px; justify-content:space-between; align-items:flex-start; }
+.badge { background:rgba(255,255,255,.92); backdrop-filter:blur(8px); padding:6px 9px; border-radius:999px; font-size:10px; font-weight:850; text-transform:uppercase; letter-spacing:.06em; box-shadow:0 3px 12px rgba(0,0,0,.08); }
+.badge.budget-cheap, .badge.budget-free { background:#dff8dc; color:#175a22; }
+.badge.budget-normal { background:#e2f1ff; color:#174c74; }
+.badge.budget-treat { background:#fff0cf; color:#765011; }
+.badge.budget-splurge { background:#ffe0dc; color:#7e241a; }
+.preference-mark { min-width:31px; height:31px; border-radius:999px; background:rgba(255,255,255,.94); display:grid; place-items:center; font-size:15px; }
+.card-body { padding:17px 17px 12px; flex:1; display:flex; flex-direction:column; }
+.card-meta { display:flex; gap:8px; color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.07em; font-weight:750; }
+.card h4 { font-size:21px; letter-spacing:-.035em; line-height:1.08; margin:7px 0 9px; }
+.card-copy { color:#596462; font-size:13px; line-height:1.52; margin:0 0 13px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+.card-tags { display:flex; gap:5px; flex-wrap:wrap; margin-top:auto; }
+.mini-tag { background:#f2f2ed; border-radius:7px; padding:5px 7px; font-size:10px; color:#5c6563; }
+.card-footer { display:flex; align-items:center; justify-content:space-between; gap:8px; padding:11px 14px 14px; border-top:1px solid #f0f0eb; }
+.price { font-weight:850; font-size:13px; }
+.price small { font-weight:500; color:var(--muted); }
+.pref-actions { display:flex; gap:4px; }
+.pref-btn { width:31px; height:31px; display:grid; place-items:center; border:1px solid var(--line); background:white; border-radius:9px; cursor:pointer; transition:.15s; }
+.pref-btn:hover, .pref-btn.selected { border-color:var(--accent); background:var(--soft); transform:scale(1.03); }
+.open-btn { border:0; background:var(--ink); color:white; border-radius:10px; padding:8px 10px; cursor:pointer; font-size:11px; font-weight:800; }
+
+.empty-state { text-align:center; padding:70px 20px; color:var(--muted); }
+.empty-state span { font-size:44px; }
+.empty-state h3 { color:var(--ink); margin-bottom:5px; }
+
+footer { margin:0 auto; width:min(1240px, calc(100% - 34px)); border-top:1px solid var(--line); padding:30px 0 48px; color:var(--muted); font-size:12px; display:grid; gap:8px; }
+footer strong { color:var(--ink); }
+.credits summary { cursor:pointer; color:var(--ink); font-weight:700; }
+.credits p { max-width:850px; line-height:1.5; }
+
+.modal-backdrop { position:fixed; inset:0; background:rgba(7,18,18,.54); backdrop-filter:blur(5px); z-index:49; }
+.detail-sheet { position:fixed; right:0; top:0; bottom:0; width:min(540px, 100%); background:var(--paper); z-index:50; box-shadow:-25px 0 70px rgba(0,0,0,.2); transform:translateX(105%); transition:transform .25s ease; overflow:auto; }
+.detail-sheet.open { transform:translateX(0); }
+.sheet-close { position:fixed; right:16px; top:16px; width:40px; height:40px; border-radius:50%; border:0; background:rgba(255,255,255,.92); z-index:3; font-size:26px; cursor:pointer; box-shadow:0 5px 18px rgba(0,0,0,.12); }
+.sheet-image { height:280px; background:center/cover no-repeat; }
+.sheet-body { padding:25px 25px 50px; }
+.sheet-body .eyebrow { color:var(--accent); margin-bottom:8px; }
+.sheet-body h2 { font-size:34px; letter-spacing:-.045em; line-height:1; margin:0 0 12px; }
+.sheet-body > p { color:#56615f; line-height:1.6; }
+.sheet-pref { display:flex; gap:8px; margin:19px 0 24px; }
+.sheet-pref button { flex:1; border:1px solid var(--line); background:white; border-radius:12px; padding:12px 8px; cursor:pointer; font-weight:750; }
+.sheet-pref button.selected { background:var(--soft); border-color:var(--accent); }
+.info-grid { display:grid; grid-template-columns:1fr 1fr; gap:9px; margin:20px 0; }
+.info-box { background:#f5f5f0; padding:13px; border-radius:13px; }
+.info-box small { color:var(--muted); display:block; margin-bottom:4px; text-transform:uppercase; font-size:9px; letter-spacing:.08em; font-weight:800; }
+.info-box strong { font-size:13px; }
+.sheet-section { padding:17px 0; border-top:1px solid var(--line); }
+.sheet-section h3 { margin:0 0 10px; font-size:14px; text-transform:uppercase; letter-spacing:.08em; }
+.sheet-section ul { margin:0; padding-left:19px; color:#56615f; line-height:1.55; font-size:13px; }
+.sheet-section .tag-cloud { display:flex; gap:6px; flex-wrap:wrap; }
+.source-link { display:block; color:var(--deep); margin:6px 0; font-size:12px; }
+
+.toast { position:fixed; left:50%; bottom:22px; transform:translate(-50%,20px); background:var(--ink); color:white; padding:11px 15px; border-radius:999px; font-size:12px; font-weight:750; opacity:0; pointer-events:none; transition:.2s; z-index:70; }
+.toast.show { opacity:1; transform:translate(-50%,0); }
+
+@media (max-width: 920px) {
+  .featured-grid, .card-grid { grid-template-columns:repeat(2,1fr); }
+  .feature-card:first-child { grid-column:span 2; }
+  .control-dock { grid-template-columns:1fr; }
+  .search-row { grid-template-columns:1fr; }
+  .cheap-toggle { min-width:0; }
+}
+
+@media (max-width: 640px) {
+  .topbar { height:68px; padding:0 14px; }
+  .brand small { display:none; }
+  .profile-switch { display:none; }
+  .hero { margin:10px 10px 0; border-radius:24px; min-height:470px; }
+  .hero-content { padding:26px 20px 42px; width:100%; }
+  .hero h1 { font-size:54px; }
+  .hero p { font-size:15px; }
+  .control-dock { width:calc(100% - 20px); margin:-20px auto 0; border-radius:17px; }
+  .segment { font-size:12px; min-height:42px; padding:0 7px; }
+  .explore-wrap { width:calc(100% - 24px); margin-top:44px; }
+  .section-heading { align-items:flex-start; }
+  .section-heading h2 { font-size:31px; }
+  .filter-block { display:block; }
+  .filter-label { width:auto; margin:0 0 8px; padding:0; }
+  .chip-row { flex-wrap:nowrap; overflow:auto; padding-bottom:4px; scrollbar-width:none; margin-right:-12px; padding-right:12px; }
+  .chip-row::-webkit-scrollbar { display:none; }
+  .chip { white-space:nowrap; }
+  .featured-grid, .card-grid { grid-template-columns:1fr; }
+  .feature-card:first-child { grid-column:auto; }
+  .feature-card:first-child .card-image { height:210px; }
+  .card-image { height:210px; }
+  .list-head .muted { display:none; }
+  .info-grid { grid-template-columns:1fr 1fr; }
+  .detail-sheet { width:100%; top:auto; height:min(88vh, 800px); border-radius:24px 24px 0 0; transform:translateY(105%); }
+  .detail-sheet.open { transform:translateY(0); }
+  .sheet-close { position:absolute; }
+  .sheet-image { height:220px; }
+}
+
+  </style>
+</head>
+<body class="destination-cancun">
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Cancún to Rio home">
+        <span class="brand-mark">↗</span>
+        <span><strong>Cancún → Rio</strong><small>Adventure Index</small></span>
+      </a>
+      <div class="topbar-actions">
+        <div class="profile-switch" aria-label="Whose picks are these?">
+          <button class="profile-btn active" data-profile="emrys">Emrys</button>
+          <button class="profile-btn" data-profile="hannah">Hannah</button>
+        </div>
+        <button class="ghost-btn" id="picksBtn" type="button"><span>🔥</span> Picks <b id="pickCount">0</b></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-image" aria-hidden="true"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="eyebrow">A choose-your-own-adventure for two</div>
+          <h1 id="heroTitle">Cancún <span>+</span> Yucatán</h1>
+          <p id="heroCopy">Cenotes, Maya cities, islands, reefs, jungle missions, local culture and excellent cheap food — without pretending every good day needs a tour bus.</p>
+          <div class="hero-stats" id="heroStats"></div>
+        </div>
+      </section>
+
+      <section class="control-dock" aria-label="Guide controls">
+        <div class="segmented destination-switch" role="group" aria-label="Destination">
+          <button class="segment active" data-destination="cancun-yucatan">🌴 Cancún + Yucatán</button>
+          <button class="segment" data-destination="rio-beyond">⛰ Rio + Beyond</button>
+        </div>
+        <div class="segmented content-switch" role="group" aria-label="Section">
+          <button class="segment active" data-content="do">⚡ Do</button>
+          <button class="segment" data-content="eat">🍜 Eat & Drink</button>
+        </div>
+      </section>
+
+      <section class="explore-wrap">
+        <div class="section-heading">
+          <div>
+            <span class="kicker" id="sectionKicker">EXPLORE</span>
+            <h2 id="sectionTitle">What are we in the mood for?</h2>
+          </div>
+          <button class="text-btn" id="resetBtn" type="button">Reset filters</button>
+        </div>
+
+        <div class="search-row">
+          <label class="search-box">
+            <span>⌕</span>
+            <input id="searchInput" type="search" placeholder="Search cenotes, wildlife, cheap food…" autocomplete="off" />
+          </label>
+          <label class="cheap-toggle">
+            <input id="cheapToggle" type="checkbox" />
+            <span class="toggle-ui"></span>
+            <span><strong>Keep it cheap</strong><small>Cheap stuff rises; splurges stay visible</small></span>
+          </label>
+        </div>
+
+        <div class="filter-block">
+          <div class="filter-label">Quick filters</div>
+          <div class="chip-row" id="quickFilters"></div>
+        </div>
+
+        <div class="filter-block budget-row">
+          <div class="filter-label">Budget</div>
+          <div class="chip-row" id="budgetFilters">
+            <button class="chip active" data-budget="all">All</button>
+            <button class="chip" data-budget="cheap">💚 Cheap</button>
+            <button class="chip" data-budget="normal">💙 Normal</button>
+            <button class="chip" data-budget="treat">🧡 Treat</button>
+            <button class="chip" data-budget="splurge">❤️ Splurge</button>
+          </div>
+        </div>
+
+        <section class="featured-section" id="featuredSection">
+          <div class="list-head">
+            <div>
+              <span class="kicker">START HERE</span>
+              <h3>Standouts</h3>
+            </div>
+            <span class="muted" id="featuredHint">A mixed handful, not a ranking.</span>
+          </div>
+          <div class="featured-grid" id="featuredGrid"></div>
+        </section>
+
+        <section class="all-section">
+          <div class="list-head">
+            <div>
+              <span class="kicker" id="allKicker">THE FULL INDEX</span>
+              <h3><span id="resultCount">0</span> possibilities</h3>
+            </div>
+            <span class="muted" id="activeFilterText">Browse everything or narrow it down.</span>
+          </div>
+          <div class="card-grid" id="cardGrid"></div>
+          <div class="empty-state" id="emptyState" hidden>
+            <span>🧭</span>
+            <h3>Nothing matches that combination.</h3>
+            <p>Try dropping one filter — the good stuff is probably hiding just outside it.</p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>Cancún → Rio</strong> · Prototype v0.2</div>
+      <div class="footer-note">Prices are planning estimates, not booking quotes. Venue details should be refreshed before visiting.</div>
+      <details class="credits">
+        <summary>Prototype image credits</summary>
+        <p>Unsplash imagery by Henrique Ferreira, Elesban Landero Berriozábal, Marco Murakami, Paulo Collares, Mike Swigunski, J. Balla Photography, cyrus gomez and Awal Uddin Sodri. Images are temporary prototype assets and can be replaced with our own photos later.</p>
+      </details>
+    </footer>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden></div>
+  <aside class="detail-sheet" id="detailSheet" aria-hidden="true" aria-label="Experience details">
+    <button class="sheet-close" id="sheetClose" type="button" aria-label="Close">×</button>
+    <div class="sheet-image" id="sheetImage"></div>
+    <div class="sheet-body" id="sheetBody"></div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+  (async () => {
+    try {
+      const [cDo, rDo, cEat, rEat] = await Promise.all([
+        fetch('./cancun-yucatan-experiences.seed.json').then(r => r.json()),
+        fetch('./rio-beyond-experiences.seed.json').then(r => r.json()),
+        fetch('./cancun-yucatan-eat-drink.seed.json').then(r => r.json()),
+        fetch('./rio-eat-drink.seed.json').then(r => r.json())
+      ]);
+      window.GUIDE_DATA = {
+        do: {
+          'cancun-yucatan': cDo.experiences,
+          'rio-beyond': rDo.experiences
+        },
+        eat: {
+          'cancun-yucatan': cEat.items,
+          'rio-beyond': rEat.items
+        }
+      };
+  (() => {
+    const DATA = window.GUIDE_DATA;
+    const state = {
+      destination: localStorage.getItem('cr-destination') || 'cancun-yucatan',
+      content: localStorage.getItem('cr-content') || 'do',
+      profile: localStorage.getItem('cr-profile') || 'emrys',
+      search: '',
+      quick: new Set(),
+      budget: 'all',
+      cheapMode: false,
+      picksOnly: false,
+      prefs: JSON.parse(localStorage.getItem('cr-prefs') || '{}')
+    };
+  
+    const $ = s => document.querySelector(s);
+    const $$ = s => [...document.querySelectorAll(s)];
+  
+    const images = {
+      cancunHero: 'https://images.unsplash.com/photo-1745874589259-768dcc79a0ef?auto=format&fit=crop&w=1400&q=78',
+      chichen: 'https://images.unsplash.com/photo-1657203863967-0bc1c41827db?auto=format&fit=crop&w=1200&q=78',
+      cenote: 'https://images.unsplash.com/photo-1719941463960-f3310fe64e46?auto=format&fit=crop&w=1200&q=78',
+      rioHero: 'https://images.unsplash.com/photo-1743443924554-9b7630c2ff46?auto=format&fit=crop&w=1400&q=78',
+      rioMountain: 'https://images.unsplash.com/photo-1589394760151-b4c9890765fe?auto=format&fit=crop&w=1200&q=78',
+      rioCulture: 'https://images.unsplash.com/photo-1660699936111-7b73cd664028?auto=format&fit=crop&w=1200&q=78',
+      tacos: 'https://images.unsplash.com/photo-1568127305183-bec960a6c5ea?auto=format&fit=crop&w=1200&q=78',
+      drink: 'https://images.unsplash.com/photo-1766566676250-d27ef8ccdd82?auto=format&fit=crop&w=1200&q=78'
+    };
+  
+    const featured = {
+      'cancun-yucatan:do': ['punta-laguna','muyil-sian-kaan','musa-punta-nizuc','coba','nichupte-sunset-kayak','xyaat'],
+      'cancun-yucatan:eat': ['parque-palapas-food-night','cochinita-pibil-hunt','el-pocito','xtabentun-hunt','mumma-rooftop','ancestral-cooking-valladolid'],
+      'rio-beyond:do': ['hang-glide-pedra-bonita','pedra-da-gavea','samba-school-rehearsal','arpoador-surf','morro-da-urca-trail','carnival-backstage'],
+      'rio-beyond:eat': ['beco-rato-samba','mureta-urca','adega-perola','mate-biscoito-globo','bar-do-omar','feijoada-hunt']
+    };
+  
+    const quickConfig = {
+      'cancun-yucatan:do': [
+        ['Water','water'],['Wildlife','wildlife'],['Maya','maya-ancient'],['Adrenaline','adrenaline'],['Hands-on','hands-on'],['Night','night'],['No car','public-transport'],['Overnight','overnight']
+      ],
+      'cancun-yucatan:eat': [
+        ['Near base','easy-from-base'],['Cheap','cheap'],['Local','local'],['Street food','street-food'],['Yucatecan','yucatecan'],['Rooftop','rooftop'],['Night','night'],['Hands-on','hands-on']
+      ],
+      'rio-beyond:do': [
+        ['Hike','hiking'],['Water','water'],['Adrenaline','adrenaline'],['Culture','culture'],['Night','night'],['Learn','learn'],['Rainy day','rainy-day'],['Beyond Rio','beyond-rio']
+      ],
+      'rio-beyond:eat': [
+        ['Cheap','cheap'],['Boteco','boteco'],['Samba','samba'],['Beach','beach'],['Local','local'],['Sunset','sunset'],['Cachaça','cachaca'],['Rooftop','rooftop']
+      ]
+    };
+  
+    const heroText = {
+      'cancun-yucatan': {
+        title:'Cancún <span>+</span> Yucatán',
+        copy:'Cenotes, Maya cities, islands, reefs, jungle missions, local culture and excellent cheap food — without pretending every good day needs a tour bus.'
+      },
+      'rio-beyond': {
+        title:'Rio <span>+</span> Beyond',
+        copy:'Mountains above the city, Atlantic rainforest, surf, samba, flying, football, island escapes and boteco nights — with plenty that costs almost nothing.'
+      }
+    };
+  
+    function currentItems() { return DATA[state.content][state.destination] || []; }
+  
+    function normalize(raw) {
+      const isDo = state.content === 'do';
+      const location = raw.location || {};
+      const budget = raw.budget || {};
+      const tags = new Set([...(raw.tags || []), ...(raw.categories || []), ...(raw.best_for || []), ...(raw.vibe || [])]);
+      if (!isDo) {
+        if (location.base_relevance) tags.add(location.base_relevance);
+        tags.add(raw.record_type || '');
+        if (budget.band) tags.add(budget.band);
+      }
+      if (isDo && raw.transport?.public_transport_viable) tags.add('public-transport');
+      if (isDo && raw.mission_type === 'overnight-unlock') tags.add('overnight');
+      return {
+        ...raw,
+        area: location.area || '',
+        budgetBand: budget.band || 'variable',
+        tags: [...tags].filter(Boolean),
+        summary: raw.summary || '',
+        typeLabel: isDo ? labelize(raw.mission_type || 'experience') : labelize(raw.record_type || 'food'),
+        priceText: getPrice(raw),
+        image: getImage(raw)
+      };
+    }
+  
+    function labelize(s) { return String(s || '').replaceAll('-',' ').replace(/\b\w/g,m=>m.toUpperCase()); }
+    function money(m) {
+      if (!m || typeof m.amount !== 'number') return null;
+      const symbol = m.currency === 'MXN' ? 'MX$' : m.currency === 'BRL' ? 'R$' : m.currency === 'AUD' ? 'A$' : `${m.currency} `;
+      return `${symbol}${Math.round(m.amount).toLocaleString()}`;
+    }
+    function getPrice(raw) {
+      const b = raw.budget || {};
+      if (state.content === 'do') {
+        if (b.mission_price_pp_estimate) return `${money(b.mission_price_pp_estimate)} <small>mission pp</small>`;
+        if (b.activity_price_pp) return `${money(b.activity_price_pp)} <small>activity pp</small>`;
+        if (b.band === 'price-on-request') return 'Price on request';
+        return labelize(b.band || 'Check price');
+      }
+      if (b.expected_spend_pp) return `${money(b.expected_spend_pp)} <small>pp</small>`;
+      if (b.range_low_pp && b.range_high_pp) return `${money(b.range_low_pp)}–${money(b.range_high_pp)} <small>pp</small>`;
+      return labelize(b.band || 'Variable');
+    }
+  
+    function getImage(raw) {
+      const id = raw.id || '';
+      const tags = [...(raw.tags || []), ...(raw.categories || []), ...(raw.vibe || [])].join(' ').toLowerCase();
+      if (state.content === 'eat') {
+        if (/bar|drink|cach|rooftop|beer|samba|night/.test(id+' '+tags)) return images.drink;
+        return images.tacos;
+      }
+      if (state.destination === 'cancun-yucatan') {
+        if (/chichen|coba|ek-balam|ichkabal|maya-ancient/.test(id+' '+tags)) return images.chichen;
+        if (/cenote|secreto|cav|dos-ojos|underground|xplor/.test(id+' '+tags)) return images.cenote;
+        return images.cancunHero;
+      }
+      if (/hike|pedra|morro|mountain|gávea|gavea|dois|corcovado|serra/.test(id+' '+tags)) return images.rioMountain;
+      if (/carnival|samba|capoeira|africa|maracana|santa|culture/.test(id+' '+tags)) return images.rioCulture;
+      return images.rioHero;
+    }
+  
+    function prefKey(id, profile=state.profile) { return `${profile}:${state.content}:${state.destination}:${id}`; }
+    function getPref(id, profile=state.profile) { return state.prefs[prefKey(id,profile)] || null; }
+    function setPref(id, value) {
+      const key = prefKey(id);
+      if (state.prefs[key] === value) delete state.prefs[key]; else state.prefs[key] = value;
+      localStorage.setItem('cr-prefs', JSON.stringify(state.prefs));
+      render();
+      toast(`${state.profile === 'hannah' ? 'Hannah' : 'Emrys'}: ${value === 'want' ? '🔥 want this' : value === 'maybe' ? '🤔 maybe' : '❌ skip'}`);
+    }
+    function bothWant(id) {
+      return getPref(id,'emrys') === 'want' && getPref(id,'hannah') === 'want';
+    }
+  
+    function budgetRank(b) { return ({free:0,cheap:1,normal:2,variable:2,treat:3,splurge:4,'price-on-request':3})[b] ?? 2; }
+  
+    function matches(item) {
+      const q = state.search.trim().toLowerCase();
+      if (q) {
+        const hay = [item.name,item.summary,item.area,item.typeLabel,...item.tags].join(' ').toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      if (state.budget !== 'all' && item.budgetBand !== state.budget) return false;
+      if (state.quick.size && ![...state.quick].every(f => item.tags.some(t => t.toLowerCase().includes(f.toLowerCase())))) return false;
+      if (state.picksOnly && !getPref(item.id)) return false;
+      return true;
+    }
+  
+    function sorted(items) {
+      const ids = featured[`${state.destination}:${state.content}`] || [];
+      return [...items].sort((a,b) => {
+        if (state.cheapMode) {
+          const d = budgetRank(a.budgetBand)-budgetRank(b.budgetBand);
+          if (d) return d;
+        }
+        const ai = ids.indexOf(a.id), bi = ids.indexOf(b.id);
+        if (ai >= 0 || bi >= 0) return (ai < 0 ? 999 : ai) - (bi < 0 ? 999 : bi);
+        return a.name.localeCompare(b.name);
+      });
+    }
+  
+    function card(item, feature=false) {
+      const pref = getPref(item.id);
+      const badge = item.budgetBand === 'price-on-request' ? 'POR' : labelize(item.budgetBand);
+      const tagHtml = item.tags.slice(0,4).map(t=>`<span class="mini-tag">${labelize(t)}</span>`).join('');
+      const meta = `${item.typeLabel} · ${item.area}`;
+      return `
+        <article class="card ${feature ? 'feature-card' : ''}" data-id="${item.id}">
+          <div class="card-image" data-open="${item.id}" style="background-image:url('${item.image}')">
+            <div class="card-badges">
+              <span class="badge budget-${item.budgetBand}">${badge}</span>
+              <span class="preference-mark">${pref === 'want' ? '🔥' : pref === 'maybe' ? '🤔' : pref === 'skip' ? '❌' : bothWant(item.id) ? '💥' : '＋'}</span>
+            </div>
+          </div>
+          <div class="card-body" data-open="${item.id}">
+            <div class="card-meta">${meta}</div>
+            <h4>${item.name}</h4>
+            <p class="card-copy">${item.summary}</p>
+            <div class="card-tags">${tagHtml}</div>
+          </div>
+          <div class="card-footer">
+            <div class="price">${item.priceText}</div>
+            <div class="pref-actions" aria-label="Preference">
+              <button class="pref-btn ${pref==='want'?'selected':''}" data-pref="want" data-id="${item.id}" title="Want this">🔥</button>
+              <button class="pref-btn ${pref==='maybe'?'selected':''}" data-pref="maybe" data-id="${item.id}" title="Maybe">🤔</button>
+              <button class="pref-btn ${pref==='skip'?'selected':''}" data-pref="skip" data-id="${item.id}" title="Skip">❌</button>
+              <button class="open-btn" data-open="${item.id}">Open</button>
+            </div>
+          </div>
+        </article>`;
+    }
+  
+    function renderHero(items) {
+      const h = heroText[state.destination];
+      $('#heroTitle').innerHTML = h.title;
+      $('#heroCopy').textContent = h.copy;
+      const doCount = DATA.do[state.destination].length;
+      const eatCount = DATA.eat[state.destination].length;
+      const chosen = items.filter(x=>getPref(x.id)==='want').length;
+      $('#heroStats').innerHTML = `
+        <span class="hero-stat"><strong>${doCount}</strong> things to do</span>
+        <span class="hero-stat"><strong>${eatCount}</strong> eat & drink ideas</span>
+        <span class="hero-stat"><strong>${chosen}</strong> ${state.profile==='hannah'?'Hannah':'Emrys'} wants</span>`;
+      document.body.classList.toggle('destination-rio', state.destination === 'rio-beyond');
+      document.body.classList.toggle('destination-cancun', state.destination === 'cancun-yucatan');
+    }
+  
+    function renderQuickFilters() {
+      const conf = quickConfig[`${state.destination}:${state.content}`] || [];
+      $('#quickFilters').innerHTML = conf.map(([label,key]) => `<button class="chip ${state.quick.has(key)?'active':''}" data-quick="${key}">${label}</button>`).join('');
+    }
+  
+    function render() {
+      localStorage.setItem('cr-destination',state.destination);
+      localStorage.setItem('cr-content',state.content);
+      localStorage.setItem('cr-profile',state.profile);
+      $$('.destination-switch .segment').forEach(b=>b.classList.toggle('active',b.dataset.destination===state.destination));
+      $$('.content-switch .segment').forEach(b=>b.classList.toggle('active',b.dataset.content===state.content));
+      $$('.profile-btn').forEach(b=>b.classList.toggle('active',b.dataset.profile===state.profile));
+      $('#picksBtn').classList.toggle('active',state.picksOnly);
+      $('#picksBtn').innerHTML = `<span>${state.picksOnly?'←':'🔥'}</span> ${state.picksOnly?'Explore':'Picks'} <b id="pickCount">0</b>`;
+      $$('#budgetFilters .chip').forEach(b=>b.classList.toggle('active',b.dataset.budget===state.budget));
+      $('#cheapToggle').checked = state.cheapMode;
+      renderQuickFilters();
+  
+      const all = currentItems().map(normalize);
+      renderHero(all);
+      const selectedCount = all.filter(i=>getPref(i.id)).length;
+      $('#pickCount').textContent = selectedCount;
+  
+      $('#sectionKicker').textContent = state.picksOnly ? `${state.profile.toUpperCase()}'S PICKS` : 'EXPLORE';
+      $('#sectionTitle').textContent = state.picksOnly ? 'Things worth remembering' : (state.content==='do' ? 'What are we in the mood for?' : 'What do we want to eat, drink or hunt down?');
+      $('#searchInput').placeholder = state.content==='do' ? 'Search cenotes, wildlife, cheap missions…' : 'Search tacos, samba, rooftops, cheap food…';
+  
+      const filtered = sorted(all.filter(matches));
+      const fIds = featured[`${state.destination}:${state.content}`] || [];
+      const featureItems = state.picksOnly || state.search || state.quick.size || state.budget!=='all'
+        ? filtered.slice(0, Math.min(6,filtered.length))
+        : fIds.map(id=>all.find(x=>x.id===id)).filter(Boolean);
+      $('#featuredSection').hidden = !featureItems.length;
+      $('#featuredGrid').innerHTML = featureItems.map(x=>card(x,true)).join('');
+  
+      $('#resultCount').textContent = filtered.length;
+      $('#cardGrid').innerHTML = filtered.map(x=>card(x,false)).join('');
+      $('#emptyState').hidden = filtered.length > 0;
+  
+      const active = [];
+      if (state.quick.size) active.push([...state.quick].map(labelize).join(' + '));
+      if (state.budget!=='all') active.push(labelize(state.budget));
+      if (state.search) active.push(`“${state.search}”`);
+      if (state.cheapMode) active.push('cheap-first');
+      $('#activeFilterText').textContent = active.length ? active.join(' · ') : 'Browse everything or narrow it down.';
+      bindDynamic();
+    }
+  
+    function bindDynamic() {
+      $$('[data-pref]').forEach(btn=>btn.onclick = (e)=>{ e.stopPropagation(); setPref(btn.dataset.id,btn.dataset.pref); });
+      $$('[data-open]').forEach(el=>el.onclick = ()=>openDetail(el.dataset.open));
+      $$('[data-quick]').forEach(btn=>btn.onclick = ()=>{
+        const k=btn.dataset.quick;
+        state.quick.has(k) ? state.quick.delete(k) : state.quick.add(k);
+        render();
+      });
+    }
+  
+    function openDetail(id) {
+      const raw = currentItems().find(x=>x.id===id);
+      if (!raw) return;
+      const item = normalize(raw);
+      const pref = getPref(id);
+      $('#sheetImage').style.backgroundImage = `url('${item.image}')`;
+      const isDo = state.content==='do';
+      const details = [];
+      if (isDo) {
+        if (raw.time?.duration_label) details.push(['Time',raw.time.duration_label]);
+        if (raw.difficulty) details.push(['Effort',labelize(raw.difficulty)]);
+        if (raw.seasonality?.november_fit) details.push(['November',labelize(raw.seasonality.november_fit)]);
+        if (raw.transport?.car_helpfulness) details.push(['Car',labelize(raw.transport.car_helpfulness)]);
+      } else {
+        if (raw.location?.base_relevance) details.push(['From base',labelize(raw.location.base_relevance)]);
+        if (raw.record_type) details.push(['Type',labelize(raw.record_type)]);
+        if (raw.evening_friendly) details.push(['Evening', 'Good option']);
+        if (raw.alcohol_focus) details.push(['Drinks', 'Alcohol-focused']);
+      }
+      details.unshift(['Budget',labelize(item.budgetBand)]);
+      details.push(['Price',item.priceText.replace(/<[^>]*>/g,'')]);
+  
+      const transport = isDo && raw.transport?.options?.length ? `
+        <div class="sheet-section"><h3>Getting there</h3><ul>${raw.transport.options.map(o=>`<li><strong>${labelize(o.mode)}</strong> — ${o.label}${o.notes?` · ${o.notes}`:''}</li>`).join('')}</ul></div>` : '';
+      const powers = isDo && raw.power_ups?.length ? `<div class="sheet-section"><h3>Power-ups</h3><div class="tag-cloud">${raw.power_ups.map(t=>`<span class="mini-tag">⚡ ${labelize(t)}</span>`).join('')}</div></div>` : '';
+      const combos = isDo ? raw.smart_combos : raw.pair_with;
+      const comboHtml = combos?.length ? `<div class="sheet-section"><h3>Pairs well with</h3><div class="tag-cloud">${combos.map(t=>`<span class="mini-tag">↔ ${labelize(t)}</span>`).join('')}</div></div>` : '';
+      const order = !isDo && raw.order_this?.length ? `<div class="sheet-section"><h3>Try / order</h3><div class="tag-cloud">${raw.order_this.map(t=>`<span class="mini-tag">🍴 ${labelize(t)}</span>`).join('')}</div></div>` : '';
+      const sources = raw.sources?.length ? `<div class="sheet-section"><h3>Research trail</h3>${raw.sources.filter(s=>s.url).map(s=>`<a class="source-link" href="${s.url}" target="_blank" rel="noopener">↗ ${s.label}</a>`).join('')}</div>` : '';
+  
+      $('#sheetBody').innerHTML = `
+        <div class="eyebrow">${item.typeLabel} · ${item.area}</div>
+        <h2>${item.name}</h2>
+        <p>${item.summary}</p>
+        <div class="sheet-pref">
+          <button data-sheet-pref="want" class="${pref==='want'?'selected':''}">🔥 Want this</button>
+          <button data-sheet-pref="maybe" class="${pref==='maybe'?'selected':''}">🤔 Maybe</button>
+          <button data-sheet-pref="skip" class="${pref==='skip'?'selected':''}">❌ Skip</button>
+        </div>
+        <div class="info-grid">${details.map(([k,v])=>`<div class="info-box"><small>${k}</small><strong>${v}</strong></div>`).join('')}</div>
+        <div class="sheet-section"><h3>Tags</h3><div class="tag-cloud">${item.tags.slice(0,14).map(t=>`<span class="mini-tag">${labelize(t)}</span>`).join('')}</div></div>
+        ${transport}${powers}${comboHtml}${order}${sources}
+      `;
+      $$('[data-sheet-pref]').forEach(btn=>btn.onclick=()=>{setPref(id,btn.dataset.sheetPref); openDetail(id);});
+      $('#modalBackdrop').hidden=false;
+      $('#detailSheet').classList.add('open');
+      $('#detailSheet').setAttribute('aria-hidden','false');
+      document.body.style.overflow='hidden';
+    }
+  
+    function closeDetail() {
+      $('#detailSheet').classList.remove('open');
+      $('#detailSheet').setAttribute('aria-hidden','true');
+      $('#modalBackdrop').hidden=true;
+      document.body.style.overflow='';
+    }
+  
+    let toastTimer;
+    function toast(msg) {
+      const t=$('#toast'); t.textContent=msg; t.classList.add('show');
+      clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.classList.remove('show'),1300);
+    }
+  
+    $$('.destination-switch .segment').forEach(btn=>btn.onclick=()=>{state.destination=btn.dataset.destination;state.quick.clear();state.budget='all';state.search='';$('#searchInput').value='';render();});
+    $$('.content-switch .segment').forEach(btn=>btn.onclick=()=>{state.content=btn.dataset.content;state.quick.clear();state.budget='all';state.search='';$('#searchInput').value='';render();});
+    $$('.profile-btn').forEach(btn=>btn.onclick=()=>{state.profile=btn.dataset.profile;render();toast(`Now saving ${state.profile==='hannah'?'Hannah’s':'Emrys’s'} picks`);});
+    $('#searchInput').addEventListener('input',e=>{state.search=e.target.value;render();});
+    $('#cheapToggle').addEventListener('change',e=>{state.cheapMode=e.target.checked;render();});
+    $$('#budgetFilters .chip').forEach(btn=>btn.onclick=()=>{state.budget=btn.dataset.budget;render();});
+    $('#resetBtn').onclick=()=>{state.search='';state.quick.clear();state.budget='all';state.cheapMode=false;state.picksOnly=false;$('#searchInput').value='';render();};
+    $('#picksBtn').onclick=()=>{state.picksOnly=!state.picksOnly;render();};
+    $('#sheetClose').onclick=closeDetail;
+    $('#modalBackdrop').onclick=closeDetail;
+    window.addEventListener('keydown',e=>{if(e.key==='Escape')closeDetail();});
+    render();
+  })();
+  
+    } catch (err) {
+      console.error(err);
+      document.body.innerHTML = '<main style="font-family:system-ui;padding:2rem;max-width:720px;margin:auto"><h1>Could not load the travel data</h1><p>This version needs to be served from GitHub Pages (or another web server), not opened directly as a local file.</p></main>';
+    }
+  })();
+  </script>
+</body>
+</html>

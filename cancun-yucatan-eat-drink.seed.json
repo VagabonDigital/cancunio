@@ -1,0 +1,1475 @@
+{
+  "meta": {
+    "project": "Cancún → Rio Adventure Index",
+    "dataset_version": "0.1.0",
+    "generated": "2026-10-01",
+    "destination": "cancun-yucatan",
+    "likely_initial_base": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+    "notes": [
+      "Food hunts are intentionally venue-independent; venue records should be refreshed before visiting.",
+      "Budget diversity is deliberate: cheap/local food is the backbone; rooftops and treat meals are optional branches.",
+      "Mayan Monkey proximity is used as a convenience tag, not a quality ranking."
+    ]
+  },
+  "items": [
+    {
+      "id": "cochinita-pibil-hunt",
+      "destination": "cancun-yucatan",
+      "record_type": "food-hunt",
+      "name": "Find Proper Cochinita Pibil",
+      "status": "candidate",
+      "summary": "Slow-roasted achiote-and-citrus pork, ideally eaten somewhere focused on Yucatecan cooking rather than a generic resort menu.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Cancún / Yucatán",
+        "address": null,
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "regionwide"
+      },
+      "budget": {
+        "band": "cheap",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "not-applicable",
+        "notes": null
+      },
+      "best_for": [
+        "breakfast",
+        "lunch"
+      ],
+      "order_this": [
+        "cochinita pibil"
+      ],
+      "tags": [
+        "yucatecan",
+        "pork",
+        "regional-essential",
+        "food-quest"
+      ],
+      "vibe": [
+        "local",
+        "regional"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": false,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": false,
+        "refresh_before_trip": false,
+        "notes": "Regional food/drink quest is not tied to one business."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Yucatán traditional cuisine",
+          "url": "https://yucatan.travel/gastronomy/la-cocina-tradicional-yucateca-y-sus-sabores-regionales/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "panuchos-salbutes-hunt",
+      "destination": "cancun-yucatan",
+      "record_type": "food-hunt",
+      "name": "Panuchos + Salbutes Hunt",
+      "status": "candidate",
+      "summary": "Two classic fried masa snacks: bean-filled panuchos and puffier salbutes, usually topped with meat, pickled onion and vegetables.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Cancún / Yucatán",
+        "address": null,
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "regionwide"
+      },
+      "budget": {
+        "band": "cheap",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "not-applicable",
+        "notes": null
+      },
+      "best_for": [
+        "snack",
+        "lunch"
+      ],
+      "order_this": [
+        "panuchos",
+        "salbutes"
+      ],
+      "tags": [
+        "yucatecan",
+        "street-food",
+        "regional-essential",
+        "food-quest"
+      ],
+      "vibe": [
+        "market",
+        "casual"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": false,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": false,
+        "refresh_before_trip": false,
+        "notes": "Regional food/drink quest is not tied to one business."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Yucatán salbutes and panuchos",
+          "url": "https://yucatan.travel/en/flavor/245-traditional-yucatecan-snacks-salbutes-and-panuchos/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "sopa-lima-relleno-negro",
+      "destination": "cancun-yucatan",
+      "record_type": "food-hunt",
+      "name": "Sopa de Lima / Relleno Negro",
+      "status": "candidate",
+      "summary": "A deeper Yucatecan-food branch beyond tacos: citrusy sopa de lima or the dark, smoky-spiced relleno negro.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Cancún / Yucatán",
+        "address": null,
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "regionwide"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "not-applicable",
+        "notes": null
+      },
+      "best_for": [
+        "lunch",
+        "dinner"
+      ],
+      "order_this": [
+        "sopa de lima",
+        "relleno negro"
+      ],
+      "tags": [
+        "yucatecan",
+        "regional",
+        "food-quest"
+      ],
+      "vibe": [
+        "traditional"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": false,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": false,
+        "refresh_before_trip": false,
+        "notes": "Regional food/drink quest is not tied to one business."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Yucatán traditional cuisine",
+          "url": "https://yucatan.travel/gastronomy/la-cocina-tradicional-yucateca-y-sus-sabores-regionales/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "tikin-xic-hunt",
+      "destination": "cancun-yucatan",
+      "record_type": "food-hunt",
+      "name": "Pescado Tikin-Xic",
+      "status": "candidate",
+      "summary": "Yucatecan-style fish seasoned with achiote and citrus; especially logical on an island or coastal seafood day.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Caribbean coast / Yucatán",
+        "address": null,
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "trip-pairing"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "not-applicable",
+        "notes": null
+      },
+      "best_for": [
+        "lunch",
+        "dinner"
+      ],
+      "order_this": [
+        "pescado tikin-xic"
+      ],
+      "tags": [
+        "seafood",
+        "yucatecan",
+        "regional",
+        "food-quest"
+      ],
+      "vibe": [
+        "coastal"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": false,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": false,
+        "refresh_before_trip": false,
+        "notes": "Regional food/drink quest is not tied to one business."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Yucatán traditional cuisine",
+          "url": "https://yucatan.travel/gastronomy/la-cocina-tradicional-yucateca-y-sus-sabores-regionales/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "marquesita-hunt",
+      "destination": "cancun-yucatan",
+      "record_type": "food-hunt",
+      "name": "Marquesita Hunt",
+      "status": "candidate",
+      "summary": "Crunchy rolled Yucatecan street dessert, usually with Edam cheese plus sweet fillings such as cajeta or Nutella.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Cancún / Yucatán",
+        "address": null,
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "regionwide"
+      },
+      "budget": {
+        "band": "cheap",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "not-applicable",
+        "notes": null
+      },
+      "best_for": [
+        "dessert",
+        "night-snack"
+      ],
+      "order_this": [
+        "marquesita with queso de bola"
+      ],
+      "tags": [
+        "dessert",
+        "street-food",
+        "yucatecan",
+        "food-quest"
+      ],
+      "vibe": [
+        "street",
+        "casual"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": false,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": false,
+        "refresh_before_trip": false,
+        "notes": "Regional food/drink quest is not tied to one business."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Cancún tourism food guide",
+          "url": "https://www.turismocancun.mx/restaurantes",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "xtabentun-hunt",
+      "destination": "cancun-yucatan",
+      "record_type": "drink-hunt",
+      "name": "Try Xtabentún",
+      "status": "candidate",
+      "summary": "Regional honey-and-anise liqueur; a distinctly Yucatecan drink quest rather than defaulting to tequila every time.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Yucatán Peninsula",
+        "address": null,
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "regionwide"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "not-applicable",
+        "notes": null
+      },
+      "best_for": [
+        "after-dinner"
+      ],
+      "order_this": [
+        "xtabentún"
+      ],
+      "tags": [
+        "drink",
+        "regional",
+        "liqueur",
+        "yucatecan"
+      ],
+      "vibe": [
+        "regional"
+      ],
+      "alcohol_focus": true,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": false,
+        "refresh_before_trip": false,
+        "notes": "Regional food/drink quest is not tied to one business."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Yucatán gastronomy",
+          "url": "https://yucatan.travel/en/gastronomy/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "parque-palapas-food-night",
+      "destination": "cancun-yucatan",
+      "record_type": "market",
+      "name": "Parque de las Palapas Food Night",
+      "status": "candidate",
+      "summary": "Low-cost downtown food crawl around local snack stalls, desserts and casual Mexican food, with community activity around the square.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Cancún Centro",
+        "address": "Tulipanes LB, Centro, Cancún, Q.R.",
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "worth-travelling"
+      },
+      "budget": {
+        "band": "cheap",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "dinner",
+        "snacks",
+        "dessert"
+      ],
+      "order_this": [
+        "marquesita",
+        "elote",
+        "antojitos"
+      ],
+      "tags": [
+        "street-food",
+        "market",
+        "night",
+        "local",
+        "budget"
+      ],
+      "vibe": [
+        "local",
+        "busy",
+        "casual"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Parque de las Palapas",
+          "url": "https://iculturacancun.com/parque-de-las-palapas/",
+          "source_kind": "official-tourism"
+        },
+        {
+          "label": "Cancún tourism food guide",
+          "url": "https://www.turismocancun.mx/restaurantes",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "market-23",
+      "destination": "cancun-yucatan",
+      "record_type": "market",
+      "name": "Mercado 23 Food Browse",
+      "status": "candidate",
+      "summary": "A more everyday market option for produce, ingredients and simple local eating rather than a polished tourist dining experience.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Cancún Centro",
+        "address": "Jabín 9 6, Cancún, Q.R.",
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "worth-travelling"
+      },
+      "budget": {
+        "band": "cheap",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "needs-check",
+        "notes": null
+      },
+      "best_for": [
+        "breakfast",
+        "lunch",
+        "browse"
+      ],
+      "order_this": [],
+      "tags": [
+        "market",
+        "local",
+        "cheap",
+        "daytime"
+      ],
+      "vibe": [
+        "local",
+        "market"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": false,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Market 23 business listing",
+          "url": null,
+          "source_kind": "business-listing"
+        }
+      ]
+    },
+    {
+      "id": "surfin-burrito",
+      "destination": "cancun-yucatan",
+      "record_type": "venue",
+      "name": "The Surfin Burrito",
+      "status": "candidate",
+      "summary": "Very close to the likely Mayan Monkey base; useful as a cheap, low-effort meal rather than a destination dinner.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Cancún Hotel Zone",
+        "address": "Blvd. Kukulcan Km 9.5, Punta Cancún",
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "easy-from-base"
+      },
+      "budget": {
+        "band": "cheap",
+        "expected_spend_pp": null,
+        "range_low_pp": {
+          "amount": 100,
+          "currency": "MXN"
+        },
+        "range_high_pp": {
+          "amount": 250,
+          "currency": "MXN"
+        },
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "breakfast",
+        "quick-lunch",
+        "late-night"
+      ],
+      "order_this": [
+        "burrito"
+      ],
+      "tags": [
+        "near-base",
+        "burrito",
+        "late-night",
+        "easy"
+      ],
+      "vibe": [
+        "casual",
+        "fast"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "The Surfin Burrito business listing",
+          "url": null,
+          "source_kind": "business-listing"
+        }
+      ]
+    },
+    {
+      "id": "el-pocito",
+      "destination": "cancun-yucatan",
+      "record_type": "venue",
+      "name": "Lonchería El Pocito",
+      "status": "candidate",
+      "summary": "Strong traditional-Mexican/Yucatecan downtown candidate for a deliberate meal away from the Hotel Zone.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Cancún Centro",
+        "address": "31 Norte Lte 23 Mz35 SM 63, Centro, Cancún",
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "worth-travelling"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": {
+          "amount": 200,
+          "currency": "MXN"
+        },
+        "range_high_pp": {
+          "amount": 300,
+          "currency": "MXN"
+        },
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "breakfast",
+        "lunch"
+      ],
+      "order_this": [
+        "Yucatecan specials",
+        "cochinita if available"
+      ],
+      "tags": [
+        "traditional",
+        "yucatecan",
+        "downtown",
+        "local"
+      ],
+      "vibe": [
+        "traditional",
+        "unfussy"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": false,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Lonchería El Pocito business listing",
+          "url": null,
+          "source_kind": "business-listing"
+        }
+      ]
+    },
+    {
+      "id": "emara-yucatecos",
+      "destination": "cancun-yucatan",
+      "record_type": "venue",
+      "name": "Emara Antojitos Yucatecos",
+      "status": "candidate",
+      "summary": "Dedicated Yucatecan antojitos option for panuchos, salbutes and regional dishes without turning the meal into a luxury event.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Cancún Centro",
+        "address": "Xel-ha SM 27, Cancún",
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "worth-travelling"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": {
+          "amount": 200,
+          "currency": "MXN"
+        },
+        "range_high_pp": {
+          "amount": 300,
+          "currency": "MXN"
+        },
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "lunch"
+      ],
+      "order_this": [
+        "panuchos",
+        "salbutes",
+        "regional specials"
+      ],
+      "tags": [
+        "yucatecan",
+        "antojitos",
+        "local"
+      ],
+      "vibe": [
+        "casual",
+        "regional"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": false,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Emara business listing",
+          "url": null,
+          "source_kind": "business-listing"
+        }
+      ]
+    },
+    {
+      "id": "el-fish-fritanga",
+      "destination": "cancun-yucatan",
+      "record_type": "venue",
+      "name": "El Fish Fritanga",
+      "status": "candidate",
+      "summary": "Hotel Zone seafood candidate that is more casual than a luxury seafood room and works well after a beach or south-Hotel-Zone day.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Cancún Hotel Zone",
+        "address": "Blvd. Kukulcan, Zona Hotelera",
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "worth-travelling"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": {
+          "amount": 250,
+          "currency": "MXN"
+        },
+        "range_high_pp": {
+          "amount": 600,
+          "currency": "MXN"
+        },
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "lunch",
+        "dinner"
+      ],
+      "order_this": [
+        "ceviche",
+        "fried fish",
+        "seafood"
+      ],
+      "tags": [
+        "seafood",
+        "hotel-zone",
+        "casual"
+      ],
+      "vibe": [
+        "casual",
+        "waterfront-ish"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "El Fish Fritanga business listing",
+          "url": null,
+          "source_kind": "business-listing"
+        }
+      ]
+    },
+    {
+      "id": "el-galeon-caribe",
+      "destination": "cancun-yucatan",
+      "record_type": "venue",
+      "name": "El Galeón del Caribe",
+      "status": "candidate",
+      "summary": "Lagoon-side, cash-oriented seafood wildcard noted for simple ceviche, fish and shrimp rather than resort-style presentation.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Cancún Hotel Zone",
+        "address": null,
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "worth-travelling"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": {
+          "amount": 250,
+          "currency": "MXN"
+        },
+        "range_high_pp": {
+          "amount": 450,
+          "currency": "MXN"
+        },
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "lunch",
+        "early-dinner"
+      ],
+      "order_this": [
+        "ceviche",
+        "pescadilla",
+        "fried fish"
+      ],
+      "tags": [
+        "seafood",
+        "lagoon",
+        "casual",
+        "cash"
+      ],
+      "vibe": [
+        "simple",
+        "lagoon",
+        "local-ish"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Recent venue reviews summary",
+          "url": "https://wanderlog.com/es/place/details/1131614/el-gale%C3%B3n-del-caribe",
+          "source_kind": "community"
+        }
+      ]
+    },
+    {
+      "id": "taco-express",
+      "destination": "cancun-yucatan",
+      "record_type": "venue",
+      "name": "Taco Express",
+      "status": "candidate",
+      "summary": "Highly rated inexpensive downtown taco stop that can anchor a cheap food run.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Cancún Centro",
+        "address": "Pino SM 23 Local 16, Cancún",
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "worth-travelling"
+      },
+      "budget": {
+        "band": "cheap",
+        "expected_spend_pp": null,
+        "range_low_pp": {
+          "amount": 80,
+          "currency": "MXN"
+        },
+        "range_high_pp": {
+          "amount": 200,
+          "currency": "MXN"
+        },
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "order_this": [
+        "tacos"
+      ],
+      "tags": [
+        "tacos",
+        "cheap",
+        "local",
+        "downtown"
+      ],
+      "vibe": [
+        "fast",
+        "local"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": false,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Taco Express business listing",
+          "url": null,
+          "source_kind": "business-listing"
+        }
+      ]
+    },
+    {
+      "id": "xkat-ik",
+      "destination": "cancun-yucatan",
+      "record_type": "venue",
+      "name": "Xkat-Ik",
+      "status": "candidate",
+      "summary": "Hotel Zone Yucatecan restaurant candidate when regional food is wanted without travelling downtown.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Cancún Hotel Zone",
+        "address": "Blvd. Kukulcan Km 16.2, Cancún",
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "worth-travelling"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": {
+          "amount": 200,
+          "currency": "MXN"
+        },
+        "range_high_pp": {
+          "amount": 600,
+          "currency": "MXN"
+        },
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "lunch",
+        "dinner"
+      ],
+      "order_this": [
+        "regional Yucatecan dishes"
+      ],
+      "tags": [
+        "yucatecan",
+        "hotel-zone",
+        "traditional"
+      ],
+      "vibe": [
+        "sit-down",
+        "regional"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Xkat-Ik business listing",
+          "url": null,
+          "source_kind": "business-listing"
+        }
+      ]
+    },
+    {
+      "id": "mumma-rooftop",
+      "destination": "cancun-yucatan",
+      "record_type": "bar-night",
+      "name": "MUMMA Rooftop",
+      "status": "candidate",
+      "summary": "Downtown rooftop/pool bar option for a social evening without committing to the Hotel Zone club strip.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Cancún Centro",
+        "address": "Av. Carlos Nader 27, Cancún",
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "worth-travelling"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": {
+          "amount": 150,
+          "currency": "MXN"
+        },
+        "range_high_pp": {
+          "amount": 500,
+          "currency": "MXN"
+        },
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "sunset",
+        "drinks",
+        "night"
+      ],
+      "order_this": [
+        "cocktail or beer"
+      ],
+      "tags": [
+        "rooftop",
+        "bar",
+        "social",
+        "night"
+      ],
+      "vibe": [
+        "social",
+        "rooftop",
+        "hostel-ish"
+      ],
+      "alcohol_focus": true,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "MUMMA business listing",
+          "url": null,
+          "source_kind": "business-listing"
+        }
+      ]
+    },
+    {
+      "id": "wander-rooftop",
+      "destination": "cancun-yucatan",
+      "record_type": "bar-night",
+      "name": "Wander Rooftop",
+      "status": "candidate",
+      "summary": "Hotel Zone rooftop candidate for one view-focused cocktail rather than an expensive full evening.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Cancún Hotel Zone",
+        "address": "Canopy by Hilton, Blvd. Kukulcan Km 12.5",
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "worth-travelling"
+      },
+      "budget": {
+        "band": "treat",
+        "expected_spend_pp": null,
+        "range_low_pp": {
+          "amount": 250,
+          "currency": "MXN"
+        },
+        "range_high_pp": {
+          "amount": 600,
+          "currency": "MXN"
+        },
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "sunset",
+        "one-drink"
+      ],
+      "order_this": [
+        "one cocktail"
+      ],
+      "tags": [
+        "rooftop",
+        "view",
+        "cocktails",
+        "sunset"
+      ],
+      "vibe": [
+        "polished",
+        "view"
+      ],
+      "alcohol_focus": true,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Wander Rooftop business listing",
+          "url": null,
+          "source_kind": "business-listing"
+        }
+      ]
+    },
+    {
+      "id": "puerto-juarez-brewery",
+      "destination": "cancun-yucatan",
+      "record_type": "bar-night",
+      "name": "Puerto Juárez Brewery",
+      "status": "candidate",
+      "summary": "Craft-beer option away from the resort strip, potentially pairable with a Puerto Juárez / Isla Mujeres transit day.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Puerto Juárez",
+        "address": "C. 51, Puerto Juárez, Cancún",
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "trip-pairing"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": {
+          "amount": 150,
+          "currency": "MXN"
+        },
+        "range_high_pp": {
+          "amount": 450,
+          "currency": "MXN"
+        },
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "late-afternoon",
+        "evening"
+      ],
+      "order_this": [
+        "local craft beer"
+      ],
+      "tags": [
+        "craft-beer",
+        "bar",
+        "local-ish"
+      ],
+      "vibe": [
+        "casual",
+        "brewery"
+      ],
+      "alcohol_focus": true,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Puerto Juárez Brewery business listing",
+          "url": null,
+          "source_kind": "business-listing"
+        }
+      ]
+    },
+    {
+      "id": "hunter-bar",
+      "destination": "cancun-yucatan",
+      "record_type": "bar-night",
+      "name": "Hunter Bar Cancún",
+      "status": "candidate",
+      "summary": "Very low-cost downtown bar wildcard for a deliberately cheap drink rather than a polished rooftop.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Cancún Centro",
+        "address": "Alcatraces 45, Centro, Cancún",
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "worth-travelling"
+      },
+      "budget": {
+        "band": "cheap",
+        "expected_spend_pp": null,
+        "range_low_pp": {
+          "amount": 50,
+          "currency": "MXN"
+        },
+        "range_high_pp": {
+          "amount": 200,
+          "currency": "MXN"
+        },
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "cheap-drinks",
+        "night"
+      ],
+      "order_this": [
+        "beer or simple drink"
+      ],
+      "tags": [
+        "bar",
+        "cheap",
+        "downtown",
+        "night"
+      ],
+      "vibe": [
+        "basic",
+        "local-nightlife"
+      ],
+      "alcohol_focus": true,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Hunter Bar business listing",
+          "url": null,
+          "source_kind": "business-listing"
+        }
+      ]
+    },
+    {
+      "id": "ancestral-cooking-valladolid",
+      "destination": "cancun-yucatan",
+      "record_type": "food-experience",
+      "name": "Ancestral Maya Cooking Workshop",
+      "status": "candidate",
+      "summary": "Market-to-kitchen cooking experience near Valladolid with cooks descended from Maya communities; ideal attached to a Valladolid/Chichén mission.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Valladolid",
+        "address": null,
+        "country": "Mexico",
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+        "base_relevance": "trip-pairing"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "needs-check",
+        "notes": null
+      },
+      "best_for": [
+        "morning",
+        "lunch"
+      ],
+      "order_this": [
+        "cook the meal"
+      ],
+      "tags": [
+        "cooking",
+        "hands-on",
+        "maya",
+        "culture"
+      ],
+      "vibe": [
+        "hands-on",
+        "cultural"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": false,
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Aldea Xbatún Cocina Ancestral",
+          "url": "https://yucatan.travel/experiencia/231-aldea-xbatun-cocina-ancestral/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    }
+  ]
+}

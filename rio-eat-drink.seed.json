@@ -1,0 +1,1737 @@
+{
+  "meta": {
+    "project": "Cancún → Rio Adventure Index",
+    "dataset_version": "0.1.0",
+    "generated": "2026-10-01",
+    "destination": "rio-beyond",
+    "likely_initial_base": null,
+    "notes": [
+      "Rio base-relative convenience remains unresolved until accommodation is selected.",
+      "Cheap beach rituals, botecos and neighbourhood food are the backbone; rooftops/splurges are intentionally sparse.",
+      "November event records must be refreshed against the exact travel dates."
+    ]
+  },
+  "items": [
+    {
+      "id": "mate-biscoito-globo",
+      "destination": "rio-beyond",
+      "record_type": "food-hunt",
+      "name": "Mate + Biscoito Globo on the Beach",
+      "status": "candidate",
+      "summary": "The simplest Carioca food ritual: iced mate from a beach vendor with salty Biscoito Globo.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Rio beaches",
+        "address": null,
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "cheap",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "not-applicable",
+        "notes": null
+      },
+      "best_for": [
+        "beach",
+        "snack"
+      ],
+      "order_this": [
+        "iced mate",
+        "Biscoito Globo"
+      ],
+      "tags": [
+        "beach",
+        "carioca",
+        "snack",
+        "food-quest"
+      ],
+      "vibe": [
+        "beach",
+        "local"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": false,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": false,
+        "refresh_before_trip": false,
+        "notes": "Regional food/drink quest is not tied to one business."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Riotur: what makes Rio special",
+          "url": "https://riotur.rio/es/destaque/lo-que-hace-que-rio-sea-especial/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "feijoada-hunt",
+      "destination": "rio-beyond",
+      "record_type": "food-hunt",
+      "name": "Find a Proper Feijoada",
+      "status": "candidate",
+      "summary": "Slow-cooked black beans and pork with the classic accompaniments; best treated as a deliberate lunch mission rather than random menu filler.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Rio de Janeiro",
+        "address": null,
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "not-applicable",
+        "notes": null
+      },
+      "best_for": [
+        "lunch",
+        "weekend"
+      ],
+      "order_this": [
+        "feijoada"
+      ],
+      "tags": [
+        "brazilian",
+        "feijoada",
+        "regional-essential",
+        "food-quest"
+      ],
+      "vibe": [
+        "traditional"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": false,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": false,
+        "refresh_before_trip": false,
+        "notes": "Regional food/drink quest is not tied to one business."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Bar do Momo",
+          "url": "https://riotur.rio/onde_comer/bar-do-momo-4/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "boteco-snack-hunt",
+      "destination": "rio-beyond",
+      "record_type": "food-hunt",
+      "name": "Boteco Snack Hunt",
+      "status": "candidate",
+      "summary": "Build a cheap grazing night around bolinhos, coxinha, pastel, codfish snacks, sausage, farofa and cold beer.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Rio de Janeiro",
+        "address": null,
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "cheap",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "not-applicable",
+        "notes": null
+      },
+      "best_for": [
+        "afternoon",
+        "evening"
+      ],
+      "order_this": [
+        "bolinho",
+        "coxinha",
+        "pastel"
+      ],
+      "tags": [
+        "boteco",
+        "snacks",
+        "cheap",
+        "food-quest"
+      ],
+      "vibe": [
+        "social",
+        "casual"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": false,
+        "refresh_before_trip": false,
+        "notes": "Regional food/drink quest is not tied to one business."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Riotur cultural bars",
+          "url": "https://riotur.rio/editorial/patrimonio-cultural-carioca-bares/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "acai-juice-hunt",
+      "destination": "rio-beyond",
+      "record_type": "food-hunt",
+      "name": "Açaí + Juice-Bar Stop",
+      "status": "candidate",
+      "summary": "Cheap pre/post-beach food: açaí bowl or one of Rio's ubiquitous fresh juices rather than another sit-down meal.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "South Zone",
+        "address": null,
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "cheap",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "not-applicable",
+        "notes": null
+      },
+      "best_for": [
+        "breakfast",
+        "snack",
+        "post-beach"
+      ],
+      "order_this": [
+        "açaí",
+        "fresh juice"
+      ],
+      "tags": [
+        "acai",
+        "juice",
+        "beach",
+        "cheap"
+      ],
+      "vibe": [
+        "casual"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": false,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": false,
+        "refresh_before_trip": false,
+        "notes": "Regional food/drink quest is not tied to one business."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Riotur Ipanema food guide",
+          "url": "https://riotur.rio/onde_comer/nossa-senhora-da-paz/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "caipirinha-cachaca",
+      "destination": "rio-beyond",
+      "record_type": "drink-hunt",
+      "name": "Caipirinha + Cachaça",
+      "status": "candidate",
+      "summary": "Try the classic caipirinha, then if interested taste cachaça itself instead of treating it only as cocktail fuel.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Rio de Janeiro",
+        "address": null,
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "not-applicable",
+        "notes": null
+      },
+      "best_for": [
+        "evening",
+        "after-dinner"
+      ],
+      "order_this": [
+        "caipirinha",
+        "cachaça"
+      ],
+      "tags": [
+        "drink",
+        "cachaca",
+        "caipirinha",
+        "brazilian"
+      ],
+      "vibe": [
+        "regional"
+      ],
+      "alcohol_focus": true,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": false,
+        "refresh_before_trip": false,
+        "notes": "Regional food/drink quest is not tied to one business."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Academia da Cachaça",
+          "url": "https://riotur.rio/onde_comer/academia-da-cachaca/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "mureta-urca",
+      "destination": "rio-beyond",
+      "record_type": "bar-night",
+      "name": "Mureta da Urca Sunset",
+      "status": "candidate",
+      "summary": "Buy a cold beer or simple snacks nearby and sit on the seawall for sunset — a view-led evening without rooftop-bar pricing.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Urca",
+        "address": "Mureta da Urca, Urca, Rio de Janeiro",
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "cheap",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "needs-check",
+        "notes": null
+      },
+      "best_for": [
+        "sunset",
+        "early-evening"
+      ],
+      "order_this": [
+        "cold beer",
+        "simple snack"
+      ],
+      "tags": [
+        "sunset",
+        "beer",
+        "view",
+        "cheap",
+        "outdoors"
+      ],
+      "vibe": [
+        "outdoors",
+        "local",
+        "view"
+      ],
+      "alcohol_focus": true,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Mureta da Urca business listing",
+          "url": null,
+          "source_kind": "business-listing"
+        }
+      ]
+    },
+    {
+      "id": "adega-perola",
+      "destination": "rio-beyond",
+      "record_type": "venue",
+      "name": "Adega Pérola",
+      "status": "candidate",
+      "summary": "Historic Copacabana boteco with dozens of seafood and Portuguese-style snacks sold by weight; cultural-heritage status makes it more than just a bar.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Copacabana",
+        "address": "Rua Siqueira Campos 138, Copacabana",
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "late-lunch",
+        "evening"
+      ],
+      "order_this": [
+        "seafood snacks",
+        "draft beer"
+      ],
+      "tags": [
+        "boteco",
+        "seafood",
+        "heritage",
+        "snacks"
+      ],
+      "vibe": [
+        "old-school",
+        "busy",
+        "heritage"
+      ],
+      "alcohol_focus": true,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Riotur Adega Pérola",
+          "url": "https://riotur.rio/onde_comer/adega-perola-4/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "bar-do-momo",
+      "destination": "rio-beyond",
+      "record_type": "venue",
+      "name": "Bar do Momo",
+      "status": "candidate",
+      "summary": "Tijuca heritage boteco known for creative savoury snacks and a popular Friday-to-Sunday feijoada.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Tijuca",
+        "address": "Rua General Espírito Santo Cardoso 50A, Tijuca",
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "lunch",
+        "afternoon"
+      ],
+      "order_this": [
+        "coxinha de rabada",
+        "bolinho",
+        "feijoada"
+      ],
+      "tags": [
+        "boteco",
+        "heritage",
+        "feijoada",
+        "snacks"
+      ],
+      "vibe": [
+        "neighbourhood",
+        "old-school",
+        "local"
+      ],
+      "alcohol_focus": true,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Riotur Bar do Momo",
+          "url": "https://riotur.rio/onde_comer/bar-do-momo-4/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "beco-rato-samba",
+      "destination": "rio-beyond",
+      "record_type": "bar-night",
+      "name": "Beco do Rato: Samba + Feijoada",
+      "status": "candidate",
+      "summary": "Saturday afternoon samba with cheap entry timing and a R$40 feijoada makes this one of the strongest value culture-plus-food entries.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Lapa",
+        "address": "Rua Joaquim Silva 11, Lapa",
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "cheap",
+        "expected_spend_pp": {
+          "amount": 65,
+          "currency": "BRL"
+        },
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "verified-current",
+        "notes": null
+      },
+      "best_for": [
+        "saturday-lunch",
+        "afternoon",
+        "evening"
+      ],
+      "order_this": [
+        "feijoada",
+        "beer or caipirinha"
+      ],
+      "tags": [
+        "samba",
+        "feijoada",
+        "music",
+        "night",
+        "value"
+      ],
+      "vibe": [
+        "live-music",
+        "social",
+        "carioca"
+      ],
+      "alcohol_focus": true,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Riotur November 2026 Beco do Rato",
+          "url": "https://riotur.rio/evento-calendario/banda-beco-do-rato-no-beco-do-rato-dia-22-de-novembro/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "bip-bip",
+      "destination": "rio-beyond",
+      "record_type": "bar-night",
+      "name": "Bip Bip",
+      "status": "candidate",
+      "summary": "Tiny Copacabana music bar: the opposite of a polished nightlife venue, kept as an old-school samba/choro option.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Copacabana",
+        "address": "Rua Almirante Gonçalves 50, Copacabana",
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "cheap",
+        "expected_spend_pp": null,
+        "range_low_pp": {
+          "amount": 20,
+          "currency": "BRL"
+        },
+        "range_high_pp": {
+          "amount": 80,
+          "currency": "BRL"
+        },
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "late-evening"
+      ],
+      "order_this": [
+        "beer"
+      ],
+      "tags": [
+        "music",
+        "small-bar",
+        "samba",
+        "choro",
+        "local"
+      ],
+      "vibe": [
+        "tiny",
+        "informal",
+        "music-first"
+      ],
+      "alcohol_focus": true,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Bip Bip business listing",
+          "url": null,
+          "source_kind": "business-listing"
+        }
+      ]
+    },
+    {
+      "id": "bar-do-omar",
+      "destination": "rio-beyond",
+      "record_type": "bar-night",
+      "name": "Bar do Omar",
+      "status": "candidate",
+      "summary": "Harbour-view bar with cold beer, food, sunset and recurring samba circles; a strong alternative to expensive hotel rooftops.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Santo Cristo",
+        "address": "Rua Sara 114, Santo Cristo",
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "sunset",
+        "samba-night"
+      ],
+      "order_this": [
+        "beer",
+        "petiscos"
+      ],
+      "tags": [
+        "sunset",
+        "samba",
+        "view",
+        "bar"
+      ],
+      "vibe": [
+        "view",
+        "local",
+        "music"
+      ],
+      "alcohol_focus": true,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Riotur Bar do Omar",
+          "url": "https://riotur.rio/en/onde_comer/bar-do-omar-2/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "os-imortais",
+      "destination": "rio-beyond",
+      "record_type": "bar-night",
+      "name": "Os Imortais",
+      "status": "candidate",
+      "summary": "Copacabana bar with unusually useful budget promotions; current listings include R$6.90 chopp during some weekday happy-hour windows.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Copacabana",
+        "address": "Rua Ronald de Carvalho 147/154, Copacabana",
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "cheap",
+        "expected_spend_pp": null,
+        "range_low_pp": {
+          "amount": 30,
+          "currency": "BRL"
+        },
+        "range_high_pp": {
+          "amount": 100,
+          "currency": "BRL"
+        },
+        "pricing_status": "verified-current",
+        "notes": null
+      },
+      "best_for": [
+        "happy-hour",
+        "evening"
+      ],
+      "order_this": [
+        "chopp",
+        "petiscos"
+      ],
+      "tags": [
+        "happy-hour",
+        "cheap",
+        "boteco",
+        "copacabana"
+      ],
+      "vibe": [
+        "casual",
+        "social"
+      ],
+      "alcohol_focus": true,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Riotur Os Imortais",
+          "url": "https://riotur.rio/onde_comer/os-imortais/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "bar-do-mineiro",
+      "destination": "rio-beyond",
+      "record_type": "venue",
+      "name": "Bar do Mineiro",
+      "status": "candidate",
+      "summary": "Santa Teresa classic for feijoada, carne seca, pastel and cachaça — ideal paired with a neighbourhood wandering day.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Santa Teresa",
+        "address": "Rua Paschoal Carlos Magno 99, Santa Teresa",
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "trip-pairing"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "lunch",
+        "dinner"
+      ],
+      "order_this": [
+        "feijoada",
+        "carne seca",
+        "pastel",
+        "cachaça"
+      ],
+      "tags": [
+        "brazilian",
+        "feijoada",
+        "cachaca",
+        "neighbourhood"
+      ],
+      "vibe": [
+        "classic",
+        "neighbourhood"
+      ],
+      "alcohol_focus": true,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Bar do Mineiro business listing",
+          "url": null,
+          "source_kind": "business-listing"
+        }
+      ]
+    },
+    {
+      "id": "adega-velha",
+      "destination": "rio-beyond",
+      "record_type": "venue",
+      "name": "Adega da Velha",
+      "status": "candidate",
+      "summary": "Botafogo heritage bar for northeastern Brazilian food, cachaça, baião de dois, carne seca and queijo coalho.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Botafogo",
+        "address": "Rua Paulo Barreto 25, Botafogo",
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "lunch",
+        "dinner"
+      ],
+      "order_this": [
+        "carne de sol",
+        "baião de dois",
+        "cachaça"
+      ],
+      "tags": [
+        "heritage",
+        "northeastern",
+        "cachaca",
+        "boteco"
+      ],
+      "vibe": [
+        "heritage",
+        "neighbourhood"
+      ],
+      "alcohol_focus": true,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Riotur Adega da Velha",
+          "url": "https://riotur.rio/onde_comer/adega-da-velha/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "academia-cachaca",
+      "destination": "rio-beyond",
+      "record_type": "venue",
+      "name": "Academia da Cachaça",
+      "status": "candidate",
+      "summary": "A deliberate cachaça-and-caipirinha tasting stop with Brazilian food; useful if we want to learn the spirit rather than just drink one cocktail.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Leblon",
+        "address": "Rua Conde Bernadotte 26, Leblon",
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "treat",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "dinner",
+        "drinks"
+      ],
+      "order_this": [
+        "caipirinha acadêmica",
+        "cachaça flight",
+        "feijoada"
+      ],
+      "tags": [
+        "cachaca",
+        "caipirinha",
+        "tasting",
+        "brazilian"
+      ],
+      "vibe": [
+        "established",
+        "sit-down"
+      ],
+      "alcohol_focus": true,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Riotur Academia da Cachaça",
+          "url": "https://riotur.rio/onde_comer/academia-da-cachaca/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "polissucos",
+      "destination": "rio-beyond",
+      "record_type": "venue",
+      "name": "Polis Sucos",
+      "status": "candidate",
+      "summary": "Old-school Ipanema juice stop for an inexpensive açaí, vitamin or juice around a beach day.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Ipanema",
+        "address": "Rua Maria Quitéria 70, Ipanema",
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "cheap",
+        "expected_spend_pp": null,
+        "range_low_pp": {
+          "amount": 15,
+          "currency": "BRL"
+        },
+        "range_high_pp": {
+          "amount": 40,
+          "currency": "BRL"
+        },
+        "pricing_status": "verified-current",
+        "notes": null
+      },
+      "best_for": [
+        "breakfast",
+        "snack",
+        "post-beach"
+      ],
+      "order_this": [
+        "açaí",
+        "fresh juice"
+      ],
+      "tags": [
+        "juice",
+        "acai",
+        "breakfast",
+        "beach"
+      ],
+      "vibe": [
+        "casual",
+        "quick"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": false,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Riotur Ipanema food guide",
+          "url": "https://riotur.rio/onde_comer/nossa-senhora-da-paz/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "beach-kiosk-hunt",
+      "destination": "rio-beyond",
+      "record_type": "food-hunt",
+      "name": "Pick a Good Beach Kiosk",
+      "status": "candidate",
+      "summary": "Use the beach kiosks as flexible low-effort meals or drinks rather than building every beach day around a restaurant reservation.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Rio beachfront",
+        "address": null,
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "not-applicable",
+        "notes": null
+      },
+      "best_for": [
+        "lunch",
+        "snack",
+        "sunset"
+      ],
+      "order_this": [
+        "juice",
+        "açaí",
+        "simple Brazilian dish"
+      ],
+      "tags": [
+        "beach",
+        "kiosk",
+        "casual",
+        "flexible"
+      ],
+      "vibe": [
+        "beach",
+        "casual"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": false,
+        "refresh_before_trip": false,
+        "notes": "Regional food/drink quest is not tied to one business."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Riotur Sabores da Orla 2026",
+          "url": "https://riotur.rio/editorial/premio-sabores-da-orla-2026/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "rio-barcia",
+      "destination": "rio-beyond",
+      "record_type": "venue",
+      "name": "Rio Barcia",
+      "status": "candidate",
+      "summary": "Low-cost Centro restaurant/bar wildcard with a current R$20–40 price band; useful for keeping a central-city day cheap.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Centro",
+        "address": "Rua Riachuelo 360, Centro",
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "cheap",
+        "expected_spend_pp": null,
+        "range_low_pp": {
+          "amount": 20,
+          "currency": "BRL"
+        },
+        "range_high_pp": {
+          "amount": 40,
+          "currency": "BRL"
+        },
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "order_this": [
+        "daily Brazilian plate"
+      ],
+      "tags": [
+        "cheap",
+        "centro",
+        "local",
+        "budget"
+      ],
+      "vibe": [
+        "simple",
+        "budget"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Rio Barcia business listing",
+          "url": null,
+          "source_kind": "business-listing"
+        }
+      ]
+    },
+    {
+      "id": "braseiro-labuta",
+      "destination": "rio-beyond",
+      "record_type": "venue",
+      "name": "Braseiro Labuta",
+      "status": "candidate",
+      "summary": "Mid-range Brazilian barbecue candidate in Centro when we want a proper meat meal without jumping to luxury churrascaria prices.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Centro",
+        "address": "Rua do Senado 65, Centro",
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": {
+          "amount": 80,
+          "currency": "BRL"
+        },
+        "range_high_pp": {
+          "amount": 160,
+          "currency": "BRL"
+        },
+        "pricing_status": "good-estimate",
+        "notes": null
+      },
+      "best_for": [
+        "lunch",
+        "dinner"
+      ],
+      "order_this": [
+        "grilled meat"
+      ],
+      "tags": [
+        "barbecue",
+        "brazilian",
+        "meat",
+        "centro"
+      ],
+      "vibe": [
+        "casual",
+        "meat-focused"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Braseiro Labuta business listing",
+          "url": null,
+          "source_kind": "business-listing"
+        }
+      ]
+    },
+    {
+      "id": "vizta-rooftop",
+      "destination": "rio-beyond",
+      "record_type": "bar-night",
+      "name": "Vizta Rooftop",
+      "status": "candidate",
+      "summary": "Copacabana rooftop cocktail candidate kept as a view/treat option, not a default night out.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Copacabana",
+        "address": "Av. Atlântica 3716, Copacabana",
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "treat",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "needs-check",
+        "notes": null
+      },
+      "best_for": [
+        "sunset",
+        "one-drink"
+      ],
+      "order_this": [
+        "one cocktail"
+      ],
+      "tags": [
+        "rooftop",
+        "view",
+        "cocktails",
+        "sunset"
+      ],
+      "vibe": [
+        "polished",
+        "view"
+      ],
+      "alcohol_focus": true,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Vizta Rooftop business listing",
+          "url": null,
+          "source_kind": "business-listing"
+        }
+      ]
+    },
+    {
+      "id": "slow-bakery",
+      "destination": "rio-beyond",
+      "record_type": "venue",
+      "name": "Slow Bakery",
+      "status": "candidate",
+      "summary": "Brunch/bakery option that earned Rio Show's 2026 best-brunch recognition; useful for one quality breakfast rather than another dinner splurge.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Botafogo",
+        "address": null,
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "needs-check",
+        "notes": null
+      },
+      "best_for": [
+        "breakfast",
+        "brunch"
+      ],
+      "order_this": [
+        "bread",
+        "brunch item"
+      ],
+      "tags": [
+        "bakery",
+        "brunch",
+        "breakfast",
+        "award-2026"
+      ],
+      "vibe": [
+        "modern",
+        "daytime"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": false,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Rio Show Gastronomy 2026 via Riotur",
+          "url": "https://riotur.rio/editorial/premio-rio-show-de-gastronomia-2026-reconhece-restaurantes-bares-e-chefs-que-se-destacam-no-rio/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "ferro-farinha",
+      "destination": "rio-beyond",
+      "record_type": "venue",
+      "name": "Ferro e Farinha",
+      "status": "candidate",
+      "summary": "Pizza wildcard that won Rio Show's 2026 best-pizzeria category; included for variety rather than because every meal must be Brazilian.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Ipanema / Rio",
+        "address": null,
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "normal",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "needs-check",
+        "notes": null
+      },
+      "best_for": [
+        "dinner"
+      ],
+      "order_this": [
+        "pizza"
+      ],
+      "tags": [
+        "pizza",
+        "award-2026",
+        "casual"
+      ],
+      "vibe": [
+        "casual",
+        "modern"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Rio Show Gastronomy 2026 via Riotur",
+          "url": "https://riotur.rio/editorial/premio-rio-show-de-gastronomia-2026-reconhece-restaurantes-bares-e-chefs-que-se-destacam-no-rio/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "satyricon-splurge",
+      "destination": "rio-beyond",
+      "record_type": "venue",
+      "name": "Satyricon",
+      "status": "candidate",
+      "summary": "One deliberate seafood splurge wildcard; it won Rio Show's 2026 fish-and-seafood category, but it should never dominate the recommendations.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Ipanema",
+        "address": "Rua Barão da Torre 192, Ipanema",
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "splurge",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "needs-check",
+        "notes": null
+      },
+      "best_for": [
+        "special-dinner"
+      ],
+      "order_this": [
+        "fish or seafood"
+      ],
+      "tags": [
+        "seafood",
+        "special-meal",
+        "award-2026",
+        "splurge"
+      ],
+      "vibe": [
+        "special",
+        "sit-down"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "high",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Rio Show Gastronomy 2026 via Riotur",
+          "url": "https://riotur.rio/editorial/premio-rio-show-de-gastronomia-2026-reconhece-restaurantes-bares-e-chefs-que-se-destacam-no-rio/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    },
+    {
+      "id": "samba-feijoada-muhcab",
+      "destination": "rio-beyond",
+      "record_type": "food-experience",
+      "name": "Samba + Feijoada at MUHCAB (if dates line up)",
+      "status": "seasonal",
+      "summary": "November-specific culture-and-food wildcard around Black Consciousness Month programming; calendar-dependent rather than a permanent recommendation.",
+      "why_it_is_here": null,
+      "location": {
+        "area": "Gamboa",
+        "address": null,
+        "country": "Brazil",
+        "base_anchor": null,
+        "base_relevance": "base-unknown"
+      },
+      "budget": {
+        "band": "cheap",
+        "expected_spend_pp": null,
+        "range_low_pp": null,
+        "range_high_pp": null,
+        "pricing_status": "needs-check",
+        "notes": null
+      },
+      "best_for": [
+        "november-event",
+        "lunch",
+        "afternoon"
+      ],
+      "order_this": [
+        "feijoada"
+      ],
+      "tags": [
+        "november",
+        "samba",
+        "feijoada",
+        "culture",
+        "event"
+      ],
+      "vibe": [
+        "cultural",
+        "event"
+      ],
+      "alcohol_focus": false,
+      "evening_friendly": true,
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "pair_with": [],
+      "freshness": {
+        "venue_sensitive": true,
+        "refresh_before_trip": true,
+        "notes": "Venue-specific opening hours/prices should be refreshed shortly before visiting."
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Riotur Novembro Negro at MUHCAB",
+          "url": "https://riotur.rio/evento/novembro-negro-no-muhcab/",
+          "source_kind": "official-tourism"
+        }
+      ]
+    }
+  ]
+}

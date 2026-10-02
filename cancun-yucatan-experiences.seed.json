@@ -1,0 +1,3362 @@
+{
+  "meta": {
+    "project": "Cancún → Rio Adventure Index",
+    "schema_version": "0.2.0",
+    "dataset_version": "0.2.0",
+    "generated": "2026-10-01",
+    "destination": "cancun-yucatan",
+    "likely_initial_base": "Mayan Monkey Cancún, Km 9.5 Hotel Zone",
+    "currency": "MXN",
+    "aud_reference_rate": {
+      "mxn": 100,
+      "aud": 7.8828,
+      "as_of": "2026-10-01"
+    },
+    "notes": [
+      "This is a research seed, not final booking data.",
+      "Exact fares, operating days and operator prices should be refreshed before booking.",
+      "Preference fields are intentionally present now so a later shared-selection layer does not require a schema migration.",
+      "Experience records remain independent even when smart_combos link geographically sensible pairings."
+    ]
+  },
+  "experiences": [
+    {
+      "id": "nichupte-sunset-kayak",
+      "destination": "cancun-yucatan",
+      "name": "Nichupté Sunset Kayak",
+      "status": "candidate",
+      "mission_type": "easy-win",
+      "categories": [
+        "water",
+        "paddling"
+      ],
+      "summary": "Guided paddle through Nichupté mangrove channels around sunset.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Cancún",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 900,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": {
+          "amount": 924,
+          "currency": "MXN"
+        },
+        "mission_price_two_people_estimate": {
+          "amount": 1848,
+          "currency": "MXN"
+        },
+        "display_estimates": [
+          {
+            "label": "Approx AUD per person",
+            "money": {
+              "amount": 73,
+              "currency": "AUD"
+            },
+            "rate_as_of": "2026-10-01"
+          }
+        ]
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "low",
+        "options": [
+          {
+            "mode": "bus",
+            "label": "Hotel Zone bus / short local transfer",
+            "travel_time_hours_return": null,
+            "confidence": "good-estimate",
+            "notes": "Exact pickup point depends on operator.",
+            "return_price_pp": {
+              "amount": 24,
+              "currency": "MXN"
+            },
+            "total_vehicle_price": null
+          }
+        ]
+      },
+      "power_ups": [
+        "public-transport-win",
+        "swimwear",
+        "weather-window"
+      ],
+      "tags": [
+        "half-day",
+        "sunset",
+        "no-car",
+        "easy-from-base"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Cancún Kayak",
+          "url": "https://www.cancunkayak.com/"
+        }
+      ]
+    },
+    {
+      "id": "nichupte-speedboat",
+      "destination": "cancun-yucatan",
+      "name": "Drive-Your-Own Nichupté Speedboat",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "water",
+        "driving",
+        "adrenaline"
+      ],
+      "summary": "Pilot a small speedboat through the lagoon and mangroves, with snorkelling on some variants.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Cancún",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "public-transport-win",
+        "swimwear",
+        "weather-window"
+      ],
+      "tags": [
+        "half-day",
+        "no-car",
+        "different-verb"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Jungle Tour Cancún",
+          "url": "https://www.jungletourcancun.com/"
+        }
+      ]
+    },
+    {
+      "id": "musa-punta-nizuc",
+      "destination": "cancun-yucatan",
+      "name": "MUSA Punta Nizuc Snorkel",
+      "status": "candidate",
+      "mission_type": "easy-win",
+      "categories": [
+        "water",
+        "snorkelling",
+        "culture"
+      ],
+      "summary": "Snorkel above submerged sculptures at the underwater museum near Punta Nizuc.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Cancún Hotel Zone",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "public-transport-win",
+        "swimwear",
+        "sun-protection"
+      ],
+      "tags": [
+        "underwater-art",
+        "half-day",
+        "no-car",
+        "easy-from-base"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "MUSA México",
+          "url": "https://musamexico.org/"
+        }
+      ]
+    },
+    {
+      "id": "isla-mujeres",
+      "destination": "cancun-yucatan",
+      "name": "Independent Isla Mujeres Day",
+      "status": "candidate",
+      "mission_type": "easy-win",
+      "categories": [
+        "island",
+        "water"
+      ],
+      "summary": "Independent ferry day with beaches, swimming and island exploration.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Isla Mujeres",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 580,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": {
+          "amount": 610,
+          "currency": "MXN"
+        },
+        "mission_price_two_people_estimate": {
+          "amount": 1220,
+          "currency": "MXN"
+        },
+        "display_estimates": [
+          {
+            "label": "Approx AUD per person",
+            "money": {
+              "amount": 48,
+              "currency": "AUD"
+            },
+            "rate_as_of": "2026-10-01"
+          }
+        ]
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": [
+          {
+            "mode": "ferry",
+            "label": "Puerto Juárez ↔ Isla Mujeres",
+            "travel_time_hours_return": null,
+            "confidence": "verified",
+            "notes": "Add cheap Cancún local bus to Puerto Juárez.",
+            "return_price_pp": {
+              "amount": 580,
+              "currency": "MXN"
+            },
+            "total_vehicle_price": null
+          }
+        ]
+      },
+      "power_ups": [
+        "public-transport-win",
+        "ferry",
+        "sun-protection"
+      ],
+      "tags": [
+        "full-day",
+        "no-car",
+        "flexible",
+        "easy-win"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy",
+      "tourist_level": "iconic",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Ultramar",
+          "url": "https://www.ultramarferry.com/"
+        }
+      ]
+    },
+    {
+      "id": "isla-contoy",
+      "destination": "cancun-yucatan",
+      "name": "Isla Contoy Nature Day",
+      "status": "candidate",
+      "mission_type": "big-mission",
+      "categories": [
+        "island",
+        "wildlife",
+        "snorkelling"
+      ],
+      "summary": "Protected-island day focused on birdlife, nature, beaches and snorkelling.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Isla Contoy",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "advance-booking",
+        "weather-window",
+        "sun-protection"
+      ],
+      "tags": [
+        "full-day",
+        "protected-area",
+        "boat"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "CONANP",
+          "url": "https://descubreanp.conanp.gob.mx/"
+        }
+      ]
+    },
+    {
+      "id": "puerto-morelos-reef",
+      "destination": "cancun-yucatan",
+      "name": "Puerto Morelos Reef Snorkel",
+      "status": "candidate",
+      "mission_type": "easy-win",
+      "categories": [
+        "water",
+        "wildlife",
+        "snorkelling"
+      ],
+      "summary": "Short reef-snorkelling mission from the quieter town of Puerto Morelos.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Puerto Morelos",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 700,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": {
+          "amount": 1000,
+          "currency": "MXN"
+        },
+        "mission_price_two_people_estimate": {
+          "amount": 2000,
+          "currency": "MXN"
+        },
+        "display_estimates": [
+          {
+            "label": "Approx AUD per person",
+            "money": {
+              "amount": 79,
+              "currency": "AUD"
+            },
+            "rate_as_of": "2026-10-01"
+          }
+        ]
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "low",
+        "options": []
+      },
+      "power_ups": [
+        "public-transport-win",
+        "swimwear",
+        "sun-protection"
+      ],
+      "tags": [
+        "half-day",
+        "reef",
+        "good-value",
+        "public-transport"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Dive Puerto Morelos",
+          "url": "https://divepuertomorelos.com/"
+        }
+      ]
+    },
+    {
+      "id": "ruta-cenotes",
+      "destination": "cancun-yucatan",
+      "name": "Build-Your-Own Ruta de los Cenotes",
+      "status": "candidate",
+      "mission_type": "build-your-own",
+      "categories": [
+        "water",
+        "caving",
+        "road-trip"
+      ],
+      "summary": "Choose two or more cenotes and turn the inland route into a self-directed swimming/cave day.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Puerto Morelos inland",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "strong",
+        "options": []
+      },
+      "power_ups": [
+        "rental-car",
+        "swimwear",
+        "cash"
+      ],
+      "tags": [
+        "car-power-up",
+        "cenotes",
+        "flexible",
+        "full-day"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Puerto Morelos Municipality",
+          "url": "https://puertomorelos.gob.mx/"
+        }
+      ]
+    },
+    {
+      "id": "rio-secreto",
+      "destination": "cancun-yucatan",
+      "name": "Río Secreto Underground River",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "water",
+        "caving"
+      ],
+      "summary": "Walk and swim through a guided underground river and cave system.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Playa del Carmen area",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "tour-transfer",
+        "swimwear",
+        "advance-booking"
+      ],
+      "tags": [
+        "underground",
+        "half-day",
+        "tour-transfer"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "excellent",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "moderate",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Río Secreto",
+          "url": "https://www.riosecreto.com/"
+        }
+      ]
+    },
+    {
+      "id": "dos-ojos-snorkel",
+      "destination": "cancun-yucatan",
+      "name": "Dos Ojos Cavern Snorkel",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "water",
+        "caving",
+        "snorkelling"
+      ],
+      "summary": "Guided cavern swimming/snorkelling through the Dos Ojos system.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Tulum area",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 1200,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "rental-car",
+        "swimwear",
+        "advance-booking"
+      ],
+      "tags": [
+        "underground",
+        "cenote",
+        "half-day"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "excellent",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "moderate",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Cenote Dos Ojos",
+          "url": "https://cenotedosojos.mx/"
+        }
+      ]
+    },
+    {
+      "id": "cenote-diving",
+      "destination": "cancun-yucatan",
+      "name": "Certified Cenote Diving",
+      "status": "specialist",
+      "mission_type": "specialist",
+      "categories": [
+        "water",
+        "caving",
+        "diving"
+      ],
+      "summary": "Proper cavern diving in Yucatán cenote systems for certified divers.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Tulum / Dos Ojos region",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "splurge",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 2850,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "scuba-certification",
+        "advance-booking",
+        "rental-car"
+      ],
+      "tags": [
+        "specialist",
+        "scuba",
+        "underground"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "excellent",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "specialist",
+      "tourist_level": "specialist",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Dive Dos Ojos",
+          "url": "https://www.divedosojos.com/"
+        }
+      ]
+    },
+    {
+      "id": "zapote-hells-bells",
+      "destination": "cancun-yucatan",
+      "name": "Cenote Zapote / Hells Bells Dive",
+      "status": "specialist",
+      "mission_type": "specialist",
+      "categories": [
+        "water",
+        "caving",
+        "diving"
+      ],
+      "summary": "Specialist dive to the unusual bell-shaped calcite formations deep inside Cenote Zapote.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Puerto Morelos inland",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "splurge",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "scuba-certification",
+        "advance-booking",
+        "rental-car"
+      ],
+      "tags": [
+        "weird",
+        "geology",
+        "specialist"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "excellent",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "specialist",
+      "tourist_level": "specialist",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Scientific Reports",
+          "url": "https://www.nature.com/articles/s41598-023-36777-y"
+        }
+      ]
+    },
+    {
+      "id": "akumal-turtles",
+      "destination": "cancun-yucatan",
+      "name": "Akumal Turtle Snorkel",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "water",
+        "wildlife",
+        "snorkelling"
+      ],
+      "summary": "Guided protected-area snorkelling with sea turtles under regulated wildlife rules.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Akumal",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 725,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "low",
+        "options": []
+      },
+      "power_ups": [
+        "public-transport-win",
+        "advance-booking",
+        "swimwear"
+      ],
+      "tags": [
+        "half-day",
+        "wildlife",
+        "public-transport",
+        "smart-combo"
+      ],
+      "smart_combos": [
+        "tulum-jaguar-park"
+      ],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "CONANP guidance",
+          "url": "https://www.gob.mx/conanp"
+        }
+      ]
+    },
+    {
+      "id": "cozumel-reef",
+      "destination": "cancun-yucatan",
+      "name": "Cozumel Reef Day",
+      "status": "candidate",
+      "mission_type": "big-mission",
+      "categories": [
+        "island",
+        "water",
+        "snorkelling",
+        "diving"
+      ],
+      "summary": "Ferry to Cozumel for a more serious reef snorkel or dive day.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Cozumel",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "public-transport-win",
+        "ferry",
+        "advance-booking",
+        "weather-window"
+      ],
+      "tags": [
+        "full-day",
+        "ferry",
+        "reef"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Ultramar",
+          "url": "https://www.ultramarferry.com/"
+        }
+      ]
+    },
+    {
+      "id": "tulum-jaguar-park",
+      "destination": "cancun-yucatan",
+      "name": "Tulum + Jaguar Park",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "maya-ancient",
+        "water"
+      ],
+      "summary": "Coastal Maya site plus protected natural area and beach access.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Tulum",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 265,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": {
+          "amount": 825,
+          "currency": "MXN"
+        },
+        "mission_price_two_people_estimate": {
+          "amount": 1650,
+          "currency": "MXN"
+        },
+        "display_estimates": [
+          {
+            "label": "Approx AUD per person",
+            "money": {
+              "amount": 65,
+              "currency": "AUD"
+            },
+            "rate_as_of": "2026-10-01"
+          }
+        ]
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "low",
+        "options": []
+      },
+      "power_ups": [
+        "public-transport-win",
+        "sun-protection",
+        "early-start"
+      ],
+      "tags": [
+        "full-day",
+        "iconic",
+        "public-transport",
+        "coast"
+      ],
+      "smart_combos": [
+        "akumal-turtles"
+      ],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "iconic",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "INAH / Sectur",
+          "url": "https://www.gob.mx/sectur"
+        }
+      ]
+    },
+    {
+      "id": "muyil-sian-kaan",
+      "destination": "cancun-yucatan",
+      "name": "Muyil + Sian Ka’an Canal Float",
+      "status": "candidate",
+      "mission_type": "combo",
+      "categories": [
+        "maya-ancient",
+        "water",
+        "wildlife",
+        "paddling"
+      ],
+      "summary": "Maya ruins followed by lagoon navigation and floating through ancient mangrove canals.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Muyil",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 2350,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "advance-booking",
+        "swimwear",
+        "local-guide"
+      ],
+      "tags": [
+        "full-day",
+        "unusual",
+        "community-run",
+        "treat"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "lower-tourist",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "INAH Muyil",
+          "url": "https://lugares.inah.gob.mx/es/node/5811"
+        }
+      ]
+    },
+    {
+      "id": "punta-allen",
+      "destination": "cancun-yucatan",
+      "name": "Punta Allen Wildlife Safari",
+      "status": "candidate",
+      "mission_type": "big-mission",
+      "categories": [
+        "wildlife",
+        "water",
+        "snorkelling"
+      ],
+      "summary": "Boat safari for dolphins, turtles, crocodiles, rays and birds, with reef snorkelling if conditions allow.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Sian Ka’an / Punta Allen",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "advance-booking",
+        "weather-window",
+        "local-guide"
+      ],
+      "tags": [
+        "remote",
+        "full-day",
+        "boat",
+        "wildlife"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "lower-tourist",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Explore Sian Ka'an",
+          "url": "https://exploresiankaan.com/"
+        }
+      ]
+    },
+    {
+      "id": "coba",
+      "destination": "cancun-yucatan",
+      "name": "Cobá Jungle Maya Site",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "maya-ancient",
+        "hiking"
+      ],
+      "summary": "Jungle archaeological site with controlled access to the Nohoch Mul summit.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Cobá",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "cheap",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 210,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "rental-car",
+        "good-shoes",
+        "early-start"
+      ],
+      "tags": [
+        "jungle",
+        "climb",
+        "full-day",
+        "car-helpful"
+      ],
+      "smart_combos": [
+        "punta-laguna"
+      ],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "moderate",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "INAH Cobá",
+          "url": "https://www.inah.gob.mx/zonas/515-zona-arqueologica-de-coba"
+        }
+      ]
+    },
+    {
+      "id": "punta-laguna",
+      "destination": "cancun-yucatan",
+      "name": "Punta Laguna Monkey + Adventure",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "wildlife",
+        "adrenaline",
+        "paddling",
+        "culture"
+      ],
+      "summary": "Track spider monkeys, hike, canoe, zipline, rappel into a cenote and swim in a community-run reserve.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Punta Laguna",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 900,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": {
+          "amount": 1110,
+          "currency": "MXN"
+        },
+        "mission_price_two_people_estimate": {
+          "amount": 2220,
+          "currency": "MXN"
+        },
+        "display_estimates": [
+          {
+            "label": "Approx AUD per person",
+            "money": {
+              "amount": 88,
+              "currency": "AUD"
+            },
+            "rate_as_of": "2026-10-01"
+          }
+        ]
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "strong",
+        "options": []
+      },
+      "power_ups": [
+        "rental-car",
+        "advance-booking",
+        "local-guide",
+        "swimwear"
+      ],
+      "tags": [
+        "monkeys",
+        "canoe",
+        "zipline",
+        "rappel",
+        "community"
+      ],
+      "smart_combos": [
+        "coba"
+      ],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "moderate",
+      "tourist_level": "lower-tourist",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Punta Laguna Monkey Reserve",
+          "url": "https://puntalagunamonkeyreserve.com/"
+        }
+      ]
+    },
+    {
+      "id": "chichen-valladolid-cenote",
+      "destination": "cancun-yucatan",
+      "name": "Chichén Itzá + Valladolid + Cenote",
+      "status": "candidate",
+      "mission_type": "combo",
+      "categories": [
+        "maya-ancient",
+        "water",
+        "road-trip"
+      ],
+      "summary": "Turn the iconic Maya site into a full mission by attaching Valladolid and/or a cenote.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Yucatán interior",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 697,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": {
+          "amount": 1713,
+          "currency": "MXN"
+        },
+        "mission_price_two_people_estimate": {
+          "amount": 3426,
+          "currency": "MXN"
+        },
+        "display_estimates": [
+          {
+            "label": "Approx AUD per person",
+            "money": {
+              "amount": 135,
+              "currency": "AUD"
+            },
+            "rate_as_of": "2026-10-01"
+          }
+        ]
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "early-start",
+        "rental-car",
+        "public-transport-win"
+      ],
+      "tags": [
+        "iconic",
+        "full-day",
+        "smart-combo",
+        "car-power-up"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "excellent",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "iconic",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "INAH Chichén Itzá",
+          "url": "https://www.inah.gob.mx/"
+        }
+      ]
+    },
+    {
+      "id": "valladolid-bike",
+      "destination": "cancun-yucatan",
+      "name": "Valladolid Bike + Cenotes",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "cycling",
+        "culture",
+        "water"
+      ],
+      "summary": "Cycle through town, nearby communities and cenotes rather than only walking the colonial centre.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Valladolid",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 790,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "low",
+        "options": []
+      },
+      "power_ups": [
+        "bike",
+        "public-transport-win",
+        "sun-protection"
+      ],
+      "tags": [
+        "active",
+        "full-day",
+        "town-plus-cenotes"
+      ],
+      "smart_combos": [
+        "ek-balam"
+      ],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "moderate",
+      "tourist_level": "lower-tourist",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Yucatán Travel",
+          "url": "https://yucatan.travel/"
+        }
+      ]
+    },
+    {
+      "id": "ek-balam",
+      "destination": "cancun-yucatan",
+      "name": "Ek’ Balam + Cenote",
+      "status": "candidate",
+      "mission_type": "combo",
+      "categories": [
+        "maya-ancient",
+        "water"
+      ],
+      "summary": "Distinctive Maya architecture paired with a nearby cenote and Valladolid if desired.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Yucatán interior",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 691,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "rental-car",
+        "early-start"
+      ],
+      "tags": [
+        "full-day",
+        "road-trip",
+        "smart-combo"
+      ],
+      "smart_combos": [
+        "valladolid-bike"
+      ],
+      "seasonality": {
+        "november_fit": "excellent",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "INAH Ek' Balam",
+          "url": "https://lugares.inah.gob.mx/"
+        }
+      ]
+    },
+    {
+      "id": "xyaat",
+      "destination": "cancun-yucatan",
+      "name": "Xyaat Living Maya Community",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "culture",
+        "hands-on",
+        "wildlife"
+      ],
+      "summary": "Community-led experience around traditional medicine, milpa farming, henequén, food and local knowledge.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Señor, Quintana Roo",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "price-on-request",
+        "pricing_status": "price-on-request",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "advance-booking",
+        "local-guide",
+        "rental-car",
+        "cash"
+      ],
+      "tags": [
+        "local",
+        "community-run",
+        "low-tourist",
+        "hands-on"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "excellent",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "easy",
+      "tourist_level": "local",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Reserva Natura Xyaat",
+          "url": "https://reservanatura.org/areas-naturales/xyaat/"
+        }
+      ]
+    },
+    {
+      "id": "xaanil-naj",
+      "destination": "cancun-yucatan",
+      "name": "Xa’anil Naj Workshop",
+      "status": "candidate",
+      "mission_type": "build-your-own",
+      "categories": [
+        "culture",
+        "hands-on",
+        "food-adjacent"
+      ],
+      "summary": "Choose from Maya cooking, embroidery, weaving, temazcal or melipona-bee experiences led by local women.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Quintana Roo",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "price-on-request",
+        "pricing_status": "price-on-request",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "advance-booking",
+        "local-guide",
+        "cash"
+      ],
+      "tags": [
+        "cook",
+        "make",
+        "bees",
+        "local",
+        "workshop"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "excellent",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "easy",
+      "tourist_level": "local",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Aldea Maya Xa'anil Naj",
+          "url": "https://www.aldeamayaxaanilnaj.com/"
+        }
+      ]
+    },
+    {
+      "id": "lol-chuy",
+      "destination": "cancun-yucatan",
+      "name": "Lol-Chuy Maya Embroidery Workshop",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "culture",
+        "hands-on"
+      ],
+      "summary": "Spend several hours learning Maya embroidery rather than simply buying finished handicrafts.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "X-Pichil",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "price-on-request",
+        "pricing_status": "price-on-request",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "advance-booking",
+        "local-guide",
+        "cash"
+      ],
+      "tags": [
+        "make",
+        "embroidery",
+        "low-tourist",
+        "workshop"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "excellent",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "easy",
+      "tourist_level": "local",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Reserva Natura Lol-Chuy",
+          "url": "https://reservanatura.org/areas-naturales/lol-chuy/"
+        }
+      ]
+    },
+    {
+      "id": "tihosuco",
+      "destination": "cancun-yucatan",
+      "name": "Tihosuco / U Belilek",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "culture",
+        "hands-on"
+      ],
+      "summary": "Community-led history, traditional medicine, textile work, Maya Paax music and food.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Tihosuco",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "price-on-request",
+        "pricing_status": "price-on-request",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "advance-booking",
+        "local-guide",
+        "cash",
+        "rental-car"
+      ],
+      "tags": [
+        "history",
+        "music",
+        "local",
+        "low-tourist"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "excellent",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "easy",
+      "tourist_level": "local",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Reserva Natura Tihosuco",
+          "url": "https://reservanatura.org/areas-naturales/tihosuco/"
+        }
+      ]
+    },
+    {
+      "id": "tihosuco-maya-sky",
+      "destination": "cancun-yucatan",
+      "name": "Maya Sky / Astronomy at Tihosuco",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "night",
+        "culture"
+      ],
+      "summary": "Night-sky interpretation through Maya cosmology in a darker rural setting.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Tihosuco",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "price-on-request",
+        "pricing_status": "price-on-request",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "advance-booking",
+        "local-guide",
+        "overnight",
+        "rental-car"
+      ],
+      "tags": [
+        "stars",
+        "night",
+        "weird",
+        "low-tourist"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy",
+      "tourist_level": "local",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Reserva Natura Tihosuco",
+          "url": "https://reservanatura.org/areas-naturales/tihosuco/"
+        }
+      ]
+    },
+    {
+      "id": "holbox-mangrove-kayak",
+      "destination": "cancun-yucatan",
+      "name": "Holbox Mangrove Kayak",
+      "status": "candidate",
+      "mission_type": "overnight-unlock",
+      "categories": [
+        "island",
+        "paddling",
+        "wildlife"
+      ],
+      "summary": "Kayak through mangroves as part of an island overnight rather than a rushed day trip.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Holbox",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 850,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": {
+          "amount": 2270,
+          "currency": "MXN"
+        },
+        "mission_price_two_people_estimate": {
+          "amount": 4540,
+          "currency": "MXN"
+        },
+        "display_estimates": [
+          {
+            "label": "Approx AUD per person",
+            "money": {
+              "amount": 179,
+              "currency": "AUD"
+            },
+            "rate_as_of": "2026-10-01"
+          }
+        ]
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "overnight",
+        "ferry",
+        "advance-booking",
+        "weather-window"
+      ],
+      "tags": [
+        "overnight",
+        "kayak",
+        "wildlife"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Tour Holbox",
+          "url": "https://www.tourholbox.com/"
+        }
+      ]
+    },
+    {
+      "id": "holbox-kitesurf",
+      "destination": "cancun-yucatan",
+      "name": "Holbox Kitesurfing",
+      "status": "candidate",
+      "mission_type": "overnight-unlock",
+      "categories": [
+        "island",
+        "water",
+        "adrenaline"
+      ],
+      "summary": "Use the beginning of the windy season for a lesson or session on Holbox.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Holbox",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "overnight",
+        "ferry",
+        "weather-window",
+        "advance-booking"
+      ],
+      "tags": [
+        "overnight",
+        "skill",
+        "kitesurf"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "moderate",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Holbox seasonal reference",
+          "url": "https://www.cancuntripinsider.com/guides/isla-holbox/holbox-in-november"
+        }
+      ]
+    },
+    {
+      "id": "holbox-bioluminescence",
+      "destination": "cancun-yucatan",
+      "name": "Holbox Bioluminescence",
+      "status": "seasonal",
+      "mission_type": "overnight-unlock",
+      "categories": [
+        "island",
+        "night",
+        "water"
+      ],
+      "summary": "Night bioluminescence excursion, retained only as a conditional November wildcard.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Holbox",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "overnight",
+        "ferry",
+        "weather-window"
+      ],
+      "tags": [
+        "night",
+        "weird",
+        "seasonal",
+        "verify-closer"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "verify-closer",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Holbox bioluminescence operator",
+          "url": "https://en-holbox.com.mx/tours/bioluminiscencia/"
+        }
+      ]
+    },
+    {
+      "id": "rio-lagartos-wildlife",
+      "destination": "cancun-yucatan",
+      "name": "Río Lagartos Wildlife Boat",
+      "status": "candidate",
+      "mission_type": "overnight-unlock",
+      "categories": [
+        "wildlife",
+        "water"
+      ],
+      "summary": "Mangrove boat trip for flamingos, birds and crocodiles in the reserve.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Río Lagartos",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 1300,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "overnight",
+        "advance-booking",
+        "weather-window"
+      ],
+      "tags": [
+        "overnight",
+        "birds",
+        "boat",
+        "remote"
+      ],
+      "smart_combos": [
+        "las-coloradas"
+      ],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy",
+      "tourist_level": "lower-tourist",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Yucatán Travel",
+          "url": "https://yucatan.travel/"
+        }
+      ]
+    },
+    {
+      "id": "rio-lagartos-croc-night",
+      "destination": "cancun-yucatan",
+      "name": "Río Lagartos Crocodile Night",
+      "status": "candidate",
+      "mission_type": "overnight-unlock",
+      "categories": [
+        "wildlife",
+        "night",
+        "water"
+      ],
+      "summary": "Night boat mission specifically looking for crocodiles in their habitat.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Río Lagartos",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 1600,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": {
+          "amount": 2350,
+          "currency": "MXN"
+        },
+        "mission_price_two_people_estimate": {
+          "amount": 4700,
+          "currency": "MXN"
+        },
+        "display_estimates": [
+          {
+            "label": "Approx AUD per person",
+            "money": {
+              "amount": 185,
+              "currency": "AUD"
+            },
+            "rate_as_of": "2026-10-01"
+          }
+        ]
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "overnight",
+        "advance-booking",
+        "local-guide"
+      ],
+      "tags": [
+        "night",
+        "crocodiles",
+        "what-the-fuck",
+        "remote"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy",
+      "tourist_level": "lower-tourist",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Yucatán Travel",
+          "url": "https://yucatan.travel/en/experience/055-crocodile-night-in-rio-lagartos/"
+        }
+      ]
+    },
+    {
+      "id": "las-coloradas",
+      "destination": "cancun-yucatan",
+      "name": "Las Coloradas",
+      "status": "candidate",
+      "mission_type": "combo",
+      "categories": [
+        "photography",
+        "road-trip"
+      ],
+      "summary": "Pink salt-lagoon landscape best treated as an add-on to Río Lagartos rather than a standalone long trip.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Yucatán north coast",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "cheap",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "rental-car",
+        "sun-protection"
+      ],
+      "tags": [
+        "landscape",
+        "smart-combo",
+        "no-swimming"
+      ],
+      "smart_combos": [
+        "rio-lagartos-wildlife"
+      ],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Yucatán Travel",
+          "url": "https://yucatan.travel/aventura-y-naturaleza/las-coloradas/"
+        }
+      ]
+    },
+    {
+      "id": "bacalar-kayak",
+      "destination": "cancun-yucatan",
+      "name": "Bacalar Lagoon Kayak",
+      "status": "candidate",
+      "mission_type": "overnight-unlock",
+      "categories": [
+        "water",
+        "paddling"
+      ],
+      "summary": "Self-guided or guided paddle on the Lagoon of Seven Colors as part of an overnight stay.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Bacalar",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 525,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "low",
+        "options": []
+      },
+      "power_ups": [
+        "overnight",
+        "sun-protection",
+        "swimwear"
+      ],
+      "tags": [
+        "overnight",
+        "kayak",
+        "good-value"
+      ],
+      "smart_combos": [
+        "ichkabal"
+      ],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Bacalar kayak rental",
+          "url": "https://lagunaadventuresbacalar.com/"
+        }
+      ]
+    },
+    {
+      "id": "ichkabal",
+      "destination": "cancun-yucatan",
+      "name": "Ichkabal Archaeological Zone",
+      "status": "candidate",
+      "mission_type": "combo",
+      "categories": [
+        "maya-ancient",
+        "road-trip"
+      ],
+      "summary": "Newly accessible large Maya site that works naturally as an add-on to a Bacalar overnight.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Near Bacalar",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "cheap",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 0,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "overnight",
+        "rental-car",
+        "early-start"
+      ],
+      "tags": [
+        "free-entry",
+        "new",
+        "overnight-combo"
+      ],
+      "smart_combos": [
+        "bacalar-kayak"
+      ],
+      "seasonality": {
+        "november_fit": "excellent",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "lower-tourist",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "INAH Ichkabal",
+          "url": "https://lugares.inah.gob.mx/es/node/6157"
+        }
+      ]
+    },
+    {
+      "id": "xplor-fuego",
+      "destination": "cancun-yucatan",
+      "name": "Xplor Fuego",
+      "status": "candidate",
+      "mission_type": "big-mission",
+      "categories": [
+        "adrenaline",
+        "driving",
+        "caving"
+      ],
+      "summary": "High-density commercial adrenaline evening with ziplines, amphibious vehicles, caves and dinner.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Riviera Maya",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "splurge",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 2620,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": {
+          "amount": 3000,
+          "currency": "MXN"
+        },
+        "mission_price_two_people_estimate": {
+          "amount": 6000,
+          "currency": "MXN"
+        },
+        "display_estimates": [
+          {
+            "label": "Approx AUD per person",
+            "money": {
+              "amount": 237,
+              "currency": "AUD"
+            },
+            "rate_as_of": "2026-10-01"
+          }
+        ]
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "tour-transfer",
+        "advance-booking",
+        "swimwear"
+      ],
+      "tags": [
+        "commercial",
+        "night",
+        "dense-activity",
+        "splurge"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "excellent",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "moderate",
+      "tourist_level": "iconic",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Xplor",
+          "url": "https://www.xplor.travel/"
+        }
+      ]
+    },
+    {
+      "id": "horseback-cenote",
+      "destination": "cancun-yucatan",
+      "name": "Horseback Ride + Cenote Swim",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "riding",
+        "water"
+      ],
+      "summary": "Jungle horseback riding followed by a cenote swim.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Riviera Maya",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "low",
+        "options": []
+      },
+      "power_ups": [
+        "advance-booking",
+        "swimwear"
+      ],
+      "tags": [
+        "half-day",
+        "animals",
+        "swim",
+        "different-verb"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Rancho / tour reference",
+          "url": "https://pitstopcancun.com/"
+        }
+      ]
+    },
+    {
+      "id": "atv-cenote",
+      "destination": "cancun-yucatan",
+      "name": "ATV / Jungle Buggy + Cenote",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "driving",
+        "adrenaline",
+        "water"
+      ],
+      "summary": "Drive jungle tracks and attach a cenote stop for a deliberately muddy adrenaline half-day.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Riviera Maya",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "advance-booking",
+        "swimwear"
+      ],
+      "tags": [
+        "atv",
+        "mud",
+        "half-day",
+        "commercial"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "moderate",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "ATV tour reference",
+          "url": "https://www.playadelcarmentours.com/atv-cenote-tour.htm"
+        }
+      ]
+    },
+    {
+      "id": "isla-blanca-kitesurf",
+      "destination": "cancun-yucatan",
+      "name": "Isla Blanca Kitesurf Lesson",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "water",
+        "adrenaline"
+      ],
+      "summary": "Learn basic kite control and board skills in the shallow lagoon north of Cancún.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Isla Blanca",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 1100,
+          "currency": "MXN"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "weather-window",
+        "advance-booking",
+        "rental-car"
+      ],
+      "tags": [
+        "skill",
+        "learn",
+        "weather",
+        "half-day"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "excellent",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "moderate",
+      "tourist_level": "lower-tourist",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Shaka Vibes",
+          "url": "https://www.shaka-vibes.com/kiteboard"
+        }
+      ]
+    },
+    {
+      "id": "deep-sea-fishing",
+      "destination": "cancun-yucatan",
+      "name": "Shared Deep-Sea Fishing",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "water",
+        "wildlife"
+      ],
+      "summary": "Shared offshore fishing trip as a completely different ocean activity.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Cancún",
+        "country": "Mexico",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": "Mayan Monkey Cancún, Km 9.5 Hotel Zone"
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "splurge",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "advance-booking",
+        "weather-window"
+      ],
+      "tags": [
+        "fishing",
+        "boat",
+        "splurge",
+        "full-day"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": null
+      },
+      "sources": [
+        {
+          "label": "Go Fishing Cancún",
+          "url": "https://www.gofishingcancun.com/shared-fishing/"
+        }
+      ]
+    }
+  ]
+}

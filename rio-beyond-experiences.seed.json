@@ -1,0 +1,2975 @@
+{
+  "meta": {
+    "project": "Cancún → Rio Adventure Index",
+    "schema_version": "0.2.0",
+    "dataset_version": "0.2.0",
+    "generated": "2026-10-01",
+    "destination": "rio-beyond",
+    "likely_initial_base": null,
+    "currency": "BRL",
+    "notes": [
+      "This is a research seed, not final booking data.",
+      "Transport and true mission-cost fields are intentionally incomplete until the Rio base is selected.",
+      "Experience records remain independent even when they can later be grouped into smart combos."
+    ]
+  },
+  "experiences": [
+    {
+      "id": "pedra-da-gavea",
+      "destination": "rio-beyond",
+      "name": "Pedra da Gávea",
+      "status": "candidate",
+      "mission_type": "big-mission",
+      "categories": [
+        "hiking",
+        "adrenaline"
+      ],
+      "summary": "Serious mountain hike to 844 m with the exposed Carrasqueira scramble.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Rio de Janeiro",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "cheap",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 0.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "good-shoes",
+        "early-start",
+        "weather-window"
+      ],
+      "tags": [
+        "hard-hike",
+        "scramble",
+        "mountain",
+        "big-view"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "hard",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Riotur",
+          "url": "https://riotur.rio/es/que_fazer/pedra-da-gavea-3/"
+        }
+      ]
+    },
+    {
+      "id": "pedra-bonita",
+      "destination": "rio-beyond",
+      "name": "Pedra Bonita",
+      "status": "candidate",
+      "mission_type": "easy-win",
+      "categories": [
+        "hiking"
+      ],
+      "summary": "Shorter rainforest hike with huge coastal views.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Rio de Janeiro",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "cheap",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 0.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "good-shoes",
+        "weather-window"
+      ],
+      "tags": [
+        "easy-hike",
+        "half-day",
+        "view",
+        "cheap"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Riotur",
+          "url": "https://riotur.rio/es/que_fazer/pedra-bonita-3/"
+        }
+      ]
+    },
+    {
+      "id": "hang-glide-pedra-bonita",
+      "destination": "rio-beyond",
+      "name": "Hang-Glide from Pedra Bonita",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "adrenaline"
+      ],
+      "summary": "Tandem launch from the mountain and glide over forest and coast to São Conrado.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "São Conrado / Pedra Bonita",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "splurge",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 880.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "weather-window",
+        "advance-booking"
+      ],
+      "tags": [
+        "fly",
+        "splurge",
+        "weather",
+        "bucket-list"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Local Rio adventure operator",
+          "url": "https://trilhadoisirmaos.com.br/"
+        }
+      ]
+    },
+    {
+      "id": "dois-irmaos-sunrise",
+      "destination": "rio-beyond",
+      "name": "Dois Irmãos Sunrise Hike",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "hiking",
+        "culture"
+      ],
+      "summary": "Local-guided early climb from Vidigal for sunrise views over Rio.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Vidigal",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 280.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "early-start",
+        "local-guide",
+        "good-shoes"
+      ],
+      "tags": [
+        "sunrise",
+        "local-guide",
+        "half-day",
+        "view"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "moderate",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Tour Dois Irmãos",
+          "url": "https://tourdoisirmaos.com.br/pt"
+        }
+      ]
+    },
+    {
+      "id": "vidigal-community-walk",
+      "destination": "rio-beyond",
+      "name": "Vidigal Community Walk",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "culture"
+      ],
+      "summary": "Lower-intensity local neighbourhood experience without committing to the mountain hike.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Vidigal",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "local-guide"
+      ],
+      "tags": [
+        "local",
+        "walking",
+        "half-day",
+        "low-physical"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "easy",
+      "tourist_level": "local",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Tour Dois Irmãos",
+          "url": "https://tourdoisirmaos.com.br/pt"
+        }
+      ]
+    },
+    {
+      "id": "parque-lage-corcovado",
+      "destination": "rio-beyond",
+      "name": "Parque Lage → Corcovado Hike",
+      "status": "candidate",
+      "mission_type": "big-mission",
+      "categories": [
+        "hiking"
+      ],
+      "summary": "Climb through Tijuca forest from Parque Lage toward Christ the Redeemer.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Parque Lage / Corcovado",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 58.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "good-shoes",
+        "early-start",
+        "weather-window"
+      ],
+      "tags": [
+        "forest",
+        "icon-hack",
+        "cheap-ish",
+        "full-morning"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "hard",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Tijuca National Park",
+          "url": "https://parquenacionaldatijuca.rio/locais/trilha-parque-lage-x-corcovado/"
+        }
+      ]
+    },
+    {
+      "id": "paineiras-corcovado",
+      "destination": "rio-beyond",
+      "name": "Paineiras → Corcovado Short Hike",
+      "status": "candidate",
+      "mission_type": "easy-win",
+      "categories": [
+        "hiking"
+      ],
+      "summary": "Short forest walk before accessing Christ, a cheaper and more active alternative to the train.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Corcovado",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "cheap",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 58.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "public-transport-win",
+        "weather-window"
+      ],
+      "tags": [
+        "icon-hack",
+        "half-day",
+        "cheap",
+        "no-car"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "iconic",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Tijuca National Park",
+          "url": "https://parquenacionaldatijuca.rio/locais/trilha-parque-lage-x-corcovado/"
+        }
+      ]
+    },
+    {
+      "id": "morro-da-urca-trail",
+      "destination": "rio-beyond",
+      "name": "Morro da Urca Trail + Sugarloaf Option",
+      "status": "candidate",
+      "mission_type": "easy-win",
+      "categories": [
+        "hiking"
+      ],
+      "summary": "Walk to the first cable-car station, then choose whether to continue to Sugarloaf or descend.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Urca",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 65.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "public-transport-win",
+        "good-shoes"
+      ],
+      "tags": [
+        "icon-hack",
+        "half-day",
+        "budget",
+        "view"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "iconic",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Parque Bondinho",
+          "url": "https://sac.bondinho.com.br/hc/pt-br/articles/9818455162395-Acesso-ao-Parque-Bondinho-pela-trilha-do-Morro-da-Urca"
+        }
+      ]
+    },
+    {
+      "id": "sugarloaf-costao",
+      "destination": "rio-beyond",
+      "name": "Sugarloaf Costão Route",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "hiking",
+        "adrenaline"
+      ],
+      "summary": "Reach Sugarloaf via hiking and a short protected climbing/scrambling section.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Sugarloaf / Urca",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "local-guide",
+        "good-shoes",
+        "advance-booking"
+      ],
+      "tags": [
+        "scramble",
+        "icon",
+        "guide",
+        "half-day"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "hard",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Rio Mountain Sports",
+          "url": "https://www.riomountainsports.com/sugarloaf-trail"
+        }
+      ]
+    },
+    {
+      "id": "sugarloaf-rock-climbing",
+      "destination": "rio-beyond",
+      "name": "Sugarloaf Rock Climbing",
+      "status": "specialist",
+      "mission_type": "specialist",
+      "categories": [
+        "adrenaline"
+      ],
+      "summary": "Guided rock-climbing routes on Rio's iconic granite.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Sugarloaf / Urca",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 480.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "local-guide",
+        "advance-booking",
+        "good-shoes"
+      ],
+      "tags": [
+        "climb",
+        "specialist",
+        "icon",
+        "half-day"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "specialist",
+      "tourist_level": "specialist",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Rio Mountain Sports",
+          "url": "https://www.riomountainsports.com/sugarloaf"
+        }
+      ]
+    },
+    {
+      "id": "tijuca-forest-expedition",
+      "destination": "rio-beyond",
+      "name": "Tijuca Forest Expedition",
+      "status": "candidate",
+      "mission_type": "build-your-own",
+      "categories": [
+        "hiking",
+        "wildlife"
+      ],
+      "summary": "Flexible rainforest day combining trails, waterfalls, caves and viewpoints.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Tijuca National Park",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "cheap",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 0.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "good-shoes",
+        "weather-window"
+      ],
+      "tags": [
+        "rainforest",
+        "waterfall",
+        "caves",
+        "flexible"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "moderate",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Tijuca National Park",
+          "url": "https://parquenacionaldatijuca.rio/atividades/caminhada-em-trilha/"
+        }
+      ]
+    },
+    {
+      "id": "catacumba-adventure",
+      "destination": "rio-beyond",
+      "name": "Parque da Catacumba Urban Adventure",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "hiking",
+        "adrenaline"
+      ],
+      "summary": "Short urban viewpoint hike with optional rappel, zipline, ropes and climbing wall.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Lagoa",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "public-transport-win"
+      ],
+      "tags": [
+        "half-day",
+        "easy-access",
+        "zipline",
+        "rappel"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Riotur",
+          "url": "https://riotur.rio/que_fazer/parque-natural-municipal-da-catacumba/"
+        }
+      ]
+    },
+    {
+      "id": "wild-beaches-telegrafo",
+      "destination": "rio-beyond",
+      "name": "Wild Beaches + Pedra do Telégrafo",
+      "status": "candidate",
+      "mission_type": "big-mission",
+      "categories": [
+        "hiking",
+        "water"
+      ],
+      "summary": "Hike the wilder western coast through beaches and viewpoints rather than only visiting the photo rock.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Western Rio",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "cheap",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 0.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "good-shoes",
+        "early-start",
+        "weather-window"
+      ],
+      "tags": [
+        "wild-coast",
+        "full-day",
+        "less-touristy",
+        "beaches"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "hard",
+      "tourist_level": "lower-tourist",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Brazil Ministry of Tourism",
+          "url": "https://www.gov.br/turismo/pt-br/assuntos/noticias/trilha-transcarioca-conheca-a-primeira-rota-de-longo-curso-do-brasil-que-une-a-mata-atlantica-aos-cartoes-postais-do-rio-de-janeiro"
+        }
+      ]
+    },
+    {
+      "id": "arpoador-surf",
+      "destination": "rio-beyond",
+      "name": "Learn to Surf at Arpoador",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "water",
+        "adrenaline"
+      ],
+      "summary": "Beginner surf lesson at one of Rio's classic surf locations.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Arpoador / Ipanema",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 130.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "public-transport-win",
+        "swimwear",
+        "weather-window"
+      ],
+      "tags": [
+        "learn",
+        "surf",
+        "half-day",
+        "no-car"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "moderate",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Escola de Surf Ipanema",
+          "url": "https://www.escoladesurfipanema.com/"
+        }
+      ]
+    },
+    {
+      "id": "sunrise-sup",
+      "destination": "rio-beyond",
+      "name": "Sunrise SUP",
+      "status": "candidate",
+      "mission_type": "easy-win",
+      "categories": [
+        "water",
+        "paddling"
+      ],
+      "summary": "Early-morning stand-up paddle session as the city wakes up.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Copacabana",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 180.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "public-transport-win",
+        "swimwear",
+        "weather-window",
+        "early-start"
+      ],
+      "tags": [
+        "sunrise",
+        "half-day",
+        "no-car",
+        "easy-win"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Rio Paddle",
+          "url": "https://riopaddle.com/"
+        }
+      ]
+    },
+    {
+      "id": "outrigger-canoe",
+      "destination": "rio-beyond",
+      "name": "Hawaiian Outrigger Canoe",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "water",
+        "paddling"
+      ],
+      "summary": "Team paddle along Rio's coastline, potentially toward the Cagarras.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Rio coastline",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "swimwear",
+        "weather-window"
+      ],
+      "tags": [
+        "team",
+        "ocean",
+        "different-verb",
+        "half-day"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "moderate",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Riotur",
+          "url": "https://riotur.rio/que_fazer/canoa-havaiana/"
+        }
+      ]
+    },
+    {
+      "id": "cagarras-island-trail",
+      "destination": "rio-beyond",
+      "name": "Cagarras Island Trail",
+      "status": "candidate",
+      "mission_type": "big-mission",
+      "categories": [
+        "island",
+        "wildlife",
+        "hiking"
+      ],
+      "summary": "Authorised boat-and-trail visit inside the offshore protected monument.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Ilhas Cagarras",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "advance-booking",
+        "local-guide",
+        "weather-window"
+      ],
+      "tags": [
+        "island",
+        "protected-area",
+        "boat",
+        "unusual"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "moderate",
+      "tourist_level": "lower-tourist",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "ICMBio",
+          "url": "https://www.gov.br/icmbio/"
+        }
+      ]
+    },
+    {
+      "id": "cagarras-scuba",
+      "destination": "rio-beyond",
+      "name": "Dive the Cagarras",
+      "status": "specialist",
+      "mission_type": "specialist",
+      "categories": [
+        "island",
+        "wildlife",
+        "diving"
+      ],
+      "summary": "Scuba inside Rio's offshore marine protected area.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Ilhas Cagarras",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "scuba-certification",
+        "advance-booking",
+        "weather-window"
+      ],
+      "tags": [
+        "scuba",
+        "specialist",
+        "marine",
+        "half-day"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "specialist",
+      "tourist_level": "specialist",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "ICMBio Cagarras",
+          "url": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/marinho/lista-de-ucs/mona-do-arquipelago-das-ilhas-cagarras"
+        }
+      ]
+    },
+    {
+      "id": "guanabara-sunset-sail",
+      "destination": "rio-beyond",
+      "name": "Guanabara Sunset Sail",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "water"
+      ],
+      "summary": "Three-hour sail past Sugarloaf, forts and Niterói around sunset.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Guanabara Bay",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 280.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "advance-booking",
+        "weather-window"
+      ],
+      "tags": [
+        "sunset",
+        "sail",
+        "relaxed",
+        "treat"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Rio Sun Sail",
+          "url": "https://riosunsail.com/passeio/sunset-tour"
+        }
+      ]
+    },
+    {
+      "id": "footvolley-lesson",
+      "destination": "rio-beyond",
+      "name": "Learn Footvolley",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "adrenaline",
+        "culture"
+      ],
+      "summary": "Learn one of Rio's characteristic beach sports rather than only watching from the sand.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Copacabana",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 120.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "public-transport-win",
+        "sun-protection"
+      ],
+      "tags": [
+        "learn",
+        "sport",
+        "beach",
+        "local"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "moderate",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Footvolley World",
+          "url": "https://www.footvolleyworld.com/"
+        }
+      ]
+    },
+    {
+      "id": "rio-bike-tour",
+      "destination": "rio-beyond",
+      "name": "Cycle Across Rio",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "cycling",
+        "culture"
+      ],
+      "summary": "Active half-day ride linking beaches, Botafogo, Flamengo, Lapa and the centre.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "South Zone / Centro",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 215.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "bike",
+        "sun-protection"
+      ],
+      "tags": [
+        "cycle",
+        "city",
+        "half-day",
+        "active"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "moderate",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Rio by Bike",
+          "url": "https://riobybike.com/panoramic-tour/"
+        }
+      ]
+    },
+    {
+      "id": "doors-off-helicopter",
+      "destination": "rio-beyond",
+      "name": "Doors-Off Helicopter Flight",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "adrenaline",
+        "photography"
+      ],
+      "summary": "Short doors-off aerial photography flight over Rio.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Rio de Janeiro",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "splurge",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 1020.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "advance-booking",
+        "weather-window"
+      ],
+      "tags": [
+        "fly",
+        "splurge",
+        "photography",
+        "fuck-it"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy",
+      "tourist_level": "iconic",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Rio Helicopters",
+          "url": "https://riohelicopters.com/passeio/sem-portas/"
+        }
+      ]
+    },
+    {
+      "id": "maracana-match",
+      "destination": "rio-beyond",
+      "name": "Football Match at Maracanã",
+      "status": "seasonal",
+      "mission_type": "standalone",
+      "categories": [
+        "culture",
+        "night"
+      ],
+      "summary": "Attend a live Flamengo, Fluminense or other fixture if the calendar lines up.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Maracanã",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "advance-booking",
+        "public-transport-win"
+      ],
+      "tags": [
+        "football",
+        "live-event",
+        "night",
+        "schedule-dependent"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "verify-closer",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "easy",
+      "tourist_level": "iconic",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Maracanã",
+          "url": "https://www.tourmaracana.com.br/"
+        }
+      ]
+    },
+    {
+      "id": "maracana-tour",
+      "destination": "rio-beyond",
+      "name": "Maracanã Behind the Scenes",
+      "status": "candidate",
+      "mission_type": "easy-win",
+      "categories": [
+        "culture"
+      ],
+      "summary": "Dressing rooms, tunnel, pitchside and Brazilian football history.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Maracanã",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 115.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "public-transport-win"
+      ],
+      "tags": [
+        "rainy-day",
+        "football",
+        "easy-win",
+        "half-day"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "easy",
+      "tourist_level": "iconic",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Maracanã Tour",
+          "url": "https://www.tourmaracana.com.br/ingressos"
+        }
+      ]
+    },
+    {
+      "id": "carnival-backstage",
+      "destination": "rio-beyond",
+      "name": "Carnival Backstage / Cidade do Samba",
+      "status": "candidate",
+      "mission_type": "easy-win",
+      "categories": [
+        "culture",
+        "hands-on"
+      ],
+      "summary": "See samba-school workshops, costumes and float production behind the Carnival machine.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Cidade do Samba",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "cheap",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 55.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "public-transport-win"
+      ],
+      "tags": [
+        "carnival",
+        "cheap",
+        "rainy-day",
+        "behind-scenes"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "easy",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Carnaval Experience",
+          "url": "https://carnavalexperience.com.br/"
+        }
+      ]
+    },
+    {
+      "id": "rio-carnaval-expo",
+      "destination": "rio-beyond",
+      "name": "Rio Carnaval Expo",
+      "status": "candidate",
+      "mission_type": "easy-win",
+      "categories": [
+        "culture"
+      ],
+      "summary": "Low-cost interactive Carnival exhibition for a rainy or low-energy slot.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Rio de Janeiro",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "cheap",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 25.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "public-transport-win"
+      ],
+      "tags": [
+        "rainy-day",
+        "cheap",
+        "indoor",
+        "carnival"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "easy",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Fever / Rio Carnaval Expo",
+          "url": "https://feverup.com/"
+        }
+      ]
+    },
+    {
+      "id": "samba-school-rehearsal",
+      "destination": "rio-beyond",
+      "name": "Samba-School Rehearsal",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "culture",
+        "night"
+      ],
+      "summary": "See a working samba school rehearse in the pre-Carnival build-up rather than a staged tourist show.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Rio de Janeiro",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "advance-booking",
+        "public-transport-win"
+      ],
+      "tags": [
+        "samba",
+        "music",
+        "dance",
+        "living-culture",
+        "night"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "easy",
+      "tourist_level": "local",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Riotur events",
+          "url": "https://riotur.rio/"
+        }
+      ]
+    },
+    {
+      "id": "pequena-africa",
+      "destination": "rio-beyond",
+      "name": "Pequena África Walk",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "culture"
+      ],
+      "summary": "Explore Cais do Valongo, Pedra do Sal and sites tied to African diaspora and the birth of samba.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Centro / Gamboa",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 185.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "local-guide",
+        "public-transport-win"
+      ],
+      "tags": [
+        "history",
+        "walking",
+        "meaningful",
+        "half-day"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Riotur",
+          "url": "https://riotur.rio/que_fazer/pequena-africa/"
+        }
+      ]
+    },
+    {
+      "id": "tia-ciata-workshop",
+      "destination": "rio-beyond",
+      "name": "Casa da Tia Ciata Workshop",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "culture",
+        "hands-on"
+      ],
+      "summary": "Potential jongo, drumming, Afro-dance, capoeira or related hands-on cultural workshop.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Centro",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "advance-booking",
+        "local-guide"
+      ],
+      "tags": [
+        "music",
+        "dance",
+        "workshop",
+        "local"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "local",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Riotur Casa da Tia Ciata",
+          "url": "https://riotur.rio/"
+        }
+      ]
+    },
+    {
+      "id": "capoeira-class",
+      "destination": "rio-beyond",
+      "name": "Capoeira Class",
+      "status": "candidate",
+      "mission_type": "standalone",
+      "categories": [
+        "culture",
+        "hands-on",
+        "adrenaline"
+      ],
+      "summary": "Learn basic movements and take part in a roda instead of only watching.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Rio de Janeiro",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "advance-booking"
+      ],
+      "tags": [
+        "learn",
+        "physical",
+        "culture",
+        "half-day"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "moderate",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Rio capoeira experience reference",
+          "url": "https://www.airbnb.com/experiences"
+        }
+      ]
+    },
+    {
+      "id": "santa-teresa-selaron",
+      "destination": "rio-beyond",
+      "name": "Santa Teresa + Tram + Selarón",
+      "status": "candidate",
+      "mission_type": "easy-win",
+      "categories": [
+        "culture",
+        "photography"
+      ],
+      "summary": "Easy city-roaming mission through hillside streets, tram culture and Selarón steps.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Santa Teresa / Lapa",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "cheap",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "public-transport-win"
+      ],
+      "tags": [
+        "explore",
+        "architecture",
+        "easy",
+        "cheap"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "iconic",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Riotur",
+          "url": "https://riotur.rio/es/que_fazer/escalinitaselaron/"
+        }
+      ]
+    },
+    {
+      "id": "museu-amanha",
+      "destination": "rio-beyond",
+      "name": "Museu do Amanhã",
+      "status": "candidate",
+      "mission_type": "easy-win",
+      "categories": [
+        "culture"
+      ],
+      "summary": "Science and future-focused indoor option for bad weather or lower-energy days.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Centro",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "public-transport-win"
+      ],
+      "tags": [
+        "rainy-day",
+        "science",
+        "indoor",
+        "easy"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": false,
+        "notes": null
+      },
+      "difficulty": "easy",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Riotur Museu do Amanhã",
+          "url": "https://riotur.rio/es/que_fazer/museu-do-amanha-museo-del-manana/"
+        }
+      ]
+    },
+    {
+      "id": "arraial-boat",
+      "destination": "rio-beyond",
+      "name": "Arraial do Cabo Boat Day",
+      "status": "candidate",
+      "mission_type": "big-mission",
+      "categories": [
+        "water",
+        "snorkelling",
+        "road-trip"
+      ],
+      "summary": "Clear-water boat mission with beach stops and snorkelling outside Rio.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Arraial do Cabo",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 340.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "early-start",
+        "weather-window",
+        "advance-booking"
+      ],
+      "tags": [
+        "beyond-rio",
+        "full-day",
+        "boat",
+        "big-mission"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "easy-active",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Rio State Tourism",
+          "url": "https://www.turismo.rj.gov.br/cidades/arraial-do-cabo/"
+        }
+      ]
+    },
+    {
+      "id": "arraial-scuba",
+      "destination": "rio-beyond",
+      "name": "Arraial do Cabo Scuba",
+      "status": "specialist",
+      "mission_type": "specialist",
+      "categories": [
+        "water",
+        "diving",
+        "road-trip"
+      ],
+      "summary": "Dive one of Rio state's strongest marine destinations.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Arraial do Cabo",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": false,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "scuba-certification",
+        "advance-booking",
+        "weather-window"
+      ],
+      "tags": [
+        "beyond-rio",
+        "scuba",
+        "specialist",
+        "full-day"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "specialist",
+      "tourist_level": "specialist",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Rio State Tourism",
+          "url": "https://www.turismo.rj.gov.br/noticias/turismo-de-aventura/"
+        }
+      ]
+    },
+    {
+      "id": "ilha-grande",
+      "destination": "rio-beyond",
+      "name": "Ilha Grande + Lopes Mendes",
+      "status": "candidate",
+      "mission_type": "overnight-unlock",
+      "categories": [
+        "island",
+        "hiking",
+        "water"
+      ],
+      "summary": "Roadless island overnight with hiking, beaches, swimming and optional diving.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Ilha Grande",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "none",
+        "options": []
+      },
+      "power_ups": [
+        "overnight",
+        "ferry",
+        "advance-booking",
+        "weather-window"
+      ],
+      "tags": [
+        "beyond-rio",
+        "overnight",
+        "big-mission",
+        "beach"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "moderate",
+      "tourist_level": "mixed",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "Rio State Tourism",
+          "url": "https://www.turismo.rj.gov.br/cidades/angra-dos-reis/"
+        }
+      ]
+    },
+    {
+      "id": "serra-orgaos-day",
+      "destination": "rio-beyond",
+      "name": "Serra dos Órgãos Day Mission",
+      "status": "candidate",
+      "mission_type": "big-mission",
+      "categories": [
+        "hiking",
+        "road-trip"
+      ],
+      "summary": "Leave the coast for mountain trails, waterfalls and serious scenery.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Serra dos Órgãos",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "normal",
+        "pricing_status": "good-estimate",
+        "notes": null,
+        "activity_price_pp": {
+          "amount": 0.0,
+          "currency": "BRL"
+        },
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "early-start",
+        "good-shoes",
+        "weather-window"
+      ],
+      "tags": [
+        "beyond-rio",
+        "mountains",
+        "full-day",
+        "cheap-entry"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "good",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "hard",
+      "tourist_level": "lower-tourist",
+      "booking": {
+        "advance_needed": false,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "ICMBio Serra dos Órgãos",
+          "url": "https://www.gov.br/icmbio/"
+        }
+      ]
+    },
+    {
+      "id": "petropolis-teresopolis",
+      "destination": "rio-beyond",
+      "name": "Petrópolis → Teresópolis Traverse",
+      "status": "specialist",
+      "mission_type": "specialist",
+      "categories": [
+        "hiking",
+        "road-trip"
+      ],
+      "summary": "Hardcore multi-day mountain traverse for a very different Rio-state experience.",
+      "why_it_is_cool": null,
+      "location": {
+        "area": "Serra dos Órgãos",
+        "country": "Brazil",
+        "lat": null,
+        "lng": null,
+        "distance_from_base_km": null,
+        "base_anchor": null
+      },
+      "time": {
+        "duration_label": null,
+        "activity_hours": null,
+        "door_to_door_hours": null,
+        "best_time_of_day": null
+      },
+      "budget": {
+        "band": "treat",
+        "pricing_status": "needs-check",
+        "notes": null,
+        "activity_price_pp": null,
+        "mission_price_pp_estimate": null,
+        "mission_price_two_people_estimate": null,
+        "display_estimates": []
+      },
+      "transport": {
+        "public_transport_viable": true,
+        "car_helpfulness": "helpful",
+        "options": []
+      },
+      "power_ups": [
+        "overnight",
+        "advance-booking",
+        "good-shoes",
+        "weather-window"
+      ],
+      "tags": [
+        "beyond-rio",
+        "multi-day",
+        "hardcore",
+        "mountains"
+      ],
+      "smart_combos": [],
+      "seasonality": {
+        "november_fit": "verify-closer",
+        "weather_sensitive": true,
+        "notes": null
+      },
+      "difficulty": "specialist",
+      "tourist_level": "specialist",
+      "booking": {
+        "advance_needed": true,
+        "notes": null
+      },
+      "preference": {
+        "hannah": "unset",
+        "emrys": "unset"
+      },
+      "confidence": {
+        "overall": "medium",
+        "last_checked": "2026-10-01",
+        "notes": "Rio transport costs remain base-dependent until accommodation is selected."
+      },
+      "sources": [
+        {
+          "label": "ICMBio traverse guide",
+          "url": "https://www.gov.br/icmbio/"
+        }
+      ]
+    }
+  ]
+}
