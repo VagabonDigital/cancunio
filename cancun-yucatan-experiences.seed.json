@@ -674,7 +674,11 @@
           "label": "Puerto Morelos Municipality",
           "url": "https://puertomorelos.gob.mx/"
         }
-      ]
+      ],
+      "image_url": "https://www.poresto.com/crop/0-0-900-600O1F0x0D1200x800C4e968bf04af032160573360075580f53/media/fotografias/fotosnoticias/2021/4/15/70990.png",
+      "image_position": "center",
+      "image_credit": "Por Esto · representative Ruta de los Cenotes",
+      "image_credit_url": "https://puertomorelos.mx/la-ruta-de-los-cenotes/"
     },
     {
       "id": "rio-secreto",
@@ -838,7 +842,11 @@
           "label": "Cenote Dos Ojos",
           "url": "https://cenotedosojos.mx/"
         }
-      ]
+      ],
+      "image_url": "https://american-transfersbest.tours/assets/sliders/dos-ojos-6.jpeg",
+      "image_position": "center",
+      "image_credit": "American Transfers Best · Dos Ojos",
+      "image_credit_url": "https://american-transfersbest.tours/tour-activity/cenote-dos-ojos"
     },
     {
       "id": "cenote-diving",
@@ -999,7 +1007,11 @@
           "label": "Scientific Reports",
           "url": "https://www.nature.com/articles/s41598-023-36777-y"
         }
-      ]
+      ],
+      "image_url": "https://naw-media.s3.amazonaws.com/cenote_zapote_3-min.jpg",
+      "image_position": "center",
+      "image_credit": "NAW · Cenote Zapote / Hell Bells",
+      "image_credit_url": "https://naw.mx/adventures/playa-del-carmen/cenote-diving/cenote-el-zapote-hell-bells-cenote-maravilla/17"
     },
     {
       "id": "akumal-turtles",
@@ -1440,7 +1452,11 @@
           "label": "Explore Sian Ka'an",
           "url": "https://exploresiankaan.com/"
         }
-      ]
+      ],
+      "image_url": "https://www.pelago.com/img/products/MX-Mexico/exclusive-full-day-nature-expedition-in-sian-ka-an/23effdfe-91cc-4b6c-aa17-c4f13e35719f_exclusive-full-day-nature-expedition-in-sian-ka-an.jpg",
+      "image_position": "center",
+      "image_credit": "Pelago · representative Punta Allen wildlife boat",
+      "image_credit_url": "https://www.pelago.com/"
     },
     {
       "id": "coba",
@@ -2494,7 +2510,11 @@
           "label": "Holbox seasonal reference",
           "url": "https://www.cancuntripinsider.com/guides/isla-holbox/holbox-in-november"
         }
-      ]
+      ],
+      "image_url": "https://www.holboxkiteboarding.com/assets/images/spots/mainland-05.jpg",
+      "image_position": "center",
+      "image_credit": "Holbox Kiteboarding",
+      "image_credit_url": "https://www.holboxkiteboarding.com/"
     },
     {
       "id": "holbox-bioluminescence",
@@ -2574,7 +2594,11 @@
           "label": "Holbox bioluminescence operator",
           "url": "https://en-holbox.com.mx/tours/bioluminiscencia/"
         }
-      ]
+      ],
+      "image_url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0e/bb/67/e8.jpg",
+      "image_position": "center",
+      "image_credit": "Tripadvisor / tour provider · Holbox bioluminescence",
+      "image_credit_url": "https://en-holbox.com.mx/tours/bioluminiscencia/"
     },
     {
       "id": "rio-lagartos-wildlife",
@@ -2756,7 +2780,11 @@
           "label": "Yucatán Travel",
           "url": "https://yucatan.travel/en/experience/055-crocodile-night-in-rio-lagartos/"
         }
-      ]
+      ],
+      "image_url": "https://www.civitatis.com/f/mexico/rio-lagartos/galeria/cocodrilo-manglares-noche.jpg",
+      "image_position": "center",
+      "image_credit": "Civitatis · Río Lagartos crocodile night",
+      "image_credit_url": "https://www.civitatis.com/mx/rio-lagartos/paseo-nocturno-barco-manglares/"
     },
     {
       "id": "las-coloradas",
@@ -2835,7 +2863,11 @@
           "label": "Yucatán Travel",
           "url": "https://yucatan.travel/aventura-y-naturaleza/las-coloradas/"
         }
-      ]
+      ],
+      "image_url": "https://i.pinimg.com/originals/c3/c2/b5/c3c2b522502d0b3384e9647e0d99b724.jpg",
+      "image_position": "center",
+      "image_credit": "Las Coloradas · aerial salt ponds",
+      "image_credit_url": "https://yucatan.travel/aventura-y-naturaleza/las-coloradas/"
     },
     {
       "id": "bacalar-kayak",
@@ -3005,7 +3037,11 @@
           "label": "INAH Ichkabal",
           "url": "https://lugares.inah.gob.mx/es/node/6157"
         }
-      ]
+      ],
+      "image_url": "https://escapadas.mexicodesconocido.com.mx/wp-content/uploads/2023/11/Ichkabal_1600-portada-1000x666.jpg",
+      "image_position": "center",
+      "image_credit": "México Desconocido · Ichkabal",
+      "image_credit_url": "https://escapadas.mexicodesconocido.com.mx/atractivos/zona-arqueologica-ichkabal/"
     },
     {
       "id": "xplor-fuego",
@@ -3181,7 +3217,11 @@
           "label": "Rancho / tour reference",
           "url": "https://pitstopcancun.com/"
         }
-      ]
+      ],
+      "image_url": "https://unsplash.com/photos/TXCXz7ksdFk/download?force=true&w=1400",
+      "image_position": "center",
+      "image_credit": "Jeannie Harris / Unsplash · representative horseback trail",
+      "image_credit_url": "https://unsplash.com/photos/TXCXz7ksdFk"
     },
     {
       "id": "atv-cenote",
@@ -3260,7 +3300,11 @@
           "label": "ATV tour reference",
           "url": "https://www.playadelcarmentours.com/atv-cenote-tour.htm"
         }
-      ]
+      ],
+      "image_url": "https://www.amstardmc.com/media/23985/atv-adventure-cenote-puerto-morelos.jpg",
+      "image_position": "center",
+      "image_credit": "Amstar · ATV adventure, Puerto Morelos",
+      "image_credit_url": "https://www.amstardmc.com/en/excursions/atv-adventure-and-cenote-swim-puerto-morelos/"
     },
     {
       "id": "isla-blanca-kitesurf",
