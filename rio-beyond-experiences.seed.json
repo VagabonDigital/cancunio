@@ -45,7 +45,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 0.0,
+          "amount": 0,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -94,7 +94,11 @@
           "label": "Riotur",
           "url": "https://riotur.rio/es/que_fazer/pedra-da-gavea-3/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pedra%20da%20Gavea%20vista%20da%20Pedra%20Bonita.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Carlos Perez Couto · Wikimedia Commons",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Pedra_da_Gavea_vista_da_Pedra_Bonita.jpg"
     },
     {
       "id": "pedra-bonita",
@@ -126,7 +130,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 0.0,
+          "amount": 0,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -206,7 +210,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 880.0,
+          "amount": 880,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -254,7 +258,11 @@
           "label": "Local Rio adventure operator",
           "url": "https://trilhadoisirmaos.com.br/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Matheus%20rodrigues%20de%20lara%20voo%20de%20asa%20delta%20rio%20de%20janeiro%20pedra%20bonita%20rj.png?width=1400",
+      "image_position": "center",
+      "image_credit": "Matheus Rodrigues de Lara · CC BY-SA 4.0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Matheus_rodrigues_de_lara_voo_de_asa_delta_rio_de_janeiro_pedra_bonita_rj.png"
     },
     {
       "id": "dois-irmaos-sunrise",
@@ -287,7 +295,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 280.0,
+          "amount": 280,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -444,7 +452,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 58.0,
+          "amount": 58,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -525,7 +533,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 58.0,
+          "amount": 58,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -605,7 +613,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 65.0,
+          "amount": 65,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -653,7 +661,11 @@
           "label": "Parque Bondinho",
           "url": "https://sac.bondinho.com.br/hc/pt-br/articles/9818455162395-Acesso-ao-Parque-Bondinho-pela-trilha-do-Morro-da-Urca"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Morro%20da%20Urca%20DSCN3878.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Wikimedia Commons · Morro da Urca",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Morro_da_Urca_DSCN3878.jpg"
     },
     {
       "id": "sugarloaf-costao",
@@ -764,7 +776,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 480.0,
+          "amount": 480,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -846,7 +858,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 0.0,
+          "amount": 0,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -1004,7 +1016,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 0.0,
+          "amount": 0,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -1086,7 +1098,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 130.0,
+          "amount": 130,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -1135,7 +1147,11 @@
           "label": "Escola de Surf Ipanema",
           "url": "https://www.escoladesurfipanema.com/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arpoador%20-%20Rio.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "VinnyWiki · CC BY-SA 4.0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Arpoador_-_Rio.jpg"
     },
     {
       "id": "sunrise-sup",
@@ -1168,7 +1184,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 180.0,
+          "amount": 180,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -1488,7 +1504,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 280.0,
+          "amount": 280,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -1569,7 +1585,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 120.0,
+          "amount": 120,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -1650,7 +1666,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 215.0,
+          "amount": 215,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -1731,7 +1747,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 1020.0,
+          "amount": 1020,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -1889,7 +1905,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 115.0,
+          "amount": 115,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -1969,7 +1985,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 55.0,
+          "amount": 55,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -2016,7 +2032,11 @@
           "label": "Carnaval Experience",
           "url": "https://carnavalexperience.com.br/"
         }
-      ]
+      ],
+      "image_url": "https://d3rr2gvhjw0wwy.cloudfront.net/uploads/activity_galleries/326865/2000x2000-0-70-d3968971f3ffcb5cb881e5d5956f9d25.jpg",
+      "image_position": "center",
+      "image_credit": "Carnival Experience / tour imagery",
+      "image_credit_url": "https://ingressos.carnavalexperience.com.br/en/tour-regular"
     },
     {
       "id": "rio-carnaval-expo",
@@ -2048,7 +2068,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 25.0,
+          "amount": 25,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -2174,7 +2194,11 @@
           "label": "Riotur events",
           "url": "https://riotur.rio/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Carnival%20Rehearsal%20at%20a%20Samba%20School.jpg?width=1400",
+      "image_position": "center 38%",
+      "image_credit": "Daytours4u · CC BY 2.0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Carnival_Rehearsal_at_a_Samba_School.jpg"
     },
     {
       "id": "pequena-africa",
@@ -2206,7 +2230,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 185.0,
+          "amount": 185,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -2597,7 +2621,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 340.0,
+          "amount": 340,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
@@ -2840,7 +2864,7 @@
         "pricing_status": "good-estimate",
         "notes": null,
         "activity_price_pp": {
-          "amount": 0.0,
+          "amount": 0,
           "currency": "BRL"
         },
         "mission_price_pp_estimate": null,
