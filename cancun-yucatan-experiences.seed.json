@@ -211,7 +211,11 @@
           "label": "Jungle Tour Cancún",
           "url": "https://www.jungletourcancun.com/"
         }
-      ]
+      ],
+      "image_url": "https://unsplash.com/photos/f3HmMWkzHzo/download?force=true&w=1400",
+      "image_position": "center",
+      "image_credit": "Unsplash · representative speedboat",
+      "image_credit_url": "https://unsplash.com/photos/f3HmMWkzHzo"
     },
     {
       "id": "musa-punta-nizuc",
@@ -928,7 +932,11 @@
           "label": "Dive Dos Ojos",
           "url": "https://www.divedosojos.com/"
         }
-      ]
+      ],
+      "image_url": "https://static.wixstatic.com/media/44f219_8e7cd294880d42fdace76ef6b2bd92de~mv2.jpg/v1/fill/w_698%2Ch_559%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_auto/IMG_2589_JPG.jpg",
+      "image_position": "center",
+      "image_credit": "Heaven Under Earth Divers · Dos Ojos",
+      "image_credit_url": "https://www.heavenunderearthdivers.com/cenote-dos-ojos"
     },
     {
       "id": "zapote-hells-bells",
@@ -1181,7 +1189,11 @@
           "label": "Ultramar",
           "url": "https://www.ultramarferry.com/"
         }
-      ]
+      ],
+      "image_url": "https://www.mexicotravelandleisure.com/_astro/san-miguel-cozumel-downtown-restaurants.Cmz7Qmv0_1o1A1A.webp",
+      "image_position": "center",
+      "image_credit": "Mexico Travel & Leisure · Cozumel reef",
+      "image_credit_url": "https://www.mexicotravelandleisure.com/blog/best-hotels-cozumel/"
     },
     {
       "id": "tulum-jaguar-park",
@@ -1923,7 +1935,11 @@
           "label": "INAH Ek' Balam",
           "url": "https://lugares.inah.gob.mx/"
         }
-      ]
+      ],
+      "image_url": "https://alg.widen.net/content/jfhs03nqbx/webp/Mexican-Caribbean-Cancun-Pyramid-id19319-Apr-2-2025-002.webp?download=true&q=80&u=itfpsm",
+      "image_position": "center",
+      "image_credit": "Mexican Caribbean · Ek Balam",
+      "image_credit_url": "https://www.cancun-adventure.com/en/tour/ek-balam-adventure"
     },
     {
       "id": "xyaat",
@@ -2089,7 +2105,11 @@
           "label": "Aldea Maya Xa'anil Naj",
           "url": "https://www.aldeamayaxaanilnaj.com/"
         }
-      ]
+      ],
+      "image_url": "https://topyucatan.com/storage/uploads/248434238-213848094185917-642586490099469017-n-1641407116.webp",
+      "image_position": "center",
+      "image_credit": "TOP Yucatán · representative xa’anil naj Maya house",
+      "image_credit_url": "https://topyucatan.com/notas/the-yucatan-culture/como-se-hacen-las-casas-mayas-de-yucatan"
     },
     {
       "id": "lol-chuy",
@@ -2168,7 +2188,11 @@
           "label": "Reserva Natura Lol-Chuy",
           "url": "https://reservanatura.org/areas-naturales/lol-chuy/"
         }
-      ]
+      ],
+      "image_url": "https://img.lajornadamaya.mx/711411684272840xpichilbordados%20%281%29.jpeg",
+      "image_position": "center",
+      "image_credit": "La Jornada Maya · Lol-Chuy / X-Pichil embroidery",
+      "image_credit_url": "https://www.lajornadamaya.mx/quintanaroo/249380/desde-xpichil-el-colectivo-lol-chuy-rescata-disenos-de-bordado-ancestrales-felipe-carrillo-puerto-quintana-roo"
     },
     {
       "id": "tihosuco",
@@ -2248,7 +2272,11 @@
           "label": "Reserva Natura Tihosuco",
           "url": "https://reservanatura.org/areas-naturales/tihosuco/"
         }
-      ]
+      ],
+      "image_url": "https://cloudfront-us-east-1.images.arcpublishing.com/lacronicadehoy/WRA5K5MXORGIFMFWQBFKKCEV6U.jpeg",
+      "image_position": "center",
+      "image_credit": "La Crónica de Hoy · Tihosuco",
+      "image_credit_url": "https://www.cronica.com.mx/cultura/2025/07/30/recuperan-la-historia-y-actualidad-de-tihosuco-punto-clave-de-la-guerra-social-maya/"
     },
     {
       "id": "tihosuco-maya-sky",
@@ -2328,7 +2356,11 @@
           "label": "Reserva Natura Tihosuco",
           "url": "https://reservanatura.org/areas-naturales/tihosuco/"
         }
-      ]
+      ],
+      "image_url": "https://wallpapers.com/images/hd/chichen-itza-mexico-starry-night-sky-3jgqetx5p62ttamu.jpg",
+      "image_position": "center",
+      "image_credit": "Wallpapers.com · representative Maya night sky",
+      "image_credit_url": "https://wallpapers.com/wallpapers/chichen-itza-mexico-starry-night-sky-3jgqetx5p62ttamu.html"
     },
     {
       "id": "holbox-mangrove-kayak",
@@ -2682,7 +2714,11 @@
           "label": "Yucatán Travel",
           "url": "https://yucatan.travel/"
         }
-      ]
+      ],
+      "image_url": "https://cdn.getyourguide.com/image/format%3Dauto%2Cfit%3Dcrop%2Cgravity%3Dauto%2Cquality%3D60%2Cwidth%3D400%2Cheight%3D265%2Cdpr%3D2/tour_img/eef450c9a2df20bb1bed99c1f8e9ed7b072877f7ac1c07dd3a97c28d0d3b91e1.png",
+      "image_position": "center",
+      "image_credit": "GetYourGuide · Río Lagartos flamingo boat",
+      "image_credit_url": "https://www.getyourguide.com/rio-lagartos-l146496/ttd/"
     },
     {
       "id": "rio-lagartos-croc-night",
@@ -3139,7 +3175,11 @@
           "label": "Xplor",
           "url": "https://www.xplor.travel/"
         }
-      ]
+      ],
+      "image_url": "https://www.pelago.com/img/products/MX-Mexico/xplor-fuego-admission-official-product/9c47a9e2-5b61-4520-add6-1cf036371f79_xplor-fuego-admission-official-product.jpg",
+      "image_position": "center",
+      "image_credit": "Pelago / Xplor Fuego",
+      "image_credit_url": "https://www.pelago.com/en-IN/activity/pezegwehv-xplor-fuego-admission-official-product-playa-del-carmen/"
     },
     {
       "id": "horseback-cenote",
@@ -3386,7 +3426,11 @@
           "label": "Shaka Vibes",
           "url": "https://www.shaka-vibes.com/kiteboard"
         }
-      ]
+      ],
+      "image_url": "https://www.iksurfmag.com/wp-content/uploads/2016/05/anthar.jpg",
+      "image_position": "center",
+      "image_credit": "IKSURFMAG · Isla Blanca kitesurfing",
+      "image_credit_url": "https://www.iksurfmag.com/travel-guides/americas/mexico/cancun/"
     },
     {
       "id": "deep-sea-fishing",
@@ -3464,7 +3508,11 @@
           "label": "Go Fishing Cancún",
           "url": "https://www.gofishingcancun.com/shared-fishing/"
         }
-      ]
+      ],
+      "image_url": "https://www.prlog.org/13017325-cancun-fishing-boat.jpg",
+      "image_position": "center",
+      "image_credit": "Fishing and Fun in Cancun · deep-sea charter",
+      "image_credit_url": "https://business.wapakdailynews.com/wapakdailynews/article/prlog-2024-4-22-catch-the-thrill-of-deep-sea-fishing-with-fishing-and-fun-in-cancun"
     }
   ]
 }
