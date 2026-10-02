@@ -178,7 +178,11 @@
           "label": "Riotur",
           "url": "https://riotur.rio/es/que_fazer/pedra-bonita-3/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pedra%20Bonita-RJ.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Lettydornelas · CC BY-SA 3.0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Pedra_Bonita-RJ.jpg"
     },
     {
       "id": "hang-glide-pedra-bonita",
@@ -424,7 +428,11 @@
           "label": "Tour Dois Irmãos",
           "url": "https://tourdoisirmaos.com.br/pt"
         }
-      ]
+      ],
+      "image_url": "https://www.civitatis.com/f/brasil/rio-de-janeiro/galeria/vue-panoramique-favela.jpg",
+      "image_position": "center",
+      "image_credit": "Civitatis · Vidigal",
+      "image_credit_url": "https://www.civitatis.com/br/rio-de-janeiro/tour-favela-vidigal/"
     },
     {
       "id": "parque-lage-corcovado",
@@ -841,7 +849,11 @@
           "label": "Rio Mountain Sports",
           "url": "https://www.riomountainsports.com/sugarloaf"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Climbing%20Sugar%20Loaf%20Rio%20De%20Janeiro%20(46800449684).jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Boris Kasimov · CC BY 2.0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Climbing_Sugar_Loaf_Rio_De_Janeiro_(46800449684).jpg"
     },
     {
       "id": "tijuca-forest-expedition",
@@ -1003,7 +1015,11 @@
           "label": "Riotur",
           "url": "https://riotur.rio/que_fazer/parque-natural-municipal-da-catacumba/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Parque%20da%20Catacumba.JPG?width=1400",
+      "image_position": "center",
+      "image_credit": "Eduardo P · CC BY-SA 3.0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Parque_da_Catacumba.JPG"
     },
     {
       "id": "wild-beaches-telegrafo",
@@ -1085,7 +1101,11 @@
           "label": "Brazil Ministry of Tourism",
           "url": "https://www.gov.br/turismo/pt-br/assuntos/noticias/trilha-transcarioca-conheca-a-primeira-rota-de-longo-curso-do-brasil-que-une-a-mata-atlantica-aos-cartoes-postais-do-rio-de-janeiro"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Na%20Pedra%20do%20Tel%C3%A9grafo.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "PauloRicFerr · CC BY-SA",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Na_Pedra_do_Tel%C3%A9grafo.jpg"
     },
     {
       "id": "arpoador-surf",
@@ -1254,7 +1274,11 @@
           "label": "Rio Paddle",
           "url": "https://riopaddle.com/"
         }
-      ]
+      ],
+      "image_url": "https://unsplash.com/photos/DqJJIWeILcs/download?force=true&w=1400",
+      "image_position": "center",
+      "image_credit": "Lilian Jeane Schiffer / Unsplash · representative sunrise SUP",
+      "image_credit_url": "https://unsplash.com/photos/DqJJIWeILcs"
     },
     {
       "id": "outrigger-canoe",
@@ -1332,7 +1356,11 @@
           "label": "Riotur",
           "url": "https://riotur.rio/que_fazer/canoa-havaiana/"
         }
-      ]
+      ],
+      "image_url": "https://unsplash.com/photos/BqC1_rzygJk/download?force=true&w=1400",
+      "image_position": "center",
+      "image_credit": "Trac Vu / Unsplash · representative outrigger canoe",
+      "image_credit_url": "https://unsplash.com/photos/BqC1_rzygJk"
     },
     {
       "id": "cagarras-island-trail",
@@ -1412,7 +1440,11 @@
           "label": "ICMBio",
           "url": "https://www.gov.br/icmbio/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arquil%C3%A9lago%20das%20Cagarras.JPG?width=1400",
+      "image_position": "center",
+      "image_credit": "Wikimedia Commons · Ilhas Cagarras",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/Category:Ilhas_Cagarras"
     },
     {
       "id": "cagarras-scuba",
@@ -1492,7 +1524,11 @@
           "label": "ICMBio Cagarras",
           "url": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/marinho/lista-de-ucs/mona-do-arquipelago-das-ilhas-cagarras"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Acanthistius%20brasilianus.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Wikimedia Commons · marine life at Ilhas Cagarras",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/Category:Ilhas_Cagarras"
     },
     {
       "id": "guanabara-sunset-sail",
@@ -1657,7 +1693,11 @@
           "label": "Footvolley World",
           "url": "https://www.footvolleyworld.com/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Footvolley%20World%20Cup%20-%20Mundial%20de%20Futevolei%20-%20PU1JFC.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "PU1JFC · Copacabana Footvolley World Cup",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Footvolley_World_Cup_-_Mundial_de_Futevolei_-_PU1JFC.jpg"
     },
     {
       "id": "rio-bike-tour",
@@ -1738,7 +1778,11 @@
           "label": "Rio by Bike",
           "url": "https://riobybike.com/panoramic-tour/"
         }
-      ]
+      ],
+      "image_url": "https://unsplash.com/photos/B7YQmou0Uu4/download?force=true&w=1400",
+      "image_position": "center",
+      "image_credit": "Christian Lue / Unsplash · representative coastal cycling",
+      "image_credit_url": "https://unsplash.com/photos/B7YQmou0Uu4"
     },
     {
       "id": "doors-off-helicopter",
@@ -1819,7 +1863,11 @@
           "label": "Rio Helicopters",
           "url": "https://riohelicopters.com/passeio/sem-portas/"
         }
-      ]
+      ],
+      "image_url": "https://cdn.travelersuniverse.com/media/rio-de-janeiro-doors-off-30-min-helicopter-tour-t590881-4.jpg",
+      "image_position": "center",
+      "image_credit": "Travelers Universe · doors-off Rio helicopter",
+      "image_credit_url": "https://www.travelersuniverse.com/rio-de-janeiro-doors-off-30-min-helicopter-tour/"
     },
     {
       "id": "maracana-match",
@@ -1980,7 +2028,11 @@
           "label": "Maracanã Tour",
           "url": "https://www.tourmaracana.com.br/ingressos"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maracana%20internal%20view%20april%202013.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Marcelo Santos · CC BY 3.0 BR",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Maracana_internal_view_april_2013.jpg"
     },
     {
       "id": "carnival-backstage",
@@ -2143,7 +2195,11 @@
           "label": "Fever / Rio Carnaval Expo",
           "url": "https://feverup.com/"
         }
-      ]
+      ],
+      "image_url": "https://expo-rio.com/assets/img/Vis%C3%A9/04.jpg",
+      "image_position": "center",
+      "image_credit": "Le Fabuleux Carnaval de Rio · representative costume exhibition",
+      "image_credit_url": "https://www.expo-rio.com/expo.html"
     },
     {
       "id": "samba-school-rehearsal",
@@ -2388,7 +2444,11 @@
           "label": "Riotur Casa da Tia Ciata",
           "url": "https://riotur.rio/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa%20da%20Tia%20Ciata.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Erikaoliveira2025 · CC BY 4.0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Casa_da_Tia_Ciata.jpg"
     },
     {
       "id": "capoeira-class",
@@ -2466,7 +2526,11 @@
           "label": "Rio capoeira experience reference",
           "url": "https://www.airbnb.com/experiences"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Capoeira%20handstand%20kick.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Eduardo Otubo · CC BY 2.0 · Rio street capoeira",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Capoeira_handstand_kick.jpg"
     },
     {
       "id": "santa-teresa-selaron",
@@ -2623,7 +2687,11 @@
           "label": "Riotur Museu do Amanhã",
           "url": "https://riotur.rio/es/que_fazer/museu-do-amanha-museo-del-manana/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museu%20do%20Amanh%C3%A3%20rio.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Arne Müseler · Museu do Amanhã",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Museu_do_Amanh%C3%A3_rio.jpg"
     },
     {
       "id": "arraial-boat",
@@ -2706,7 +2774,11 @@
           "label": "Rio State Tourism",
           "url": "https://www.turismo.rj.gov.br/cidades/arraial-do-cabo/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/ARRAIAL%20DO%20CABO%20(3011039741).jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "alexanpaulo · CC BY 2.0 · Arraial boat trip",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:ARRAIAL_DO_CABO_(3011039741).jpg"
     },
     {
       "id": "arraial-scuba",
@@ -2786,7 +2858,11 @@
           "label": "Rio State Tourism",
           "url": "https://www.turismo.rj.gov.br/noticias/turismo-de-aventura/"
         }
-      ]
+      ],
+      "image_url": "https://admin.tripcart.io/server_images/1622-1762452001-1.jpg",
+      "image_position": "center",
+      "image_credit": "Smart Travel Conecta · Arraial scuba",
+      "image_credit_url": "https://smarttravelconecta.com.br/trip/mergulho-de-batismo-em-arraial-do-cabo"
     },
     {
       "id": "ilha-grande",
@@ -3037,7 +3113,11 @@
           "label": "ICMBio traverse guide",
           "url": "https://www.gov.br/icmbio/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amanhecer%20no%20Hercules%20--.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Serra dos Órgãos · Wikimedia Commons",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Amanhecer_no_Hercules_--.jpg"
     }
   ]
 }
