@@ -405,7 +405,11 @@
           "label": "Ultramar",
           "url": "https://www.ultramarferry.com/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Isla%20Mujeres%20aerial%20(29729604048).jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "dronepicr · Wikimedia Commons",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Isla_Mujeres_aerial_(29729604048).jpg"
     },
     {
       "id": "isla-contoy",
@@ -484,7 +488,11 @@
           "label": "CONANP",
           "url": "https://descubreanp.conanp.gob.mx/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Contoy.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "ImTurismo · CC0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Contoy.jpg"
     },
     {
       "id": "puerto-morelos-reef",
@@ -582,7 +590,11 @@
           "label": "Dive Puerto Morelos",
           "url": "https://divepuertomorelos.com/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Personas%20practicando%20snorkel%20en%20arrecife%20de%20Puerto%20Morelos%201.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "ProtoplasmaKid · CC BY-SA 4.0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Personas_practicando_snorkel_en_arrecife_de_Puerto_Morelos_1.jpg"
     },
     {
       "id": "ruta-cenotes",
@@ -740,7 +752,11 @@
           "label": "Río Secreto",
           "url": "https://www.riosecreto.com/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rio%20Secreto%20Quintana%20Roo%20visit%2020%20June%202024%20-%2005.jpg?width=1400",
+      "image_position": "center 44%",
+      "image_credit": "edenpictures · Wikimedia Commons",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Rio_Secreto_Quintana_Roo_visit_20_June_2024_-_05.jpg"
     },
     {
       "id": "dos-ojos-snorkel",
@@ -1068,7 +1084,11 @@
           "label": "CONANP guidance",
           "url": "https://www.gob.mx/conanp"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Green%20Sea%20Turtle%20grazing%20seagrass.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Wikimedia Commons · Akumal Bay",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Green_Sea_Turtle_grazing_seagrass.jpg"
     },
     {
       "id": "cozumel-reef",
@@ -1248,7 +1268,11 @@
           "label": "INAH / Sectur",
           "url": "https://www.gob.mx/sectur"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tulum%20Ruins%20(213574113).jpeg?width=1400",
+      "image_position": "center",
+      "image_credit": "dronepicr · CC BY 3.0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Tulum_Ruins_(213574113).jpeg"
     },
     {
       "id": "muyil-sian-kaan",
@@ -1709,7 +1733,11 @@
           "label": "INAH Chichén Itzá",
           "url": "https://www.inah.gob.mx/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chichen-Itza.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Berenice Lara Ramírez · Wikimedia Commons",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Chichen-Itza.jpg"
     },
     {
       "id": "valladolid-bike",
@@ -1793,7 +1821,11 @@
           "label": "Yucatán Travel",
           "url": "https://yucatan.travel/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valladolid%20Yucatan.JPG?width=1400",
+      "image_position": "center",
+      "image_credit": "Wikimedia Commons · Valladolid, Yucatán",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Valladolid_Yucatan.JPG"
     },
     {
       "id": "ek-balam",
@@ -2378,7 +2410,11 @@
           "label": "Tour Holbox",
           "url": "https://www.tourholbox.com/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beach%20of%20Holbox%2C%20Mexico%20(42690758045).jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Wikimedia Commons · Holbox",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Beach_of_Holbox,_Mexico_(42690758045).jpg"
     },
     {
       "id": "holbox-kitesurf",
@@ -2882,7 +2918,11 @@
           "label": "Bacalar kayak rental",
           "url": "https://lagunaadventuresbacalar.com/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Laguna%20de%20Bacalar%2C%20M%C3%A9xico%2C%202025-12-16%2C%20DD%2019-21%20HDR.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Diego Delso · Wikimedia Commons",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Laguna_de_Bacalar,_México,_2025-12-16,_DD_19-21_HDR.jpg"
     },
     {
       "id": "ichkabal",
