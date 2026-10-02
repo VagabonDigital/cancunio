@@ -4,8 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#12b8a6" />
-  <meta name="description" content="A bright, interactive Cancún to Rio adventure index." />
-  <title>Cancún → Rio · Adventure Index</title>
+  <meta name="description" content="CANCÚNIO — a bright, interactive Cancún to Rio adventure index." />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <title>CANCÚNIO · Cancún → Rio Adventure Index</title>
   <style>
 :root {
   --bg: #f8f7f1;
@@ -205,10 +206,11 @@ footer strong { color:var(--ink); }
 .credits p { max-width:850px; line-height:1.5; }
 
 .modal-backdrop { position:fixed; inset:0; background:rgba(7,18,18,.54); backdrop-filter:blur(5px); z-index:49; }
-.detail-sheet { position:fixed; right:0; top:0; bottom:0; width:min(540px, 100%); background:var(--paper); z-index:50; box-shadow:-25px 0 70px rgba(0,0,0,.2); transform:translateX(105%); transition:transform .25s ease; overflow:auto; }
+.detail-sheet { position:fixed; right:0; top:0; bottom:0; width:min(680px, 100%); background:var(--paper); z-index:50; box-shadow:-25px 0 70px rgba(0,0,0,.2); transform:translateX(105%); transition:transform .25s ease; overflow:auto; }
 .detail-sheet.open { transform:translateX(0); }
 .sheet-close { position:fixed; right:16px; top:16px; width:40px; height:40px; border-radius:50%; border:0; background:rgba(255,255,255,.92); z-index:3; font-size:26px; cursor:pointer; box-shadow:0 5px 18px rgba(0,0,0,.12); }
-.sheet-image { height:280px; background:center/cover no-repeat; }
+.sheet-image { height:340px; background:center/cover no-repeat; position:relative; }
+.sheet-photo-credit { position:absolute; left:12px; bottom:12px; background:rgba(0,0,0,.58); color:white; padding:6px 9px; border-radius:999px; font-size:10px; text-decoration:none; backdrop-filter:blur(5px); }
 .sheet-body { padding:25px 25px 50px; }
 .sheet-body .eyebrow { color:var(--accent); margin-bottom:8px; }
 .sheet-body h2 { font-size:34px; letter-spacing:-.045em; line-height:1; margin:0 0 12px; }
@@ -240,7 +242,9 @@ footer strong { color:var(--ink); }
 @media (max-width: 640px) {
   .topbar { height:68px; padding:0 14px; }
   .brand small { display:none; }
-  .profile-switch { display:none; }
+  .profile-switch { display:flex; }
+  .profile-btn { padding:7px 9px; font-size:11px; }
+  .ghost-btn { padding:8px 10px; font-size:12px; }
   .hero { margin:10px 10px 0; border-radius:24px; min-height:470px; }
   .hero-content { padding:26px 20px 42px; width:100%; }
   .hero h1 { font-size:54px; }
@@ -272,9 +276,9 @@ footer strong { color:var(--ink); }
 <body class="destination-cancun">
   <div class="page-shell">
     <header class="topbar">
-      <a class="brand" href="#" aria-label="Cancún to Rio home">
+      <a class="brand" href="#" aria-label="CANCÚNIO home">
         <span class="brand-mark">↗</span>
-        <span><strong>Cancún → Rio</strong><small>Adventure Index</small></span>
+        <span><strong>CANCÚNIO</strong><small>Cancún → Rio</small></span>
       </a>
       <div class="topbar-actions">
         <div class="profile-switch" aria-label="Whose picks are these?">
@@ -375,7 +379,7 @@ footer strong { color:var(--ink); }
     </main>
 
     <footer>
-      <div><strong>Cancún → Rio</strong> · Prototype v0.2</div>
+      <div><strong>CANCÚNIO</strong> · Cancún → Rio · Prototype v0.3</div>
       <div class="footer-note">Prices are planning estimates, not booking quotes. Venue details should be refreshed before visiting.</div>
       <details class="credits">
         <summary>Prototype image credits</summary>
@@ -495,7 +499,10 @@ footer strong { color:var(--ink); }
         summary: raw.summary || '',
         typeLabel: isDo ? labelize(raw.mission_type || 'experience') : labelize(raw.record_type || 'food'),
         priceText: getPrice(raw),
-        image: getImage(raw)
+        image: getImage(raw),
+        imagePosition: raw.image_position || 'center',
+        imageCredit: raw.image_credit || null,
+        imageCreditUrl: raw.image_credit_url || null
       };
     }
   
@@ -519,6 +526,7 @@ footer strong { color:var(--ink); }
     }
   
     function getImage(raw) {
+      if (raw.image_url) return raw.image_url;
       const id = raw.id || '';
       const tags = [...(raw.tags || []), ...(raw.categories || []), ...(raw.vibe || [])].join(' ').toLowerCase();
       if (state.content === 'eat') {
@@ -582,7 +590,7 @@ footer strong { color:var(--ink); }
       const meta = `${item.typeLabel} · ${item.area}`;
       return `
         <article class="card ${feature ? 'feature-card' : ''}" data-id="${item.id}">
-          <div class="card-image" data-open="${item.id}" style="background-image:url('${item.image}')">
+          <div class="card-image" data-open="${item.id}" style="background-image:url('${item.image}');background-position:${item.imagePosition}">
             <div class="card-badges">
               <span class="badge budget-${item.budgetBand}">${badge}</span>
               <span class="preference-mark">${pref === 'want' ? '🔥' : pref === 'maybe' ? '🤔' : pref === 'skip' ? '❌' : bothWant(item.id) ? '💥' : '＋'}</span>
@@ -685,6 +693,8 @@ footer strong { color:var(--ink); }
       const item = normalize(raw);
       const pref = getPref(id);
       $('#sheetImage').style.backgroundImage = `url('${item.image}')`;
+      $('#sheetImage').style.backgroundPosition = item.imagePosition;
+      $('#sheetImage').innerHTML = item.imageCredit ? `<a class="sheet-photo-credit" href="${item.imageCreditUrl || '#'}" ${item.imageCreditUrl ? 'target="_blank" rel="noopener"' : ''}>📷 ${item.imageCredit}</a>` : '';
       const isDo = state.content==='do';
       const details = [];
       if (isDo) {
