@@ -301,7 +301,11 @@
           "url": "https://riotur.rio/onde_comer/nossa-senhora-da-paz/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://images.csmonitor.com/csm/2021/12/1208%20DDP%20ACAI%20bowl.jpg?alias=standard_1200x800",
+      "image_position": "center",
+      "image_credit": "Christian Science Monitor · representative açaí bar",
+      "image_credit_url": "https://www.csmonitor.com/World/Americas/2021/1208/Brazilian-wonder-berry-offers-farmers-and-the-Amazon-a-future"
     },
     {
       "id": "caipirinha-cachaca",
@@ -521,7 +525,11 @@
           "url": "https://riotur.rio/onde_comer/adega-perola-4/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://media.timeout.com/images/106112465/750/422/image.jpg",
+      "image_position": "center",
+      "image_credit": "Time Out / Reprodução Facebook · Adega Pérola",
+      "image_credit_url": "https://www.timeout.com/rio-de-janeiro/bars/adega-perola"
     },
     {
       "id": "bar-do-momo",
@@ -593,7 +601,11 @@
           "url": "https://riotur.rio/onde_comer/bar-do-momo-4/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://odia.ig.com.br/_midias/jpg/2019/06/27/toninho_4286-11793254.jpg",
+      "image_position": "center",
+      "image_credit": "O Dia · Bar do Momo",
+      "image_credit_url": "https://odia.ig.com.br/rio-de-janeiro/2019/06/5657910-bares-com-a-cara-da-boemia-do-rio.html"
     },
     {
       "id": "beco-rato-samba",
@@ -669,7 +681,11 @@
           "url": "https://riotur.rio/evento-calendario/banda-beco-do-rato-no-beco-do-rato-dia-22-de-novembro/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://riodejaneirobycariocas.com/wp-content/uploads/2023/02/samba-no-rio-rbc-3.jpg",
+      "image_position": "center",
+      "image_credit": "Rio de Janeiro by Cariocas · Beco do Rato",
+      "image_credit_url": "https://riodejaneirobycariocas.com/samba-in-rio-de-janeiro-a-guide-to-enjoy-the-best-samba-shows/"
     },
     {
       "id": "bip-bip",
@@ -745,7 +761,11 @@
           "url": null,
           "source_kind": "business-listing"
         }
-      ]
+      ],
+      "image_url": "https://images.mnstatic.com/37/82/3782982e26368c777861239ac89f3df1.jpg?aspect_ratio=980%3A880&fit=crop&format=pjpg&height=880&quality=75&width=980",
+      "image_position": "center",
+      "image_credit": "Minube · Bip Bip",
+      "image_credit_url": "https://www.minube.com.br/sitio-preferido/bip-bip-a2219275"
     },
     {
       "id": "bar-do-omar",
@@ -816,7 +836,11 @@
           "url": "https://riotur.rio/en/onde_comer/bar-do-omar-2/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/a3/38/ce/bar-do-omar.jpg?h=1100&s=1&w=1100",
+      "image_position": "center",
+      "image_credit": "Tripadvisor · Bar do Omar",
+      "image_credit_url": "https://www.tripadvisor.com.br/Restaurant_Review-g303506-d6579465-Reviews-Bar_do_Omar-Rio_de_Janeiro_State_of_Rio_de_Janeiro.html"
     },
     {
       "id": "os-imortais",
@@ -892,7 +916,11 @@
           "url": "https://riotur.rio/onde_comer/os-imortais/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://www.boadiversao.com.br/midia/image/content/OsImortais-tomasRangel_80422.jpg",
+      "image_position": "center",
+      "image_credit": "Boa Diversão / Tomas Rangel · Os Imortais",
+      "image_credit_url": "https://boadiversao.com.br/guia/rio-de-janeiro/bares/noticia/id/76659/bar_os_imortais_inaugura_anexo_dedicado_aos_coqueteis"
     },
     {
       "id": "bar-do-mineiro",
@@ -964,7 +992,11 @@
           "url": null,
           "source_kind": "business-listing"
         }
-      ]
+      ],
+      "image_url": "https://barsforkings.com/images/places/bars/rio-de-janeiro/bar-do-mineiro/00-hero.jpg",
+      "image_position": "center 42%",
+      "image_credit": "Bars for Kings · Bar do Mineiro",
+      "image_credit_url": "https://barsforkings.com/bars/rio-de-janeiro/bar-do-mineiro/"
     },
     {
       "id": "adega-velha",
@@ -1035,7 +1067,11 @@
           "url": "https://riotur.rio/onde_comer/adega-da-velha/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://viagenss2.com.br/wp-content/uploads/2024/07/Bar-Adega-da-Velha.jpg",
+      "image_position": "center",
+      "image_credit": "Viagens S2 · Adega da Velha",
+      "image_credit_url": "https://viagenss2.com.br/melhores-restaurantes-e-bares-botafogo/"
     },
     {
       "id": "academia-cachaca",
@@ -1106,7 +1142,11 @@
           "url": "https://riotur.rio/onde_comer/academia-da-cachaca/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://3.bp.blogspot.com/-KKQD2pgxCxY/TVkd8oTdNII/AAAAAAAALeY/y8G_IpuiOJ0/s1600/DSC08169.JPG",
+      "image_position": "center",
+      "image_credit": "Feijoadas Cariocas · Academia da Cachaça",
+      "image_credit_url": "https://feijoadascariocas.blogspot.com/2011/02/academia-da-cachaca.html"
     },
     {
       "id": "polissucos",
@@ -1183,7 +1223,11 @@
           "url": "https://riotur.rio/onde_comer/nossa-senhora-da-paz/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://www.palavradecarioca.com/uploads/4/0/6/9/40698839/5720860_orig.png",
+      "image_position": "center",
+      "image_credit": "Palavra de Carioca · Polis Sucos",
+      "image_credit_url": "https://www.palavradecarioca.com/entrada/a-cidade-dos-sucos"
     },
     {
       "id": "beach-kiosk-hunt",
@@ -1335,7 +1379,11 @@
           "url": null,
           "source_kind": "business-listing"
         }
-      ]
+      ],
+      "image_url": "https://images.squarespace-cdn.com/content/v1/645ea3b4fecb8f1cd71a040a/1763789453703-TMU1V08NJFLOSSOCT3OM/IMG_4202.jpeg",
+      "image_position": "center",
+      "image_credit": "The Rio Kitchen · representative prato feito",
+      "image_credit_url": "https://www.theriokitchen.com/rio/botecoprincesa"
     },
     {
       "id": "braseiro-labuta",
@@ -1410,7 +1458,11 @@
           "url": null,
           "source_kind": "business-listing"
         }
-      ]
+      ],
+      "image_url": "https://s2-oglobo.glbimg.com/e3p-11HbmF076zHpVjDfFuI6Jsc%3D/0x0%3A768x1024/984x0/smart/filters%3Astrip_icc%28%29/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2024/h/r/ff6ttgR8CYsOZ1Pl9gUQ/105626570-1-.jpg",
+      "image_position": "center",
+      "image_credit": "O Globo · Braseiro Labuta",
+      "image_credit_url": "https://oglobo.globo.com/ela/gastronomia/noticia/2024/01/23/chef-transforma-area-no-rio-antes-degradada-em-point-gastronomico-e-musical.ghtml"
     },
     {
       "id": "vizta-rooftop",
@@ -1479,7 +1531,11 @@
           "url": null,
           "source_kind": "business-listing"
         }
-      ]
+      ],
+      "image_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/c9/48/de/caption.jpg?h=500&s=1&w=900",
+      "image_position": "center",
+      "image_credit": "Tripadvisor · Vizta Rooftop",
+      "image_credit_url": "https://www.tripadvisor.com/Restaurant_Review-g303506-d32873692-Reviews-Vizta_Rooftop_Bar-Rio_de_Janeiro_State_of_Rio_de_Janeiro.html"
     },
     {
       "id": "slow-bakery",
@@ -1549,7 +1605,11 @@
           "url": "https://riotur.rio/editorial/premio-rio-show-de-gastronomia-2026-reconhece-restaurantes-bares-e-chefs-que-se-destacam-no-rio/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://media.timeout.com/images/106073260/750/422/image.jpg",
+      "image_position": "center",
+      "image_credit": "Time Out / Reprodução Facebook · Slow Bakery",
+      "image_credit_url": "https://www.timeout.com/pt/rio-de-janeiro/restaurantes/the-slow-bakery"
     },
     {
       "id": "ferro-farinha",
@@ -1616,7 +1676,11 @@
           "url": "https://riotur.rio/editorial/premio-rio-show-de-gastronomia-2026-reconhece-restaurantes-bares-e-chefs-que-se-destacam-no-rio/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://media.timeout.com/images/106077948/750/422/image.jpg",
+      "image_position": "center",
+      "image_credit": "Time Out / Rafael Mollica · Ferro e Farinha",
+      "image_credit_url": "https://www.timeout.com/pt/rio-de-janeiro/restaurantes/ferro-e-farinha"
     },
     {
       "id": "satyricon-splurge",
@@ -1684,7 +1748,11 @@
           "url": "https://riotur.rio/editorial/premio-rio-show-de-gastronomia-2026-reconhece-restaurantes-bares-e-chefs-que-se-destacam-no-rio/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://s2-oglobo.glbimg.com/STh_TOn465WQ2TOdv_y_YOy6ZCY%3D/1333x0/smart/filters%3Astrip_icc%28%29/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2025/Q/x/oYIVhtRYGCEBgXra9cOw/satyricon-misto-di-carpacci-marenostrum-credito-tomas-rangel.jpg.jpg",
+      "image_position": "center",
+      "image_credit": "O Globo / Tomas Rangel · Satyricon",
+      "image_credit_url": "https://oglobo.globo.com/rioshow/gastronomia/guia/onda-crua-tartares-crudos-e-carpaccios-sao-destaque-nos-cardapios-para-o-calor.ghtml"
     },
     {
       "id": "samba-feijoada-muhcab",
@@ -1755,7 +1823,11 @@
           "url": "https://riotur.rio/evento/novembro-negro-no-muhcab/",
           "source_kind": "official-tourism"
         }
-      ]
+      ],
+      "image_url": "https://riotur.rio/wp-content/uploads/2024/09/52460561539_6e9355fc70_o-scaled.jpg",
+      "image_position": "center",
+      "image_credit": "Riotur · MUHCAB",
+      "image_credit_url": "https://riotur.rio/onde_comer/muhcab-museu-da-historia-e-da-cultura-afro-brasileira/"
     }
   ]
 }
