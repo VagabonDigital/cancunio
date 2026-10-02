@@ -344,7 +344,11 @@
           "label": "Tour Dois Irmãos",
           "url": "https://tourdoisirmaos.com.br/pt"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dois%20Irmaos%2C%20Rio%20(20160307%20171536).jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "MB-one · Wikimedia Commons",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Dois_Irmaos,_Rio_(20160307_171536).jpg"
     },
     {
       "id": "vidigal-community-walk",
@@ -501,7 +505,11 @@
           "label": "Tijuca National Park",
           "url": "https://parquenacionaldatijuca.rio/locais/trilha-parque-lage-x-corcovado/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Parque%20Lage%2C%20Rio%20de%20Janeiro.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Wilfredor · CC0",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Parque_Lage,_Rio_de_Janeiro.jpg"
     },
     {
       "id": "paineiras-corcovado",
@@ -581,7 +589,11 @@
           "label": "Tijuca National Park",
           "url": "https://parquenacionaldatijuca.rio/locais/trilha-parque-lage-x-corcovado/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Christ%20the%20Redeemer%20on%20Corcovado%20Mountain%2C%20Rio%20de%20Janeiro%2C%20Brazil.jpg?width=1400",
+      "image_position": "center 38%",
+      "image_credit": "Wikimedia Commons · Corcovado",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Christ_the_Redeemer_on_Corcovado_Mountain,_Rio_de_Janeiro,_Brazil.jpg"
     },
     {
       "id": "morro-da-urca-trail",
@@ -744,7 +756,11 @@
           "label": "Rio Mountain Sports",
           "url": "https://www.riomountainsports.com/sugarloaf-trail"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/P%C3%A3o%20de%20A%C3%A7ucar%20-%20Sugarloaf%20Mountain%20-%20Zuckerhut%20-%202022.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Wikimedia Commons · Sugarloaf",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:P%C3%A3o_de_A%C3%A7ucar_-_Sugarloaf_Mountain_-_Zuckerhut_-_2022.jpg"
     },
     {
       "id": "sugarloaf-rock-climbing",
@@ -906,7 +922,11 @@
           "label": "Tijuca National Park",
           "url": "https://parquenacionaldatijuca.rio/atividades/caminhada-em-trilha/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rio%20de%20Janeiro%20Tijuca%20Forest%20(2).jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Wikimedia Commons · Tijuca Forest",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Rio_de_Janeiro_Tijuca_Forest_(2).jpg"
     },
     {
       "id": "catacumba-adventure",
@@ -1552,7 +1572,11 @@
           "label": "Rio Sun Sail",
           "url": "https://riosunsail.com/passeio/sunset-tour"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sailboats%20in%20a%20bay%20of%20Rio%20de%20Janeiro%2C%20Brazil.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Wikimedia Commons · Rio sailboats",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Sailboats_in_a_bay_of_Rio_de_Janeiro,_Brazil.jpg"
     },
     {
       "id": "footvolley-lesson",
@@ -1873,7 +1897,11 @@
           "label": "Maracanã",
           "url": "https://www.tourmaracana.com.br/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maracana%20Stadium.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Peter & Jackie Main · Public domain",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Maracana_Stadium.jpg"
     },
     {
       "id": "maracana-tour",
@@ -2278,7 +2306,11 @@
           "label": "Riotur",
           "url": "https://riotur.rio/que_fazer/pequena-africa/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/VLT%20Cristiano%20Otoni%20Pequena%20Africa%2001.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Mwaldeck · Wikimedia Commons",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:VLT_Cristiano_Otoni_Pequena_Africa_01.jpg"
     },
     {
       "id": "tia-ciata-workshop",
@@ -2511,7 +2543,11 @@
           "label": "Riotur",
           "url": "https://riotur.rio/es/que_fazer/escalinitaselaron/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Santa%20Teresa%20-%20Rio%20de%20Janeiro.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Wikimedia Commons · Santa Teresa",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Santa_Teresa_-_Rio_de_Janeiro.jpg"
     },
     {
       "id": "museu-amanha",
@@ -2831,7 +2867,11 @@
           "label": "Rio State Tourism",
           "url": "https://www.turismo.rj.gov.br/cidades/angra-dos-reis/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ilha%20Grande%20Rio%20de%20Janeiro..JPG?width=1400",
+      "image_position": "center",
+      "image_credit": "João Geraldo Ferreira · Wikimedia Commons",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Ilha_Grande_Rio_de_Janeiro..JPG"
     },
     {
       "id": "serra-orgaos-day",
@@ -2913,7 +2953,11 @@
           "label": "ICMBio Serra dos Órgãos",
           "url": "https://www.gov.br/icmbio/"
         }
-      ]
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Serra%20dos%20%C3%93rg%C3%A3os%202025.jpg?width=1400",
+      "image_position": "center",
+      "image_credit": "Wikimedia Commons · Serra dos Órgãos",
+      "image_credit_url": "https://commons.wikimedia.org/wiki/File:Serra_dos_%C3%93rg%C3%A3os_2025.jpg"
     },
     {
       "id": "petropolis-teresopolis",
