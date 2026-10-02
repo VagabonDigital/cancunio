@@ -714,7 +714,7 @@ footer strong { color:var(--ink); }
     }
   
     function bindDynamic() {
-      $('[data-image]').forEach(el=>{
+      $$('[data-image]').forEach(el=>{
         const src = decodeURIComponent(el.dataset.image || '');
         const fallback = decodeURIComponent(el.dataset.fallback || '');
         if (!src || src === fallback) return;
@@ -723,9 +723,9 @@ footer strong { color:var(--ink); }
         probe.onerror = ()=>{ el.style.backgroundImage = 'url("' + fallback.replace(/"/g,'\\\"') + '")'; };
         probe.src = src;
       });
-      $('[data-pref]').forEach(btn=>btn.onclick = (e)=>{ e.stopPropagation(); setPref(btn.dataset.id,btn.dataset.pref); });
-      $('[data-open]').forEach(el=>el.onclick = ()=>openDetail(el.dataset.open));
-      $('[data-quick]').forEach(btn=>btn.onclick = ()=>{
+      $$('[data-pref]').forEach(btn=>btn.onclick = (e)=>{ e.stopPropagation(); setPref(btn.dataset.id,btn.dataset.pref); });
+      $$('[data-open]').forEach(el=>el.onclick = ()=>openDetail(el.dataset.open));
+      $$('[data-quick]').forEach(btn=>btn.onclick = ()=>{
         const k=btn.dataset.quick;
         state.quick.has(k) ? state.quick.delete(k) : state.quick.add(k);
         render();
