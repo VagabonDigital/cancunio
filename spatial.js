@@ -8,7 +8,7 @@
 
   const shell = document.createElement('div');
   shell.className = 'spatial-shell';
-  shell.dataset.mobileView = 'list';
+  shell.dataset.view = 'list';
 
   const listPane = document.createElement('div');
   listPane.className = 'spatial-list-pane';
@@ -24,15 +24,16 @@
     <div id="tripMap" class="trip-map" aria-label="Interactive map"></div>
     <p class="map-note">Pins use place or area centres where exact coordinates are not in the seed data.</p>`;
 
-  const mobileToggle = document.createElement('div');
-  mobileToggle.className = 'mobile-spatial-toggle';
-  mobileToggle.setAttribute('aria-label', 'Choose list or map view');
-  mobileToggle.innerHTML = `
-    <button type="button" class="active" data-spatial-view="list">☷ List</button>
-    <button type="button" data-spatial-view="map">⌖ Map</button>`;
+  const viewToggle = document.createElement('div');
+  viewToggle.className = 'spatial-view-toggle';
+  viewToggle.setAttribute('aria-label', 'Choose board view');
+  viewToggle.innerHTML = `
+    <button type="button" class="active" data-spatial-view="list">List</button>
+    <button type="button" data-spatial-view="map">Map</button>
+    <button type="button" data-spatial-view="split">Split</button>`;
 
-  if (listHead) listHead.insertAdjacentElement('afterend', mobileToggle);
-  else allSection.prepend(mobileToggle);
+  if (listHead) listHead.insertAdjacentElement('afterend', viewToggle);
+  else allSection.prepend(viewToggle);
 
   grid.parentNode.insertBefore(shell, grid);
   listPane.appendChild(grid);
@@ -189,7 +190,7 @@
       map.setView(destination.center, destination.zoom);
       return;
     }
-    map.fitBounds(latestBounds, { padding: [34, 34], maxZoom: 13, animate: false });
+    map.fitBounds(latestBounds, { padding: [42, 42], maxZoom: 13, animate: false });
   }
 
   function refreshMap() {
@@ -215,8 +216,7 @@
       marker.on('mouseout', () => setActive(data.key, false));
       marker.on('click', () => {
         setActive(data.key, true);
-        const openTarget = card.querySelector('[data-open]');
-        openTarget?.click();
+        card.querySelector('[data-open]')?.click();
       });
       markers.set(data.key, marker);
       bounds.extend([data.lat, data.lng]);
@@ -226,7 +226,7 @@
     const count = document.getElementById('mapCount');
     if (count) count.textContent = `${points.length} visible`;
 
-    if (shouldFit) requestAnimationFrame(() => {
+    if (shouldFit && shell.dataset.view !== 'list') requestAnimationFrame(() => {
       map.invalidateSize(false);
       fitVisible();
     });
@@ -259,12 +259,12 @@
     fitVisible();
   });
 
-  mobileToggle.querySelectorAll('[data-spatial-view]').forEach(button => {
+  viewToggle.querySelectorAll('[data-spatial-view]').forEach(button => {
     button.addEventListener('click', () => {
       const view = button.dataset.spatialView;
-      shell.dataset.mobileView = view;
-      mobileToggle.querySelectorAll('button').forEach(candidate => candidate.classList.toggle('active', candidate === button));
-      if (view === 'map') requestAnimationFrame(() => {
+      shell.dataset.view = view;
+      viewToggle.querySelectorAll('button').forEach(candidate => candidate.classList.toggle('active', candidate === button));
+      if (view !== 'list') requestAnimationFrame(() => {
         map.invalidateSize(false);
         fitVisible();
       });
@@ -277,6 +277,8 @@
   const bodyObserver = new MutationObserver(queueRefresh);
   bodyObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
 
-  window.addEventListener('resize', () => map.invalidateSize(false));
+  window.addEventListener('resize', () => {
+    if (shell.dataset.view !== 'list') map.invalidateSize(false);
+  });
   queueRefresh();
 })();
