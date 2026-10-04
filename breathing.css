@@ -1,11 +1,13 @@
 /* Breathing room only. Keep the pre-reset visual system intact. */
 
 body.destination-cancun #destinationPhoto {
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8qTnQhoERsiFcQE1IYrg1rGd3dg-m_34EgQW_tqeh0A&s=10') !important;
+  background-image: url('https://commons.wikimedia.org/wiki/Special:FilePath/Cancun%20beach%20aerial%20-%20Luftbild%20%2818632395003%29.jpg?width=1920') !important;
+  background-position: center 46% !important;
 }
 
 body.destination-rio #destinationPhoto {
-  background-image: url('https://cdn.wallpapersafari.com/76/0/eDoAdS.jpg') !important;
+  background-image: url('https://commons.wikimedia.org/wiki/Special:FilePath/Panoramic%20view%20of%20Rio%20de%20Janeiro.jpg?width=1920') !important;
+  background-position: center 48% !important;
 }
 
 @media (min-width: 900px) {
