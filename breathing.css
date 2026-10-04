@@ -1,12 +1,12 @@
 /* Breathing room only. Keep the pre-reset visual system intact. */
 
 body.destination-cancun #destinationPhoto {
-  background-image: url('./assets/cancun-hero.webp') !important;
+  background-image: url('/hero/cancun.jpg?v=1') !important;
   background-position: center 46% !important;
 }
 
 body.destination-rio #destinationPhoto {
-  background-image: url('./assets/rio-hero.webp') !important;
+  background-image: url('/hero/rio.jpg?v=1') !important;
   background-position: center 48% !important;
 }
 
