@@ -1,0 +1,7 @@
+/* Breathing room only. Keep the pre-reset visual system intact. */
+@media (min-width: 900px) {
+  main,
+  footer {
+    width: min(1080px, 82vw);
+  }
+}
