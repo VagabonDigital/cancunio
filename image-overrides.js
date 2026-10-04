@@ -7,6 +7,7 @@
     'rio-beyond-experiences.seed.json': {
       'cagarras-island-trail': 'https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/ilhas-cagarras-hope-spot-mission-blue-3.webp?w=1600&h=900',
       'dois-irmaos-sunrise': 'https://a0.muscache.com/im/pictures/Mt/MtTemplate-2472910/original/60dd2aaf-f0b4-466d-8ca0-fe044e7b69dd.png?im_w=1440&im_q=highq',
+      'footvolley-lesson': 'https://hikingillustrated.com/wp-content/uploads/2020/03/20200117_Futevolei_rio-de-janeiro_Ipanema-Beach_1086-2000x1200.jpg',
     },
   };
 
