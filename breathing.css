@@ -1,12 +1,12 @@
 /* Breathing room only. Keep the pre-reset visual system intact. */
 
 body.destination-cancun #destinationPhoto {
-  background-image: url('https://images.unsplash.com/photo-1745874589259-768dcc79a0ef?auto=format&fit=crop&w=1400&q=78') !important;
+  background-image: url('https://commons.wikimedia.org/wiki/Special:FilePath/Canc%C3%BAn%20-%20Playa%20Gaviota%20Azul%20-%2009.jpg?width=1600') !important;
   background-position: center 46% !important;
 }
 
 body.destination-rio #destinationPhoto {
-  background-image: url('https://images.unsplash.com/photo-1743443924554-9b7630c2ff46?auto=format&fit=crop&w=1400&q=78') !important;
+  background-image: url('https://commons.wikimedia.org/wiki/Special:FilePath/Rio-panorama-Botafogo-Sugarloaf.jpg?width=1600') !important;
   background-position: center 48% !important;
 }
 
