@@ -1,0 +1,11 @@
+{
+  "name": "cancunio",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-03",
+  "assets": {
+    "directory": "./",
+    "binding": "ASSETS",
+    "html_handling": "none",
+    "run_worker_first": ["/api/*"]
+  }
+}
