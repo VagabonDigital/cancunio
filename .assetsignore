@@ -1,6 +1,9 @@
 .git/
 .github/
 src/
+scripts/
+migrations/
 wrangler.jsonc
 .assetsignore
 README*
+package*.json
