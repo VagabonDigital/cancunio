@@ -6,6 +6,13 @@
     "directory": "./",
     "binding": "ASSETS",
     "html_handling": "none",
-    "run_worker_first": ["/api/*"]
-  }
+    "run_worker_first": ["/api/*", "/"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "cancunio-db",
+      "database_id": "1d4b8796-af3f-4383-95bf-0520054fbe6b"
+    }
+  ]
 }
