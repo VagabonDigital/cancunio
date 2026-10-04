@@ -1,14 +1,17 @@
 (async () => {
   try {
-    const profileSwitch = document.querySelector('.profile-switch');
+    const $ = selector => document.querySelector(selector);
+    const $$ = selector => [...document.querySelectorAll(selector)];
+
+    const profileSwitch = $('.profile-switch');
     if (profileSwitch) profileSwitch.style.display = 'none';
 
     const [bootstrapResponse, cDo, rDo, cEat, rEat] = await Promise.all([
       fetch('/api/bootstrap', { headers: { Accept: 'application/json' } }),
-      fetch('./cancun-yucatan-experiences.seed.json').then(r => r.json()),
-      fetch('./rio-beyond-experiences.seed.json').then(r => r.json()),
-      fetch('./cancun-yucatan-eat-drink.seed.json').then(r => r.json()),
-      fetch('./rio-eat-drink.seed.json').then(r => r.json()),
+      fetch('./cancun-yucatan-experiences.seed.json').then(response => response.json()),
+      fetch('./rio-beyond-experiences.seed.json').then(response => response.json()),
+      fetch('./cancun-yucatan-eat-drink.seed.json').then(response => response.json()),
+      fetch('./rio-eat-drink.seed.json').then(response => response.json()),
     ]);
 
     if (!bootstrapResponse.ok) {
@@ -27,9 +30,9 @@
       },
     };
 
-    const serverPrefs = {};
+    const prefs = {};
     for (const row of bootstrap.preferences || []) {
-      serverPrefs[`${row.profile}:${row.item_key}`] = row.value;
+      prefs[`${row.profile}:${row.item_key}`] = row.value;
     }
 
     const state = {
@@ -41,36 +44,10 @@
       budget: 'all',
       cheapMode: false,
       picksOnly: false,
-      prefs: serverPrefs,
+      prefs,
     };
 
-    const $ = s => document.querySelector(s);
-    const $$ = s => [...document.querySelectorAll(s)];
     const saveChains = new Map();
-
-    function mountIdentity() {
-      const actions = $('.topbar-actions');
-      if (!actions) return;
-
-      const style = document.createElement('style');
-      style.textContent = `
-        .profile-switch{display:none!important}
-        .identity-chip{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(20,33,32,.12);background:rgba(255,255,255,.9);border-radius:999px;padding:9px 12px;font-size:13px;font-weight:800;line-height:1;white-space:nowrap}
-        .identity-chip::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent,#10b9a5);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent,#10b9a5) 15%,transparent)}
-        @media(max-width:640px){.identity-chip{padding:8px 10px;font-size:12px}}
-      `;
-      document.head.appendChild(style);
-
-      const displayName = state.profile === 'hannah' ? 'Hannah' : 'Emrys';
-      const chip = document.createElement('span');
-      chip.className = 'identity-chip';
-      chip.textContent = displayName;
-      chip.title = `Signed in as ${displayName}`;
-      chip.setAttribute('aria-label', `Signed in as ${displayName}`);
-      const picks = $('#picksBtn');
-      if (picks) actions.insertBefore(chip, picks);
-      else actions.prepend(chip);
-    }
 
     const images = {
       cancunHero: 'https://images.unsplash.com/photo-1745874589259-768dcc79a0ef?auto=format&fit=crop&w=1400&q=78',
@@ -132,6 +109,30 @@
         copy: 'Mountains above the city, Atlantic rainforest, surf, samba, flying, football, island escapes and boteco nights — with plenty that costs almost nothing.',
       },
     };
+
+    function mountIdentity() {
+      const actions = $('.topbar-actions');
+      if (!actions || actions.querySelector('.identity-chip')) return;
+
+      const style = document.createElement('style');
+      style.textContent = `
+        .profile-switch{display:none!important}
+        .identity-chip{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(20,33,32,.12);background:rgba(255,255,255,.9);border-radius:999px;padding:9px 12px;font-size:13px;font-weight:800;line-height:1;white-space:nowrap}
+        .identity-chip::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent,#10b9a5);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent,#10b9a5) 15%,transparent)}
+        @media(max-width:640px){.identity-chip{padding:8px 10px;font-size:12px}}
+      `;
+      document.head.appendChild(style);
+
+      const displayName = state.profile === 'hannah' ? 'Hannah' : 'Emrys';
+      const chip = document.createElement('span');
+      chip.className = 'identity-chip';
+      chip.textContent = displayName;
+      chip.title = `Signed in as ${displayName}`;
+      chip.setAttribute('aria-label', `Signed in as ${displayName}`);
+      const picks = $('#picksBtn');
+      if (picks) actions.insertBefore(chip, picks);
+      else actions.prepend(chip);
+    }
 
     function currentItems() {
       return DATA[state.content][state.destination] || [];
@@ -204,19 +205,27 @@
       const isDo = state.content === 'do';
       const location = raw.location || {};
       const budget = raw.budget || {};
-      const tags = new Set([...(raw.tags || []), ...(raw.categories || []), ...(raw.best_for || []), ...(raw.vibe || [])]);
+      const tags = new Set(
+        [...(raw.tags || []), ...(raw.categories || []), ...(raw.best_for || []), ...(raw.vibe || [])]
+          .filter(Boolean)
+          .map(tag => String(tag).toLowerCase())
+      );
+
       if (!isDo) {
-        if (location.base_relevance) tags.add(location.base_relevance);
-        tags.add(raw.record_type || '');
-        if (budget.band) tags.add(budget.band);
+        if (location.base_relevance) tags.add(String(location.base_relevance).toLowerCase());
+        if (raw.record_type) tags.add(String(raw.record_type).toLowerCase());
+        if (budget.band) tags.add(String(budget.band).toLowerCase());
       }
       if (isDo && raw.transport?.public_transport_viable) tags.add('public-transport');
       if (isDo && raw.mission_type === 'overnight-unlock') tags.add('overnight');
+
+      // Seed-level preferences are legacy prototype data. D1 is the preference source of truth.
+      const { preference: _legacyPreference, ...content } = raw;
       return {
-        ...raw,
+        ...content,
         area: location.area || '',
         budgetBand: budget.band || 'variable',
-        tags: [...tags].filter(Boolean),
+        tags: [...tags],
         summary: raw.summary || '',
         typeLabel: isDo ? labelize(raw.mission_type || 'experience') : labelize(raw.record_type || 'food'),
         priceText: getPrice(raw),
@@ -238,6 +247,15 @@
 
     function getPref(id, profile = state.profile) {
       return state.prefs[prefKey(id, profile)] || null;
+    }
+
+    function isPick(id, profile = state.profile) {
+      const pref = getPref(id, profile);
+      return pref === 'want' || pref === 'maybe';
+    }
+
+    function bothWant(id) {
+      return getPref(id, 'emrys') === 'want' && getPref(id, 'hannah') === 'want';
     }
 
     function queuePreferenceSave(key, value, previous, stateKey) {
@@ -282,10 +300,6 @@
       else toast(`${name}: ${value === 'want' ? '🔥 want this' : value === 'maybe' ? '🤔 maybe' : '❌ skip'}`);
     }
 
-    function bothWant(id) {
-      return getPref(id, 'emrys') === 'want' && getPref(id, 'hannah') === 'want';
-    }
-
     function budgetRank(band) {
       return ({ free: 0, cheap: 1, normal: 2, variable: 2, treat: 3, splurge: 4, 'price-on-request': 3 })[band] ?? 2;
     }
@@ -297,8 +311,8 @@
         if (!hay.includes(query)) return false;
       }
       if (state.budget !== 'all' && item.budgetBand !== state.budget) return false;
-      if (state.quick.size && ![...state.quick].every(filter => item.tags.some(tag => tag.toLowerCase().includes(filter.toLowerCase())))) return false;
-      if (state.picksOnly && !getPref(item.id)) return false;
+      if (state.quick.size && ![...state.quick].every(filter => item.tags.includes(filter))) return false;
+      if (state.picksOnly && !isPick(item.id)) return false;
       return true;
     }
 
@@ -321,12 +335,16 @@
       const badge = item.budgetBand === 'price-on-request' ? 'POR' : labelize(item.budgetBand);
       const tagHtml = item.tags.slice(0, 4).map(tag => `<span class="mini-tag">${labelize(tag)}</span>`).join('');
       const meta = `${item.typeLabel} · ${item.area}`;
+      const mark = bothWant(item.id)
+        ? '💥'
+        : pref === 'want' ? '🔥' : pref === 'maybe' ? '🤔' : pref === 'skip' ? '❌' : '＋';
+
       return `
         <article class="card ${feature ? 'feature-card' : ''}" data-id="${item.id}">
           <div class="card-image" data-open="${item.id}" data-image="${encodeURIComponent(item.image)}" data-fallback="${encodeURIComponent(item.fallbackImage)}" style="background-image:url('${item.fallbackImage}');background-position:${item.imagePosition}">
             <div class="card-badges">
               <span class="badge budget-${item.budgetBand}">${badge}</span>
-              <span class="preference-mark">${pref === 'want' ? '🔥' : pref === 'maybe' ? '🤔' : pref === 'skip' ? '❌' : bothWant(item.id) ? '💥' : '＋'}</span>
+              <span class="preference-mark" title="${bothWant(item.id) ? 'You both want this' : 'Preference'}">${mark}</span>
             </div>
           </div>
           <div class="card-body" data-open="${item.id}">
@@ -372,17 +390,18 @@
     function render() {
       localStorage.setItem('cr-destination', state.destination);
       localStorage.setItem('cr-content', state.content);
+
       $$('.destination-switch .segment').forEach(button => button.classList.toggle('active', button.dataset.destination === state.destination));
       $$('.content-switch .segment').forEach(button => button.classList.toggle('active', button.dataset.content === state.content));
-      $('#picksBtn').classList.toggle('active', state.picksOnly);
-      $('#picksBtn').innerHTML = `<span>${state.picksOnly ? '←' : '🔥'}</span> ${state.picksOnly ? 'Explore' : 'Picks'} <b id="pickCount">0</b>`;
       $$('#budgetFilters .chip').forEach(button => button.classList.toggle('active', button.dataset.budget === state.budget));
       $('#cheapToggle').checked = state.cheapMode;
+      $('#picksBtn').classList.toggle('active', state.picksOnly);
+      $('#picksBtn').innerHTML = `<span>${state.picksOnly ? '←' : '🔥'}</span> ${state.picksOnly ? 'Explore' : 'Picks'} <b id="pickCount">0</b>`;
       renderQuickFilters();
 
       const all = currentItems().map(normalize);
       renderHero(all);
-      $('#pickCount').textContent = all.filter(item => getPref(item.id)).length;
+      $('#pickCount').textContent = all.filter(item => isPick(item.id)).length;
 
       $('#sectionKicker').textContent = state.picksOnly ? `${state.profile.toUpperCase()}'S PICKS` : 'EXPLORE';
       $('#sectionTitle').textContent = state.picksOnly
@@ -401,7 +420,7 @@
       $('#featuredSection').hidden = !featureItems.length;
       $('#featuredGrid').innerHTML = featureItems.map(item => card(item, true)).join('');
       $('#resultCount').textContent = filtered.length;
-      $('#cardGrid').innerHTML = filtered.map(item => card(item, false)).join('');
+      $('#cardGrid').innerHTML = filtered.map(item => card(item)).join('');
       $('#emptyState').hidden = filtered.length > 0;
 
       const active = [];
@@ -410,6 +429,7 @@
       if (state.search) active.push(`“${state.search}”`);
       if (state.cheapMode) active.push('cheap-first');
       $('#activeFilterText').textContent = active.length ? active.join(' · ') : 'Browse everything or narrow it down.';
+
       bindDynamic();
     }
 
@@ -430,7 +450,11 @@
           setPref(button.dataset.id, button.dataset.pref);
         };
       });
-      $$('[data-open]').forEach(element => { element.onclick = () => openDetail(element.dataset.open); });
+
+      $$('[data-open]').forEach(element => {
+        element.onclick = () => openDetail(element.dataset.open);
+      });
+
       $$('[data-quick]').forEach(button => {
         button.onclick = () => {
           const key = button.dataset.quick;
@@ -443,6 +467,7 @@
     function openDetail(id) {
       const raw = currentItems().find(item => item.id === id);
       if (!raw) return;
+
       const item = normalize(raw);
       const pref = getPref(id);
       const sheetImage = $('#sheetImage');
@@ -494,11 +519,13 @@
       const sources = raw.sources?.length
         ? `<div class="sheet-section"><h3>Research trail</h3>${raw.sources.filter(source => source.url).map(source => `<a class="source-link" href="${source.url}" target="_blank" rel="noopener">↗ ${source.label}</a>`).join('')}</div>`
         : '';
+      const shared = bothWant(id) ? '<div class="sheet-section"><strong>💥 You both want this.</strong></div>' : '';
 
       $('#sheetBody').innerHTML = `
         <div class="eyebrow">${item.typeLabel} · ${item.area}</div>
         <h2>${item.name}</h2>
         <p>${item.summary}</p>
+        ${shared}
         <div class="sheet-pref">
           <button data-sheet-pref="want" class="${pref === 'want' ? 'selected' : ''}">🔥 Want this</button>
           <button data-sheet-pref="maybe" class="${pref === 'maybe' ? 'selected' : ''}">🤔 Maybe</button>
@@ -515,6 +542,7 @@
           openDetail(id);
         };
       });
+
       $('#modalBackdrop').hidden = false;
       $('#detailSheet').classList.add('open');
       $('#detailSheet').setAttribute('aria-hidden', 'false');
@@ -547,6 +575,7 @@
         render();
       };
     });
+
     $$('.content-switch .segment').forEach(button => {
       button.onclick = () => {
         state.content = button.dataset.content;
@@ -557,6 +586,7 @@
         render();
       };
     });
+
     $('#searchInput').addEventListener('input', event => { state.search = event.target.value; render(); });
     $('#cheapToggle').addEventListener('change', event => { state.cheapMode = event.target.checked; render(); });
     $$('#budgetFilters .chip').forEach(button => { button.onclick = () => { state.budget = button.dataset.budget; render(); }; });
