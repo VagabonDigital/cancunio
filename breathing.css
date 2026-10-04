@@ -1,7 +1,89 @@
 /* Breathing room only. Keep the pre-reset visual system intact. */
+
+body.destination-cancun #destinationPhoto {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8qTnQhoERsiFcQE1IYrg1rGd3dg-m_34EgQW_tqeh0A&s=10') !important;
+}
+
+body.destination-rio #destinationPhoto {
+  background-image: url('https://cdn.wallpapersafari.com/76/0/eDoAdS.jpg') !important;
+}
+
 @media (min-width: 900px) {
   main,
   footer {
     width: min(1080px, 82vw);
+  }
+
+  .destination-header {
+    min-height: clamp(360px, 42vw, 500px);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    overflow: hidden;
+    border-radius: 28px;
+    border: 0;
+    background: #173330;
+    box-shadow: var(--shadow);
+    isolation: isolate;
+  }
+
+  .destination-photo {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    border-radius: inherit;
+    background-size: cover;
+    background-position: center;
+    box-shadow: none;
+  }
+
+  .destination-photo::after {
+    background:
+      linear-gradient(180deg, rgba(4,24,25,.04) 12%, rgba(4,24,25,.12) 44%, rgba(4,24,25,.80) 100%),
+      linear-gradient(90deg, rgba(4,24,25,.28), transparent 66%);
+  }
+
+  .destination-copy {
+    position: relative;
+    z-index: 2;
+    align-self: end;
+    max-width: 760px;
+    padding: 44px 48px 26px;
+    color: #fff;
+  }
+
+  .destination-copy h1 {
+    color: #fff;
+  }
+
+  .destination-copy p {
+    color: rgba(255,255,255,.88);
+  }
+
+  .destination-copy .kicker {
+    color: rgba(255,255,255,.72);
+  }
+
+  .destination-switch {
+    position: relative;
+    z-index: 2;
+    grid-column: 1;
+    grid-row: 2;
+    padding: 0 48px 34px;
+  }
+
+  .destination-btn {
+    color: rgba(255,255,255,.78);
+    border-color: rgba(255,255,255,.22);
+    background: rgba(7,28,29,.18);
+    backdrop-filter: blur(8px);
+  }
+
+  .destination-btn.active {
+    color: #fff;
+    border-color: rgba(255,255,255,.36);
+    background: rgba(255,255,255,.15);
   }
 }
