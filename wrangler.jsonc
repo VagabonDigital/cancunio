@@ -1,6 +1,6 @@
 {
   "name": "cancunio",
-  "main": "src/worker.js",
+  "main": "src/entry.js",
   "compatibility_date": "2026-10-03",
   "assets": {
     "directory": "./",
