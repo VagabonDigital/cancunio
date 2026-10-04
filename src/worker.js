@@ -1,6 +1,11 @@
 const ALLOWED_PREFS = new Set(['want', 'maybe', 'skip']);
 const ITEM_KEY_RE = /^(do|eat):(cancun-yucatan|rio-beyond):[a-z0-9][a-z0-9-]{0,119}$/;
 
+const HERO_IMAGES = {
+  '/hero/cancun.jpg': 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Cancun_beach_aerial_-_Luftbild_%2818632395003%29.jpg/1280px-Cancun_beach_aerial_-_Luftbild_%2818632395003%29.jpg',
+  '/hero/rio.jpg': 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Rio-panorama-Botafogo-Sugarloaf.jpg/1280px-Rio-panorama-Botafogo-Sugarloaf.jpg',
+};
+
 function json(data, status = 200) {
   return Response.json(data, {
     status,
@@ -38,6 +43,25 @@ async function requireIdentity(request, env) {
   if (!profile) return { error: json({ error: 'profile_not_linked' }, 403) };
 
   return { email, profile };
+}
+
+async function serveHero(url) {
+  const source = HERO_IMAGES[url.pathname];
+  if (!source) return new Response('Hero image not found', { status: 404 });
+
+  const upstream = await fetch(source, {
+    headers: { Accept: 'image/avif,image/webp,image/*,*/*;q=0.8' },
+  });
+
+  if (!upstream.ok) {
+    console.error('Hero image upstream failed', url.pathname, upstream.status);
+    return new Response('Hero image unavailable', { status: 502 });
+  }
+
+  const headers = new Headers();
+  headers.set('Content-Type', upstream.headers.get('Content-Type') || 'image/jpeg');
+  headers.set('Cache-Control', 'public, max-age=86400, s-maxage=604800');
+  return new Response(upstream.body, { status: 200, headers });
 }
 
 async function handleApi(request, env, url) {
@@ -120,6 +144,7 @@ export default {
     const url = new URL(request.url);
 
     try {
+      if (HERO_IMAGES[url.pathname]) return await serveHero(url);
       if (url.pathname.startsWith('/api/')) return await handleApi(request, env, url);
       if (url.pathname === '/') return await serveIndex(request, env);
       return env.ASSETS.fetch(request);
