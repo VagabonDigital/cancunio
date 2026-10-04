@@ -30,6 +30,7 @@ body.destination-rio #destinationPhoto {
 
   .destination-photo {
     position: absolute;
+    grid-area: auto;
     inset: 0;
     z-index: 1;
     width: 100%;
