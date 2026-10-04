@@ -12,28 +12,6 @@ function authenticatedEmail(request) {
   return request.headers.get('cf-access-authenticated-user-email')?.trim().toLowerCase() || null;
 }
 
-async function ensureSchema(env) {
-  await env.DB.batch([
-    env.DB.prepare(`
-      CREATE TABLE IF NOT EXISTS profiles (
-        user_email TEXT PRIMARY KEY,
-        profile TEXT NOT NULL UNIQUE CHECK (profile IN ('emrys','hannah')),
-        updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
-      )
-    `),
-    env.DB.prepare(`
-      CREATE TABLE IF NOT EXISTS preferences (
-        user_email TEXT NOT NULL,
-        item_key TEXT NOT NULL,
-        value TEXT NOT NULL CHECK (value IN ('want','maybe','skip')),
-        updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
-        PRIMARY KEY (user_email, item_key),
-        FOREIGN KEY (user_email) REFERENCES profiles(user_email) ON DELETE CASCADE
-      )
-    `),
-  ]);
-}
-
 async function getProfile(env, email) {
   if (!email) return null;
   const row = await env.DB.prepare(
@@ -56,7 +34,6 @@ async function requireIdentity(request, env) {
   const email = authenticatedEmail(request);
   if (!email) return { error: json({ error: 'authentication_required' }, 401) };
 
-  await ensureSchema(env);
   const profile = await getProfile(env, email);
   if (!profile) return { error: json({ error: 'profile_not_linked' }, 403) };
 
@@ -126,29 +103,16 @@ function notLinkedPage() {
 
 async function serveIndex(request, env) {
   const email = authenticatedEmail(request);
-  if (!email) {
-    return new Response('Authentication required', { status: 401 });
-  }
+  if (!email) return new Response('Authentication required', { status: 401 });
 
-  await ensureSchema(env);
   const profile = await getProfile(env, email);
   if (!profile) return notLinkedPage();
 
   const indexUrl = new URL('/index.html', request.url);
-  const assetResponse = await env.ASSETS.fetch(new Request(indexUrl, request));
-  let html = await assetResponse.text();
-
-  const scriptStart = html.lastIndexOf('<script>');
-  const scriptEnd = html.lastIndexOf('</script>');
-  if (scriptStart !== -1 && scriptEnd > scriptStart) {
-    html = html.slice(0, scriptStart) + '<script src="/app.js" defer></script>' + html.slice(scriptEnd + 9);
-  }
-
-  const headers = new Headers(assetResponse.headers);
-  headers.set('Content-Type', 'text/html; charset=utf-8');
+  const response = await env.ASSETS.fetch(new Request(indexUrl, request));
+  const headers = new Headers(response.headers);
   headers.set('Cache-Control', 'no-store');
-  headers.delete('Content-Length');
-  return new Response(html, { status: assetResponse.status, headers });
+  return new Response(response.body, { status: response.status, headers });
 }
 
 export default {
