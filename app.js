@@ -98,6 +98,13 @@
       },
     };
 
+    const reactionInfo = {
+      want: { icon: '🔥', label: 'Want' },
+      maybe: { icon: '🤔', label: 'Maybe' },
+      skip: { icon: '❌', label: 'Skip' },
+      none: { icon: '—', label: 'No call' },
+    };
+
     function mountIdentity() {
       const actions = $('.topbar-actions');
       if (!actions || actions.querySelector('.identity-chip')) return;
@@ -237,6 +244,18 @@
       return getPref(item, 'emrys') === 'want' && getPref(item, 'hannah') === 'want';
     }
 
+    function reaction(item, profile) {
+      const value = getPref(item, profile);
+      return { value, ...(reactionInfo[value || 'none']) };
+    }
+
+    function reactionChip(item, profile, fullName = false) {
+      const result = reaction(item, profile);
+      const name = profile === 'emrys' ? 'Emrys' : 'Hannah';
+      const label = fullName ? name : name[0];
+      return `<span class="person-reaction reaction-${result.value || 'none'}" title="${name}: ${result.label}"><b>${label}</b><span>${result.icon}</span>${fullName ? `<small>${result.label}</small>` : ''}</span>`;
+    }
+
     function queuePreferenceSave(key, value, previous, stateKey) {
       const priorChain = saveChains.get(key) || Promise.resolve();
       const nextChain = priorChain
@@ -276,7 +295,7 @@
 
       const name = state.profile === 'hannah' ? 'Hannah' : 'Emrys';
       if (value === null) toast(`${name}: cleared`);
-      else toast(`${name}: ${value === 'want' ? '🔥 want this' : value === 'maybe' ? '🤔 maybe' : '❌ skip'}`);
+      else toast(`${name}: ${reactionInfo[value].icon} ${reactionInfo[value].label.toLowerCase()}`);
     }
 
     function budgetRank(band) {
@@ -302,54 +321,64 @@
       }
       const doIds = (featured[`${state.destination}:do`] || []).slice(0, 3).map(id => `do:${id}`);
       const eatIds = (featured[`${state.destination}:eat`] || []).slice(0, 3).map(id => `eat:${id}`);
-      return doIds.flatMap((id, index) => [id, eatIds[index]].filter(Boolean));
+      return doIds.flatMap((id, index) => [id, eatIds[index]]).filter(Boolean);
     }
 
     function sorted(items) {
-      const ids = featuredIdsForView();
+      const featuredIds = featuredIdsForView();
       return [...items].sort((a, b) => {
+        if (state.mode === 'picks') {
+          const prefScore = value => value === 'want' ? 0 : value === 'maybe' ? 1 : 2;
+          const mutual = Number(bothWant(b)) - Number(bothWant(a));
+          if (mutual) return mutual;
+          const diff = prefScore(getPref(a)) - prefScore(getPref(b));
+          if (diff) return diff;
+        }
         if (state.cheapMode) {
           const difference = budgetRank(a.budgetBand) - budgetRank(b.budgetBand);
           if (difference) return difference;
         }
-        if (state.mode === 'explore') {
-          const aIndex = ids.indexOf(`${a.content}:${a.id}`);
-          const bIndex = ids.indexOf(`${b.content}:${b.id}`);
-          if (aIndex >= 0 || bIndex >= 0) return (aIndex < 0 ? 999 : aIndex) - (bIndex < 0 ? 999 : bIndex);
-        }
+        const aKey = `${a.content}:${a.id}`;
+        const bKey = `${b.content}:${b.id}`;
+        const aIndex = featuredIds.indexOf(aKey);
+        const bIndex = featuredIds.indexOf(bKey);
+        if (aIndex >= 0 || bIndex >= 0) return (aIndex < 0 ? 999 : aIndex) - (bIndex < 0 ? 999 : bIndex);
         return a.name.localeCompare(b.name);
       });
     }
 
     function card(item, feature = false) {
       const pref = getPref(item);
+      const match = bothWant(item);
       const badge = item.budgetBand === 'price-on-request' ? 'POR' : labelize(item.budgetBand);
-      const tagHtml = item.tags.slice(0, 4).map(tag => `<span class="mini-tag">${labelize(tag)}</span>`).join('');
-      const meta = `${item.content === 'do' ? '⚡ Do' : '🍜 Eat & Drink'} · ${item.area}`;
-      const mark = bothWant(item) ? '💥' : pref === 'want' ? '🔥' : pref === 'maybe' ? '🤔' : pref === 'skip' ? '❌' : '＋';
+      const tagHtml = item.tags.slice(0, 2).map(tag => `<span class="mini-tag">${labelize(tag)}</span>`).join('');
+      const contentLabel = item.content === 'do' ? '⚡ Do' : '🍜 Eat';
       const openKey = `${item.content}:${item.id}`;
 
       return `
-        <article class="card ${feature ? 'feature-card' : ''}" data-id="${item.id}" data-content="${item.content}">
+        <article class="card decision-card ${feature ? 'feature-card' : ''} ${match ? 'match-card' : ''}" data-id="${item.id}" data-content="${item.content}">
           <div class="card-image" data-open="${openKey}" data-image="${encodeURIComponent(item.image)}" data-fallback="${encodeURIComponent(item.fallbackImage)}" style="background-image:url('${item.fallbackImage}');background-position:${item.imagePosition}">
             <div class="card-badges">
-              <span class="badge budget-${item.budgetBand}">${badge}</span>
-              <span class="preference-mark" title="${bothWant(item) ? 'You both want this' : 'Preference'}">${mark}</span>
+              <span class="badge content-badge">${contentLabel}</span>
+              ${match ? '<span class="match-badge">💥 Match</span>' : `<span class="badge budget-${item.budgetBand}">${badge}</span>`}
             </div>
           </div>
           <div class="card-body" data-open="${openKey}">
-            <div class="card-meta">${meta}</div>
+            <div class="card-meta"><span>${item.area || item.typeLabel}</span><span>·</span><span>${item.typeLabel}</span></div>
             <h4>${item.name}</h4>
             <p class="card-copy">${item.summary}</p>
-            <div class="card-tags">${tagHtml}</div>
+            <div class="decision-row" aria-label="Emrys and Hannah reactions">
+              <div class="people-reactions">${reactionChip(item, 'emrys')}${reactionChip(item, 'hannah')}</div>
+              <div class="card-tags">${tagHtml}</div>
+            </div>
           </div>
           <div class="card-footer">
             <div class="price">${item.priceText}</div>
-            <div class="pref-actions" aria-label="Preference">
+            <div class="quick-call" aria-label="Your reaction">
               <button class="pref-btn ${pref === 'want' ? 'selected' : ''}" data-pref="want" data-id="${item.id}" data-content="${item.content}" title="Want this">🔥</button>
               <button class="pref-btn ${pref === 'maybe' ? 'selected' : ''}" data-pref="maybe" data-id="${item.id}" data-content="${item.content}" title="Maybe">🤔</button>
               <button class="pref-btn ${pref === 'skip' ? 'selected' : ''}" data-pref="skip" data-id="${item.id}" data-content="${item.content}" title="Skip">❌</button>
-              <button class="open-btn" data-open="${openKey}">Open</button>
+              <button class="open-btn" data-open="${openKey}" title="Open details">→</button>
             </div>
           </div>
         </article>`;
@@ -366,7 +395,7 @@
         <span class="destination-stat"><strong>${DATA.do[state.destination].length}</strong> things to do</span>
         <span class="destination-stat"><strong>${DATA.eat[state.destination].length}</strong> eat & drink</span>
         <span class="destination-stat"><strong>${picks}</strong> your picks</span>
-        <span class="destination-stat"><strong>${matches}</strong> matches</span>`;
+        <span class="destination-stat ${matches ? 'has-matches' : ''}"><strong>${matches}</strong> matches</span>`;
       document.body.classList.toggle('destination-rio', state.destination === 'rio-beyond');
       document.body.classList.toggle('destination-cancun', state.destination === 'cancun-yucatan');
     }
@@ -381,9 +410,9 @@
     function renderModeCopy() {
       const name = state.profile === 'hannah' ? 'Hannah' : 'Emrys';
       const copy = {
-        explore: ['EXPLORE', 'Find the next thing worth doing.', 'Browse the whole destination together, then narrow it down only when you need to.'],
-        picks: ['YOUR PICKS', `${name}’s shortlist.`, 'Everything you marked Want or Maybe, across activities and food.'],
-        matches: ['MUTUAL YES', 'You both want these.', 'The overlap between Emrys and Hannah — the easiest place to start making actual plans.'],
+        explore: ['EXPLORE', 'Find the next thing worth doing.', 'Scan the board, make a call, and see where you overlap.'],
+        picks: ['YOUR PICKS', `${name}’s shortlist.`, 'Want first, Maybe second — with the other person’s reaction visible beside yours.'],
+        matches: ['MUTUAL YES', 'You both want these.', 'No negotiation required. These are the easiest places to start making actual plans.'],
       }[state.mode];
       $('#sectionKicker').textContent = copy[0];
       $('#sectionTitle').textContent = copy[1];
@@ -436,11 +465,11 @@
         if (state.mode === 'matches') {
           $('#emptyIcon').textContent = '💥';
           $('#emptyTitle').textContent = 'No mutual yeses here yet.';
-          $('#emptyCopy').textContent = 'When you both mark something Want, it will land here automatically.';
+          $('#emptyCopy').textContent = 'When you both mark something Want, it lands here automatically.';
         } else if (state.mode === 'picks') {
           $('#emptyIcon').textContent = '🔥';
           $('#emptyTitle').textContent = 'No picks here yet.';
-          $('#emptyCopy').textContent = 'Mark something Want or Maybe and it will join your shortlist.';
+          $('#emptyCopy').textContent = 'Mark something Want or Maybe and it joins your shortlist.';
         } else {
           $('#emptyIcon').textContent = '🧭';
           $('#emptyTitle').textContent = 'Nothing matches that combination.';
@@ -478,7 +507,10 @@
       });
 
       $$('[data-open]').forEach(element => {
-        element.onclick = () => openDetail(element.dataset.open);
+        element.onclick = event => {
+          event?.stopPropagation?.();
+          openDetail(element.dataset.open);
+        };
       });
 
       $$('[data-quick]').forEach(button => {
@@ -490,34 +522,35 @@
       });
     }
 
-    function openDetail(openKey) {
-      const separator = openKey.indexOf(':');
-      const content = openKey.slice(0, separator);
-      const id = openKey.slice(separator + 1);
+    function openDetail(key) {
+      const [content, id] = key.split(':');
       const raw = (DATA[content]?.[state.destination] || []).find(item => item.id === id);
       if (!raw) return;
 
       const item = normalize(raw, content);
       const pref = getPref(item);
+      const match = bothWant(item);
       const sheetImage = $('#sheetImage');
       sheetImage.style.backgroundImage = `url('${item.fallbackImage}')`;
       sheetImage.style.backgroundPosition = item.imagePosition;
-      sheetImage.innerHTML = '';
+      sheetImage.innerHTML = match ? '<span class="sheet-match-badge">💥 You both want this</span>' : '';
 
       if (item.image && item.image !== item.fallbackImage) {
         const probe = new Image();
         probe.onload = () => {
           sheetImage.style.backgroundImage = 'url("' + item.image.replace(/"/g, '\\\"') + '")';
-          sheetImage.innerHTML = item.imageCredit
+          const credit = item.imageCredit
             ? `<a class="sheet-photo-credit" href="${item.imageCreditUrl || '#'}" ${item.imageCreditUrl ? 'target="_blank" rel="noopener"' : ''}>📷 ${item.imageCredit}</a>`
             : '';
+          sheetImage.innerHTML = `${match ? '<span class="sheet-match-badge">💥 You both want this</span>' : ''}${credit}`;
         };
-        probe.onerror = () => { sheetImage.innerHTML = ''; };
         probe.src = item.image;
       }
 
       const isDo = content === 'do';
       const details = [];
+      details.push(['Budget', labelize(item.budgetBand)]);
+      details.push(['Price', item.priceText.replace(/<[^>]*>/g, '')]);
       if (isDo) {
         if (raw.time?.duration_label) details.push(['Time', raw.time.duration_label]);
         if (raw.difficulty) details.push(['Effort', labelize(raw.difficulty)]);
@@ -529,8 +562,6 @@
         if (raw.evening_friendly) details.push(['Evening', 'Good option']);
         if (raw.alcohol_focus) details.push(['Drinks', 'Alcohol-focused']);
       }
-      details.unshift(['Budget', labelize(item.budgetBand)]);
-      details.push(['Price', item.priceText.replace(/<[^>]*>/g, '')]);
 
       const transport = isDo && raw.transport?.options?.length
         ? `<div class="sheet-section"><h3>Getting there</h3><ul>${raw.transport.options.map(option => `<li><strong>${labelize(option.mode)}</strong> — ${option.label}${option.notes ? ` · ${option.notes}` : ''}</li>`).join('')}</ul></div>`
@@ -548,27 +579,41 @@
       const sources = raw.sources?.length
         ? `<div class="sheet-section"><h3>Research trail</h3>${raw.sources.filter(source => source.url).map(source => `<a class="source-link" href="${source.url}" target="_blank" rel="noopener">↗ ${source.label}</a>`).join('')}</div>`
         : '';
-      const shared = bothWant(item) ? '<div class="sheet-section"><strong>💥 You both want this.</strong></div>' : '';
 
+      const currentName = state.profile === 'hannah' ? 'Hannah' : 'Emrys';
       $('#sheetBody').innerHTML = `
-        <div class="eyebrow">${item.content === 'do' ? '⚡ Do' : '🍜 Eat & Drink'} · ${item.area}</div>
-        <h2>${item.name}</h2>
-        <p>${item.summary}</p>
-        ${shared}
-        <div class="sheet-pref">
-          <button data-sheet-pref="want" class="${pref === 'want' ? 'selected' : ''}">🔥 Want this</button>
-          <button data-sheet-pref="maybe" class="${pref === 'maybe' ? 'selected' : ''}">🤔 Maybe</button>
-          <button data-sheet-pref="skip" class="${pref === 'skip' ? 'selected' : ''}">❌ Skip</button>
+        <div class="sheet-heading">
+          <div class="eyebrow">${content === 'do' ? '⚡ DO' : '🍜 EAT & DRINK'} · ${item.area || item.typeLabel}</div>
+          <h2>${item.name}</h2>
+          <p>${item.summary}</p>
         </div>
-        <div class="info-grid">${details.map(([key, value]) => `<div class="info-box"><small>${key}</small><strong>${value}</strong></div>`).join('')}</div>
-        <div class="sheet-section"><h3>Tags</h3><div class="tag-cloud">${item.tags.slice(0, 14).map(tag => `<span class="mini-tag">${labelize(tag)}</span>`).join('')}</div></div>
+
+        <div class="decision-panel ${match ? 'decision-match' : ''}">
+          <div class="decision-panel-head"><span>${match ? '💥 MATCH' : 'THE CALL'}</span><small>Emrys + Hannah</small></div>
+          <div class="people-decision-grid">
+            ${reactionChip(item, 'emrys', true)}
+            ${reactionChip(item, 'hannah', true)}
+          </div>
+        </div>
+
+        <div class="your-call">
+          <div><strong>Your call</strong><small>Saving as ${currentName}</small></div>
+          <div class="sheet-pref">
+            <button data-sheet-pref="want" class="${pref === 'want' ? 'selected' : ''}">🔥 Want</button>
+            <button data-sheet-pref="maybe" class="${pref === 'maybe' ? 'selected' : ''}">🤔 Maybe</button>
+            <button data-sheet-pref="skip" class="${pref === 'skip' ? 'selected' : ''}">❌ Skip</button>
+          </div>
+        </div>
+
+        <div class="info-grid">${details.map(([label, value]) => `<div class="info-box"><small>${label}</small><strong>${value}</strong></div>`).join('')}</div>
+        <div class="sheet-section"><h3>Useful tags</h3><div class="tag-cloud">${item.tags.slice(0, 12).map(tag => `<span class="mini-tag">${labelize(tag)}</span>`).join('')}</div></div>
         ${transport}${powers}${comboHtml}${order}${sources}
       `;
 
       $$('[data-sheet-pref]').forEach(button => {
         button.onclick = () => {
           setPref(id, content, button.dataset.sheetPref);
-          openDetail(openKey);
+          openDetail(key);
         };
       });
 
@@ -616,9 +661,6 @@
       button.onclick = () => {
         state.content = button.dataset.content;
         state.quick.clear();
-        state.budget = 'all';
-        state.search = '';
-        $('#searchInput').value = '';
         render();
       };
     });
@@ -631,6 +673,7 @@
       state.quick.clear();
       state.budget = 'all';
       state.cheapMode = false;
+      state.content = 'all';
       $('#searchInput').value = '';
       render();
     };
