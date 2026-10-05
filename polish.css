@@ -11,6 +11,21 @@
   letter-spacing:-3px;
 }
 
+/* Replace Astra's cream canvas with a cleaner, brighter base.
+   Warmth now comes from photography and secondary surfaces rather than the whole page. */
+:root {
+  --bg:#fbfcfa;
+  --paper:#ffffff;
+}
+
+body {
+  background:var(--bg);
+}
+
+.topbar {
+  background:#fbfcfaf5;
+}
+
 /* Normalize destination icons: the previous Rio mountain was a text glyph, not emoji. */
 .destination-btn {
   font-size:0;
