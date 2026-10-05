@@ -3,6 +3,7 @@
     'rio-eat-drink.seed.json': {
       'caipirinha-cachaca': 'https://www.allrecipes.com/thmb/Xv7FI7O3UL7oE__5077haA9fYWs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20210-caipirinha-PICS-Beauty-4x3-d4a5aed5d6534d579225b81de111b53a.jpg',
       'acai-juice-hunt': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThVyvlkGiTsn74V-NHRE1XsUhcR2YC_F-olzWslWWGejveK_ceNRNEGsZS&s=10',
+      'adega-perola': 'https://vejario.abril.com.br/wp-content/uploads/2026/06/1.jpg',
     },
     'rio-beyond-experiences.seed.json': {
       'cagarras-island-trail': 'https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/ilhas-cagarras-hope-spot-mission-blue-3.webp?w=1600&h=900',
