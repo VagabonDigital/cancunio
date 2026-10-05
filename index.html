@@ -42,21 +42,21 @@
     <main>
       <section class="destination-header" aria-labelledby="destinationTitle">
         <div class="destination-copy">
-          <span class="kicker">TWO PEOPLE. ONE GREAT TRIP.</span>
+          <span class="kicker">TWO PEOPLE. TOO MANY GOOD OPTIONS.</span>
           <h1 id="destinationTitle">Cancún + Yucatán</h1>
           <p id="destinationCopy">Cenotes, Maya cities, islands, reefs, jungle missions, local culture and excellent cheap food.</p>
           <div class="destination-stats" id="destinationStats"></div>
-          <a class="board-link" href="#board">Explore the board <span aria-hidden="true">↓</span></a>
+          <a class="board-link" href="#board">Show me the good stuff <span aria-hidden="true">↓</span></a>
         </div>
         <div class="destination-photo" id="destinationPhoto" aria-hidden="true"></div>
         <div class="destination-switch" role="group" aria-label="Destination">
           <button class="destination-btn active" type="button" data-destination="cancun-yucatan">🌴 Cancún + Yucatán</button>
-          <button class="destination-btn" type="button" data-destination="rio-beyond">⛰ Rio + Beyond</button>
+          <button class="destination-btn" type="button" data-destination="rio-beyond">🏔️ Rio + Beyond</button>
         </div>
       </section>
 
       <section class="workspace" id="board" aria-label="Travel board" aria-busy="true">
-        <div class="board-intro"><span class="kicker">YOUR SHARED FIELD NOTES</span><span>Find it. Feel it. Make a plan together.</span></div>
+        <div class="board-intro"><span class="kicker">THE GOOD STUFF</span><span>Pick hard. Compare notes. Do something excellent.</span></div>
         <div class="workspace-toolbar">
           <div class="content-switch" role="group" aria-label="What to browse">
             <button class="content-btn active" type="button" data-content="all">Everything</button>
@@ -66,7 +66,7 @@
 
           <label class="search-box">
             <span>⌕</span>
-            <input id="searchInput" type="search" aria-label="Search the travel board" placeholder="Search the board…" autocomplete="off" />
+            <input id="searchInput" type="search" aria-label="Search the travel board" placeholder="Search food, beaches, chaos…" autocomplete="off" />
           </label>
 
           <details class="filters-disclosure">
@@ -75,7 +75,7 @@
               <label class="cheap-toggle">
                 <input id="cheapToggle" type="checkbox" />
                 <span class="toggle-ui"></span>
-                <span><strong>Cheap first</strong><small>Prioritise lower-cost options</small></span>
+                <span><strong>Cheap first</strong><small>Stretch the budget. Keep the good stuff.</small></span>
               </label>
 
               <div class="filters-panel">
@@ -104,9 +104,9 @@
           <p class="active-filters" id="activeFilterText" hidden></p>
           <div class="section-heading" aria-live="polite" aria-atomic="true">
             <div>
-              <span class="kicker" id="sectionKicker">EXPLORE</span>
-              <h2 id="sectionTitle">Find the next thing worth doing.</h2>
-              <p class="section-subtitle" id="sectionSubtitle">Browse everything together, then narrow it down only when you need to.</p>
+              <span class="kicker" id="sectionKicker">GO ON THEN</span>
+              <h2 id="sectionTitle">What are we actually doing?</h2>
+              <p class="section-subtitle" id="sectionSubtitle">Beaches, cenotes, mountains, samba, food. Start saying yes.</p>
             </div>
             <button class="text-btn" id="resetBtn" type="button">Clear filters ↗</button>
           </div>
@@ -118,11 +118,11 @@
                 <h3><span id="resultCount">0</span> <span id="resultLabel">possibilities</span></h3>
               </div>
             </div>
-            <div class="card-grid" id="cardGrid"><div class="loading-state" role="status"><span class="loading-orbit">↗</span><h3>Gathering your next adventures…</h3><p>Loading your board and shared decisions.</p></div></div>
+            <div class="card-grid" id="cardGrid"><div class="loading-state" role="status"><span class="loading-orbit">↗</span><h3>Loading the good stuff…</h3><p>Beaches, mountains and snacks incoming.</p></div></div>
             <div class="empty-state" id="emptyState" hidden>
               <span id="emptyIcon">🧭</span>
-              <h3 id="emptyTitle">Nothing matches that combination.</h3>
-              <p id="emptyCopy">Try dropping one filter — the good stuff is probably hiding just outside it.</p>
+              <h3 id="emptyTitle">You filtered the fun out of it.</h3>
+              <p id="emptyCopy">Loosen one thing. There’s good stuff hiding nearby.</p>
               <button class="empty-action" type="button" id="emptyAction">Explore ideas</button>
             </div>
           </section>
@@ -148,6 +148,7 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
   <script src="./image-overrides.js"></script>
   <script src="./app.js" defer></script>
+  <script src="./voice.js" defer></script>
   <script src="./spatial.js" defer></script>
 </body>
 </html>
