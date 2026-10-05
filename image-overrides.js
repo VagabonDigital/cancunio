@@ -13,6 +13,7 @@
       'footvolley-lesson': 'https://hikingillustrated.com/wp-content/uploads/2020/03/20200117_Futevolei_rio-de-janeiro_Ipanema-Beach_1086-2000x1200.jpg',
       'arpoador-surf': 'https://www.pacificsurf.com/wp-content/uploads/2022/11/surf-school-rio-de-janeiro-scaled.jpeg',
       'samba-school-rehearsal': 'https://www.civitatis.com/f/brasil/rio-de-janeiro/galeria/coreografia-samba.jpg',
+      'hang-glide-pedra-bonita': 'https://i.ytimg.com/vi/aF2kplT0nwI/maxresdefault.jpg',
     },
   };
 
