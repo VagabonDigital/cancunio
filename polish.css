@@ -44,6 +44,24 @@ body {
   content:'🏔️ Rio + Beyond';
 }
 
+/* On desktop the destination hero should read as one complete first screen.
+   Keep the board below the fold, then land it cleanly beneath the sticky 88px header. */
+@media(min-width:761px) {
+  html {
+    scroll-padding-top:88px;
+  }
+
+  .destination-header {
+    min-height:calc(100svh - 76px);
+  }
+
+  .workspace {
+    margin:0 0 80px;
+    padding-top:30px;
+    scroll-margin-top:0;
+  }
+}
+
 @media(max-width:760px) {
   .destination-btn::before {
     font-size:11px;
