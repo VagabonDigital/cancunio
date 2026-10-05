@@ -1,0 +1,36 @@
+/* Small post-overhaul visual corrections. Keep this layer intentionally minimal. */
+
+/* Remove the editorial slogan overlay from destination photography. */
+.destination-photo::after {
+  display:none;
+}
+
+/* Restore more presence to the destination title without changing the layout scale. */
+.destination-copy h1 {
+  font-weight:600;
+  letter-spacing:-3px;
+}
+
+/* Normalize destination icons: the previous Rio mountain was a text glyph, not emoji. */
+.destination-btn {
+  font-size:0;
+}
+
+.destination-btn::before {
+  font-size:12px;
+  font-weight:600;
+}
+
+.destination-btn[data-destination="cancun-yucatan"]::before {
+  content:'🌴 Cancún + Yucatán';
+}
+
+.destination-btn[data-destination="rio-beyond"]::before {
+  content:'🏔️ Rio + Beyond';
+}
+
+@media(max-width:760px) {
+  .destination-btn::before {
+    font-size:11px;
+  }
+}
