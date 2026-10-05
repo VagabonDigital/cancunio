@@ -5,6 +5,7 @@
       'acai-juice-hunt': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThVyvlkGiTsn74V-NHRE1XsUhcR2YC_F-olzWslWWGejveK_ceNRNEGsZS&s=10',
       'adega-perola': 'https://vejario.abril.com.br/wp-content/uploads/2026/06/1.jpg',
       'adega-velha': 'https://adegavelha.com/wp-content/uploads/2023/12/6-combinacoes-perfeitas-para-Adega-Velha-scaled-1.jpg',
+      'bar-do-momo': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbUuHTgwZYMQhAQcCkWIfZtLgCmqRJfwxkQvRJsdIcMXAGxw6Oo6XjOig&s=10',
     },
     'rio-beyond-experiences.seed.json': {
       'cagarras-island-trail': 'https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/ilhas-cagarras-hope-spot-mission-blue-3.webp?w=1600&h=900',
