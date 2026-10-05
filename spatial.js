@@ -1,7 +1,14 @@
 (() => {
   const grid = document.getElementById('cardGrid');
   const allSection = document.querySelector('.all-section');
-  if (!grid || !allSection || !window.L) return;
+  if (!grid || !allSection) return;
+  if (!window.L) {
+    const notice = document.createElement('p');
+    notice.className = 'map-unavailable';
+    notice.textContent = 'The map couldn’t load. You can still browse every idea. Reload to try the map again.';
+    allSection.prepend(notice);
+    return;
+  }
 
   const listHead = allSection.querySelector('.list-head');
   const emptyState = document.getElementById('emptyState');
@@ -28,9 +35,9 @@
   viewToggle.className = 'spatial-view-toggle';
   viewToggle.setAttribute('aria-label', 'Choose board view');
   viewToggle.innerHTML = `
-    <button type="button" class="active" data-spatial-view="list">List</button>
-    <button type="button" data-spatial-view="map">Map</button>
-    <button type="button" data-spatial-view="split">Split</button>`;
+    <button type="button" class="active" aria-pressed="true" data-spatial-view="list">List</button>
+    <button type="button" aria-pressed="false" data-spatial-view="map">Map</button>
+    <button type="button" aria-pressed="false" data-spatial-view="split">Split</button>`;
 
   if (listHead) listHead.insertAdjacentElement('afterend', viewToggle);
   else allSection.prepend(viewToggle);
@@ -164,7 +171,7 @@
 
   function markerIcon(card, data) {
     const match = card.classList.contains('match-card');
-    const picked = !!card.querySelector('.pref-btn.selected');
+    const picked = !!card.querySelector('.pref-btn.selected[data-pref="want"],.pref-btn.selected[data-pref="maybe"]');
     const symbol = match ? '💥' : data.content === 'eat' ? '🍜' : '⚡';
     const className = match ? 'map-pin match' : picked ? 'map-pin picked' : 'map-pin';
     return L.divIcon({
@@ -263,7 +270,10 @@
     button.addEventListener('click', () => {
       const view = button.dataset.spatialView;
       shell.dataset.view = view;
-      viewToggle.querySelectorAll('button').forEach(candidate => candidate.classList.toggle('active', candidate === button));
+      viewToggle.querySelectorAll('button').forEach(candidate => {
+        candidate.classList.toggle('active', candidate === button);
+        candidate.setAttribute('aria-pressed', String(candidate === button));
+      });
       if (view !== 'list') requestAnimationFrame(() => {
         map.invalidateSize(false);
         fitVisible();
@@ -278,6 +288,7 @@
   bodyObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
 
   window.addEventListener('resize', () => {
+    if (window.innerWidth <= 620 && shell.dataset.view === 'split') viewToggle.querySelector('[data-spatial-view="list"]').click();
     if (shell.dataset.view !== 'list') map.invalidateSize(false);
   });
   queueRefresh();

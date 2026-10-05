@@ -32,7 +32,7 @@
 
     const savedContent = localStorage.getItem('cr-content');
     const state = {
-      destination: localStorage.getItem('cr-destination') || 'cancun-yucatan',
+      destination: ['cancun-yucatan', 'rio-beyond'].includes(localStorage.getItem('cr-destination')) ? localStorage.getItem('cr-destination') : 'cancun-yucatan',
       content: ['all', 'do', 'eat'].includes(savedContent) ? savedContent : 'all',
       mode: 'explore',
       profile: bootstrap.profile,
@@ -44,6 +44,11 @@
     };
 
     const saveChains = new Map();
+    let detailKey = null;
+    let detailOpener = null;
+    let detailImageVersion = 0;
+
+    const escapeAttribute = value => String(value || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
     const images = {
       cancunHero: 'https://images.unsplash.com/photo-1745874589259-768dcc79a0ef?auto=format&fit=crop&w=1400&q=78',
@@ -89,12 +94,12 @@
       'cancun-yucatan': {
         title: 'Cancún + Yucatán',
         copy: 'Cenotes, Maya cities, islands, reefs, jungle missions, local culture and excellent cheap food.',
-        photo: images.cancunHero,
+        photo: './assets/cancun-hero.jpg',
       },
       'rio-beyond': {
         title: 'Rio + Beyond',
         copy: 'Mountains, Atlantic rainforest, surf, samba, flying, football, island escapes and boteco nights.',
-        photo: images.rioHero,
+        photo: './assets/rio-hero.jpg',
       },
     };
 
@@ -275,6 +280,7 @@
             if (previous === null) delete state.prefs[stateKey];
             else state.prefs[stateKey] = previous;
             render();
+            if (detailKey) openDetail(detailKey);
           }
           toast('Couldn’t save that pick. Try again.');
         });
@@ -282,6 +288,7 @@
     }
 
     function setPref(id, content, requestedValue) {
+      const focusedPreference = document.activeElement?.dataset.pref;
       const key = itemKey(id, content);
       const stateKey = prefKey(id, content);
       const previous = state.prefs[stateKey] || null;
@@ -291,6 +298,10 @@
       else state.prefs[stateKey] = value;
 
       render();
+      if (focusedPreference) {
+        const replacement = [...document.querySelectorAll('#cardGrid [data-pref]')].find(button => button.dataset.id === id && button.dataset.content === content && button.dataset.pref === focusedPreference);
+        (replacement || $('#emptyAction')).focus({ preventScroll: true });
+      }
       queuePreferenceSave(key, value, previous, stateKey);
 
       const name = state.profile === 'hannah' ? 'Hannah' : 'Emrys';
@@ -347,7 +358,7 @@
       });
     }
 
-    function card(item, feature = false) {
+    function card(item) {
       const pref = getPref(item);
       const match = bothWant(item);
       const badge = item.budgetBand === 'price-on-request' ? 'POR' : labelize(item.budgetBand);
@@ -356,14 +367,15 @@
       const openKey = `${item.content}:${item.id}`;
 
       return `
-        <article class="card decision-card ${feature ? 'feature-card' : ''} ${match ? 'match-card' : ''}" data-id="${item.id}" data-content="${item.content}">
-          <div class="card-image" data-open="${openKey}" data-image="${encodeURIComponent(item.image)}" data-fallback="${encodeURIComponent(item.fallbackImage)}" style="background-image:url('${item.fallbackImage}');background-position:${item.imagePosition}">
+        <article class="card decision-card ${match ? 'match-card' : ''}" data-id="${item.id}" data-content="${item.content}">
+          <div class="card-image" data-open="${openKey}">
+            <img src="${escapeAttribute(item.image)}" data-fallback="${escapeAttribute(item.fallbackImage)}" alt="" loading="lazy" decoding="async" style="object-position:${escapeAttribute(item.imagePosition)}" />
             <div class="card-badges">
               <span class="badge content-badge">${contentLabel}</span>
               ${match ? '<span class="match-badge">💥 Match</span>' : `<span class="badge budget-${item.budgetBand}">${badge}</span>`}
             </div>
           </div>
-          <div class="card-body" data-open="${openKey}">
+          <div class="card-body" data-open="${openKey}" role="button" tabindex="0" aria-label="View ${escapeAttribute(item.name)} details">
             <div class="card-meta"><span>${item.area || item.typeLabel}</span><span>·</span><span>${item.typeLabel}</span></div>
             <h4>${item.name}</h4>
             <p class="card-copy">${item.summary}</p>
@@ -375,9 +387,9 @@
           <div class="card-footer">
             <div class="price">${item.priceText}</div>
             <div class="quick-call" aria-label="Your reaction">
-              <button class="pref-btn ${pref === 'want' ? 'selected' : ''}" data-pref="want" data-id="${item.id}" data-content="${item.content}" title="Want this">🔥</button>
-              <button class="pref-btn ${pref === 'maybe' ? 'selected' : ''}" data-pref="maybe" data-id="${item.id}" data-content="${item.content}" title="Maybe">🤔</button>
-              <button class="pref-btn ${pref === 'skip' ? 'selected' : ''}" data-pref="skip" data-id="${item.id}" data-content="${item.content}" title="Skip">❌</button>
+              <button class="pref-btn ${pref === 'want' ? 'selected' : ''}" data-pref="want" data-id="${item.id}" data-content="${item.content}" title="Want this">🔥 Want</button>
+              <button class="pref-btn ${pref === 'maybe' ? 'selected' : ''}" data-pref="maybe" data-id="${item.id}" data-content="${item.content}" title="Maybe">🤔 Maybe</button>
+              <button class="pref-btn ${pref === 'skip' ? 'selected' : ''}" data-pref="skip" data-id="${item.id}" data-content="${item.content}" title="Skip">× Skip</button>
               <button class="open-btn" data-open="${openKey}" title="Open details">→</button>
             </div>
           </div>
@@ -445,17 +457,7 @@
 
       const viewItems = currentItems();
       const filtered = sorted(viewItems.filter(itemMatches));
-      const featureIds = featuredIdsForView();
-      const showFeatured = state.mode === 'explore' && !state.search && !state.quick.size && state.budget === 'all' && !state.cheapMode;
-      const featureItems = showFeatured
-        ? featureIds.map(key => {
-            const [content, id] = key.split(':');
-            return viewItems.find(item => item.content === content && item.id === id);
-          }).filter(Boolean)
-        : [];
-
-      $('#featuredSection').hidden = !featureItems.length;
-      $('#featuredGrid').innerHTML = featureItems.map(item => card(item, true)).join('');
+      // Standouts are sorted first in this one board, without duplicate hidden cards/images.
       $('#resultCount').textContent = filtered.length;
       $('#resultLabel').textContent = state.mode === 'matches' ? 'matches' : state.mode === 'picks' ? 'picks' : 'possibilities';
       $('#cardGrid').innerHTML = filtered.map(item => card(item)).join('');
@@ -484,19 +486,30 @@
       if (state.search) active.push(`“${state.search}”`);
       if (state.cheapMode) active.push('cheap-first');
       $('#activeFilterText').textContent = active.length ? active.join(' · ') : 'Browse everything or narrow it down.';
+      $('#activeFilterText').hidden = active.length === 0;
+      $('#resetBtn').disabled = active.length === 0;
+      const filterCount = state.quick.size + Number(state.budget !== 'all') + Number(state.cheapMode);
+      $('#filterCount').textContent = filterCount;
+      $('#filterCount').hidden = filterCount === 0;
+      $('#filterDone').textContent = `Show ${filtered.length} ${state.mode === 'explore' ? 'ideas' : state.mode}`;
+      $('#emptyAction').textContent = active.length ? 'Clear filters' : 'Explore ideas';
+      $$('.mode-btn,.destination-btn,.content-btn,#budgetFilters .chip,[data-quick],[data-pref]').forEach(button => button.setAttribute('aria-pressed', String(button.classList.contains('active') || button.classList.contains('selected'))));
 
       bindDynamic();
     }
 
     function bindDynamic() {
-      $$('[data-image]').forEach(element => {
-        const source = decodeURIComponent(element.dataset.image || '');
-        const fallback = decodeURIComponent(element.dataset.fallback || '');
-        if (!source || source === fallback) return;
-        const probe = new Image();
-        probe.onload = () => { element.style.backgroundImage = 'url("' + source.replace(/"/g, '\\\"') + '")'; };
-        probe.onerror = () => { element.style.backgroundImage = 'url("' + fallback.replace(/"/g, '\\\"') + '")'; };
-        probe.src = source;
+      $$('.card-image img').forEach(element => {
+        element.onerror = () => {
+          const fallback = element.dataset.fallback;
+          if (fallback && element.getAttribute('src') !== fallback) {
+            delete element.dataset.fallback;
+            element.src = fallback;
+          } else {
+            element.hidden = true;
+            element.parentElement.classList.add('image-unavailable');
+          }
+        };
       });
 
       $$('[data-pref]').forEach(button => {
@@ -511,6 +524,9 @@
           event?.stopPropagation?.();
           openDetail(element.dataset.open);
         };
+        if (element.getAttribute('role') === 'button') element.onkeydown = event => {
+          if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); element.click(); }
+        };
       });
 
       $$('[data-quick]').forEach(button => {
@@ -518,6 +534,7 @@
           const key = button.dataset.quick;
           state.quick.has(key) ? state.quick.delete(key) : state.quick.add(key);
           render();
+          $(`[data-quick="${key}"]`)?.focus({ preventScroll: true });
         };
       });
     }
@@ -526,6 +543,11 @@
       const [content, id] = key.split(':');
       const raw = (DATA[content]?.[state.destination] || []).find(item => item.id === id);
       if (!raw) return;
+      const alreadyOpen = detailKey !== null;
+      const focusedSheetPref = document.activeElement?.dataset.sheetPref;
+      if (!alreadyOpen) detailOpener = document.activeElement;
+      detailKey = key;
+      const imageVersion = ++detailImageVersion;
 
       const item = normalize(raw, content);
       const pref = getPref(item);
@@ -538,6 +560,7 @@
       if (item.image && item.image !== item.fallbackImage) {
         const probe = new Image();
         probe.onload = () => {
+          if (imageVersion !== detailImageVersion || detailKey !== key) return;
           sheetImage.style.backgroundImage = 'url("' + item.image.replace(/"/g, '\\\"') + '")';
           const credit = item.imageCredit
             ? `<a class="sheet-photo-credit" href="${item.imageCreditUrl || '#'}" ${item.imageCreditUrl ? 'target="_blank" rel="noopener"' : ''}>📷 ${item.imageCredit}</a>`
@@ -584,7 +607,7 @@
       $('#sheetBody').innerHTML = `
         <div class="sheet-heading">
           <div class="eyebrow">${content === 'do' ? '⚡ DO' : '🍜 EAT & DRINK'} · ${item.area || item.typeLabel}</div>
-          <h2>${item.name}</h2>
+          <h2 id="detailTitle">${item.name}</h2>
           <p>${item.summary}</p>
         </div>
 
@@ -611,6 +634,7 @@
       `;
 
       $$('[data-sheet-pref]').forEach(button => {
+        button.setAttribute('aria-pressed', String(button.classList.contains('selected')));
         button.onclick = () => {
           setPref(id, content, button.dataset.sheetPref);
           openDetail(key);
@@ -620,14 +644,27 @@
       $('#modalBackdrop').hidden = false;
       $('#detailSheet').classList.add('open');
       $('#detailSheet').setAttribute('aria-hidden', 'false');
+      $('#detailSheet').inert = false;
+      $('#detailSheet').setAttribute('aria-labelledby', 'detailTitle');
+      $('.page-shell').inert = true;
       document.body.style.overflow = 'hidden';
+      if (!alreadyOpen) { $('#detailSheet').scrollTop = 0; $('#sheetClose').focus({ preventScroll: true }); }
+      else if (focusedSheetPref) $(`[data-sheet-pref="${focusedSheetPref}"]`)?.focus({ preventScroll: true });
     }
 
     function closeDetail() {
+      if (!detailKey) return;
+      const previousKey = detailKey;
+      detailKey = null;
+      detailImageVersion += 1;
       $('#detailSheet').classList.remove('open');
       $('#detailSheet').setAttribute('aria-hidden', 'true');
+      $('#detailSheet').inert = true;
       $('#modalBackdrop').hidden = true;
       document.body.style.overflow = '';
+      $('.page-shell').inert = false;
+      const fallback = [...document.querySelectorAll('#cardGrid .open-btn')].find(button => button.dataset.open === previousKey);
+      (detailOpener?.isConnected ? detailOpener : fallback || $('.mode-btn.active')).focus({ preventScroll: true });
     }
 
     let toastTimer;
@@ -636,13 +673,14 @@
       element.textContent = message;
       element.classList.add('show');
       clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => element.classList.remove('show'), 1300);
+      toastTimer = setTimeout(() => element.classList.remove('show'), 3200);
     }
 
     $$('.mode-btn').forEach(button => {
       button.onclick = () => {
         state.mode = button.dataset.mode;
         render();
+        $('#board').scrollIntoView({ behavior: 'instant', block: 'start' });
       };
     });
 
@@ -679,12 +717,37 @@
     };
     $('#sheetClose').onclick = closeDetail;
     $('#modalBackdrop').onclick = closeDetail;
-    window.addEventListener('keydown', event => { if (event.key === 'Escape') closeDetail(); });
+    $('#filterDone').onclick = () => { $('.filters-disclosure').open = false; $('.filters-disclosure summary').focus(); };
+    $('#emptyAction').onclick = () => {
+      if ($('#resetBtn').disabled) state.mode = 'explore';
+      $('#resetBtn').onclick();
+    };
+    document.addEventListener('click', event => {
+      // Quick filters rerender their buttons before bubbling reaches document.
+      // The original event path still identifies an inside click after replacement.
+      if (!event.composedPath().includes($('.filters-disclosure'))) $('.filters-disclosure').open = false;
+    });
+    window.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        closeDetail();
+        if ($('.filters-disclosure').open) { $('.filters-disclosure').open = false; $('.filters-disclosure summary').focus(); }
+      }
+      if (event.key === 'Tab' && detailKey) {
+        const focusable = [...$('#detailSheet').querySelectorAll('button,a[href],input,[tabindex="0"]')].filter(el => !el.disabled && el.getClientRects().length);
+        const first = focusable[0], last = focusable.at(-1);
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      }
+    });
 
     mountIdentity();
     render();
+    $('#board').setAttribute('aria-busy', 'false');
   } catch (error) {
     console.error(error);
-    document.body.innerHTML = `<main style="font-family:system-ui;padding:2rem;max-width:760px;margin:auto"><h1>Cancúnio hit an error</h1><p>${error?.message || String(error)}</p></main>`;
+    const grid = document.getElementById('cardGrid');
+    grid.innerHTML = '<div class="loading-state" role="alert"><span class="loading-orbit">↗</span><h3>Your board couldn’t load.</h3><p>Check your connection and private login, then try again. Your saved picks are safe.</p><button class="empty-action" id="retryLoad">Try again</button></div>';
+    document.getElementById('board').setAttribute('aria-busy', 'false');
+    document.getElementById('retryLoad').onclick = () => location.reload();
   }
 })();

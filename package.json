@@ -3,6 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "validate": "node scripts/validate-data.mjs"
+    "validate": "node scripts/validate-data.mjs",
+    "preview": "node scripts/preview.mjs",
+    "test": "node scripts/qa.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
   }
 }

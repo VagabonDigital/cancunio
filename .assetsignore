@@ -7,3 +7,6 @@ wrangler.jsonc
 .assetsignore
 README*
 package*.json
+node_modules/
+qa/
+.gitignore
