@@ -14,6 +14,7 @@
       'arpoador-surf': 'https://www.pacificsurf.com/wp-content/uploads/2022/11/surf-school-rio-de-janeiro-scaled.jpeg',
       'samba-school-rehearsal': 'https://www.civitatis.com/f/brasil/rio-de-janeiro/galeria/coreografia-samba.jpg',
       'hang-glide-pedra-bonita': 'https://i.ytimg.com/vi/aF2kplT0nwI/maxresdefault.jpg',
+      'carnival-backstage': 'https://d6myp1633h7qr.cloudfront.net/products/439a9195-0c62-41b1-8154-05a7247f6129_desktop.webp',
     },
   };
 
