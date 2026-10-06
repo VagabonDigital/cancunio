@@ -6,6 +6,7 @@
       'adega-perola': 'https://vejario.abril.com.br/wp-content/uploads/2026/06/1.jpg',
       'adega-velha': 'https://adegavelha.com/wp-content/uploads/2023/12/6-combinacoes-perfeitas-para-Adega-Velha-scaled-1.jpg',
       'bar-do-momo': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbUuHTgwZYMQhAQcCkWIfZtLgCmqRJfwxkQvRJsdIcMXAGxw6Oo6XjOig&s=10',
+      'ferro-farinha': 'https://viagem.cnnbrasil.com.br/wp-content/uploads/sites/5/2023/05/Sei-horizontal.jpg?w=1200&h=1200&crop=1',
     },
     'rio-beyond-experiences.seed.json': {
       'cagarras-island-trail': 'https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/ilhas-cagarras-hope-spot-mission-blue-3.webp?w=1600&h=900',
