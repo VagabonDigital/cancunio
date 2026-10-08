@@ -1,5 +1,8 @@
 (() => {
   const imageOverrides = {
+    'cancun-yucatan-experiences.seed.json': {
+      'muyil-sian-kaan': 'https://images.squarespace-cdn.com/content/v1/61b57176afaa76548e4997ba/70334207-086a-4e54-b116-8b36d30cad62/Muyil+Lazy+river+Jungle+Path+Tours-02.png',
+    },
     'rio-eat-drink.seed.json': {
       'caipirinha-cachaca': 'https://www.allrecipes.com/thmb/Xv7FI7O3UL7oE__5077haA9fYWs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20210-caipirinha-PICS-Beauty-4x3-d4a5aed5d6534d579225b81de111b53a.jpg',
       'acai-juice-hunt': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThVyvlkGiTsn74V-NHRE1XsUhcR2YC_F-olzWslWWGejveK_ceNRNEGsZS&s=10',
