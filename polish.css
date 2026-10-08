@@ -26,18 +26,18 @@ body {
   background:#fbfcfaf5;
 }
 
-/* Cancúnio mark: tropical coast, not a generic navigation glyph.
-   Sun + ridge + water gives both Cancún and Rio something to belong to. */
+/* One Cancúnio mark everywhere. Use the actual favicon artwork rather than
+   maintaining a second, slightly different recreation in CSS. */
 .brand-mark {
   width:46px;
   height:46px;
-  border-radius:14px;
+  border-radius:11px;
   color:transparent;
-  background-color:var(--ink);
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'%3E%3Ccircle cx='32.5' cy='12.5' r='4.5' fill='%23f4eacb'/%3E%3Cpath d='M7 29L15.5 20.5L21 26L27.5 19L36 29' stroke='%23ffffff' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6 32C11 28.8 15 35 20 32C25 29 30 35 36 31.5' stroke='%23f4eacb' stroke-width='2.8' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-color:transparent;
+  background-image:url('./favicon.svg');
   background-repeat:no-repeat;
   background-position:center;
-  background-size:36px 36px;
+  background-size:100% 100%;
   box-shadow:0 8px 20px rgba(24,60,53,.16);
 }
 
@@ -81,8 +81,7 @@ body {
   .brand-mark {
     width:38px;
     height:38px;
-    border-radius:12px;
-    background-size:31px 31px;
+    border-radius:9px;
   }
 
   .destination-btn::before {
