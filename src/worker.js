@@ -13,16 +13,48 @@ function json(data, status = 200) {
   });
 }
 
-function authenticatedEmail(request) {
-  return request.headers.get('cf-access-authenticated-user-email')?.trim().toLowerCase() || null;
+function normalizeEmail(value) {
+  return String(value || '').trim().toLowerCase();
 }
 
-async function getProfile(env, email) {
+function authenticatedEmail(request) {
+  return normalizeEmail(request.headers.get('cf-access-authenticated-user-email')) || null;
+}
+
+function configuredProfile(env, email) {
+  if (!email) return null;
+  const emrysEmail = normalizeEmail(env.EMRYS_EMAIL);
+  const hannahEmail = normalizeEmail(env.HANNAH_EMAIL);
+  if (emrysEmail && email === emrysEmail) return 'emrys';
+  if (hannahEmail && email === hannahEmail) return 'hannah';
+  return null;
+}
+
+async function legacyProfile(env, email) {
   if (!email) return null;
   const row = await env.DB.prepare(
     'SELECT profile FROM profiles WHERE user_email = ?'
   ).bind(email).first();
   return row?.profile || null;
+}
+
+async function ensureLegacyProfileRow(env, email, profile) {
+  const existing = await env.DB.prepare(
+    'SELECT user_email FROM profiles WHERE profile = ?'
+  ).bind(profile).first();
+
+  if (normalizeEmail(existing?.user_email) === email) return;
+  if (existing?.user_email) {
+    throw new Error(`Configured ${profile} email conflicts with existing D1 profile row`);
+  }
+
+  await env.DB.prepare(`
+    INSERT INTO profiles (user_email, profile, updated_at)
+    VALUES (?, ?, CURRENT_TIMESTAMP)
+    ON CONFLICT(user_email) DO UPDATE SET
+      profile = excluded.profile,
+      updated_at = CURRENT_TIMESTAMP
+  `).bind(email, profile).run();
 }
 
 async function allPreferences(env) {
@@ -39,10 +71,19 @@ async function requireIdentity(request, env) {
   const email = authenticatedEmail(request);
   if (!email) return { error: json({ error: 'authentication_required' }, 401) };
 
-  const profile = await getProfile(env, email);
-  if (!profile) return { error: json({ error: 'profile_not_linked' }, 403) };
+  // Primary identity source: Cloudflare Access email + two Worker variables.
+  // D1 is retained only as a compatibility layer for the existing preferences schema.
+  const configured = configuredProfile(env, email);
+  if (configured) {
+    await ensureLegacyProfileRow(env, email, configured);
+    return { email, profile: configured };
+  }
 
-  return { email, profile };
+  // Backward-compatible fallback while the two Worker variables are being configured.
+  const legacy = await legacyProfile(env, email);
+  if (legacy) return { email, profile: legacy };
+
+  return { error: json({ error: 'email_not_configured' }, 403) };
 }
 
 async function serveHero(url) {
@@ -66,7 +107,12 @@ async function serveHero(url) {
 
 async function handleApi(request, env, url) {
   if (url.pathname === '/api/health') {
-    return json({ ok: true, app: 'cancunio', d1: Boolean(env.DB) });
+    return json({
+      ok: true,
+      app: 'cancunio',
+      d1: Boolean(env.DB),
+      identity_configured: Boolean(normalizeEmail(env.EMRYS_EMAIL) && normalizeEmail(env.HANNAH_EMAIL)),
+    });
   }
 
   const identity = await requireIdentity(request, env);
@@ -115,22 +161,23 @@ async function handleApi(request, env, url) {
   return json({ error: 'not_found' }, 404);
 }
 
-function notLinkedPage() {
+function notConfiguredPage() {
   return new Response(`<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cancúnio · Account not linked</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cancúnio · Email not configured</title>
 <style>body{font-family:Inter,system-ui,sans-serif;margin:0;min-height:100vh;display:grid;place-items:center;background:#f8f7f1;color:#142120}.box{width:min(430px,calc(100% - 32px));background:#fff;border:1px solid #e7e7df;border-radius:24px;padding:28px;box-shadow:0 18px 50px rgba(20,33,32,.1)}h1{margin:0 0 8px;font-size:30px}p{color:#66706e;line-height:1.5}</style></head>
-<body><main class="box"><div>↗ Cancúnio</div><h1>Account not linked</h1><p>This email passed the private login gate, but it is not linked to an Emrys or Hannah profile.</p></main></body></html>`, {
+<body><main class="box"><div>↗ Cancúnio</div><h1>Email not configured</h1><p>This email passed the private login gate, but it is not one of the two configured Cancúnio identities.</p></main></body></html>`, {
     status: 403,
     headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' },
   });
 }
 
 async function serveIndex(request, env) {
-  const email = authenticatedEmail(request);
-  if (!email) return new Response('Authentication required', { status: 401 });
-
-  const profile = await getProfile(env, email);
-  if (!profile) return notLinkedPage();
+  const identity = await requireIdentity(request, env);
+  if (identity.error) {
+    const status = identity.error.status;
+    if (status === 401) return new Response('Authentication required', { status: 401 });
+    return notConfiguredPage();
+  }
 
   const indexUrl = new URL('/index.html', request.url);
   const response = await env.ASSETS.fetch(new Request(indexUrl, request));
