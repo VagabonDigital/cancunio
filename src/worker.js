@@ -1,4 +1,5 @@
 const ALLOWED_PREFS = new Set(['want', 'maybe', 'skip']);
+const ALLOWED_PROFILES = new Set(['emrys', 'hannah']);
 const ITEM_KEY_RE = /^(do|eat):(cancun-yucatan|rio-beyond):[a-z0-9][a-z0-9-]{0,119}$/;
 
 const HERO_IMAGES = {
@@ -30,60 +31,58 @@ function configuredProfile(env, email) {
   return null;
 }
 
-async function legacyProfile(env, email) {
-  if (!email) return null;
-  const row = await env.DB.prepare(
-    'SELECT profile FROM profiles WHERE user_email = ?'
-  ).bind(email).first();
-  return row?.profile || null;
+function identityConfigStatus(env) {
+  const emrysEmail = normalizeEmail(env.EMRYS_EMAIL);
+  const hannahEmail = normalizeEmail(env.HANNAH_EMAIL);
+  return {
+    configured: Boolean(emrysEmail && hannahEmail && emrysEmail !== hannahEmail),
+    emrys: Boolean(emrysEmail),
+    hannah: Boolean(hannahEmail),
+    distinct: Boolean(emrysEmail && hannahEmail && emrysEmail !== hannahEmail),
+  };
 }
 
-async function ensureLegacyProfileRow(env, email, profile) {
-  const existing = await env.DB.prepare(
-    'SELECT user_email FROM profiles WHERE profile = ?'
-  ).bind(profile).first();
-
-  if (normalizeEmail(existing?.user_email) === email) return;
-  if (existing?.user_email) {
-    throw new Error(`Configured ${profile} email conflicts with existing D1 profile row`);
-  }
-
+async function ensurePreferenceStore(env) {
   await env.DB.prepare(`
-    INSERT INTO profiles (user_email, profile, updated_at)
-    VALUES (?, ?, CURRENT_TIMESTAMP)
-    ON CONFLICT(user_email) DO UPDATE SET
-      profile = excluded.profile,
-      updated_at = CURRENT_TIMESTAMP
-  `).bind(email, profile).run();
-}
+    CREATE TABLE IF NOT EXISTS profile_preferences (
+      profile TEXT NOT NULL CHECK (profile IN ('emrys','hannah')),
+      item_key TEXT NOT NULL,
+      value TEXT NOT NULL CHECK (value IN ('want','maybe','skip')),
+      updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      PRIMARY KEY (profile, item_key)
+    )
+  `).run();
 
-async function allPreferences(env) {
-  const result = await env.DB.prepare(`
+  // One-way compatibility import from the old email/profile schema.
+  // DO NOTHING ensures stale legacy rows can never overwrite newer decisions.
+  await env.DB.prepare(`
+    INSERT INTO profile_preferences (profile, item_key, value, updated_at)
     SELECT profiles.profile, preferences.item_key, preferences.value, preferences.updated_at
     FROM preferences
     JOIN profiles ON profiles.user_email = preferences.user_email
-    ORDER BY profiles.profile, preferences.item_key
+    WHERE profiles.profile IN ('emrys','hannah')
+    ON CONFLICT(profile, item_key) DO NOTHING
+  `).run();
+}
+
+async function allPreferences(env) {
+  await ensurePreferenceStore(env);
+  const result = await env.DB.prepare(`
+    SELECT profile, item_key, value, updated_at
+    FROM profile_preferences
+    ORDER BY profile, item_key
   `).all();
   return result.results || [];
 }
 
-async function requireIdentity(request, env) {
+function requireIdentity(request, env) {
   const email = authenticatedEmail(request);
   if (!email) return { error: json({ error: 'authentication_required' }, 401) };
 
-  // Primary identity source: Cloudflare Access email + two Worker variables.
-  // D1 is retained only as a compatibility layer for the existing preferences schema.
-  const configured = configuredProfile(env, email);
-  if (configured) {
-    await ensureLegacyProfileRow(env, email, configured);
-    return { email, profile: configured };
-  }
+  const profile = configuredProfile(env, email);
+  if (!profile) return { error: json({ error: 'email_not_configured' }, 403) };
 
-  // Backward-compatible fallback while the two Worker variables are being configured.
-  const legacy = await legacyProfile(env, email);
-  if (legacy) return { email, profile: legacy };
-
-  return { error: json({ error: 'email_not_configured' }, 403) };
+  return { email, profile };
 }
 
 async function serveHero(url) {
@@ -107,15 +106,17 @@ async function serveHero(url) {
 
 async function handleApi(request, env, url) {
   if (url.pathname === '/api/health') {
+    const config = identityConfigStatus(env);
     return json({
       ok: true,
       app: 'cancunio',
       d1: Boolean(env.DB),
-      identity_configured: Boolean(normalizeEmail(env.EMRYS_EMAIL) && normalizeEmail(env.HANNAH_EMAIL)),
+      identity_configured: config.configured,
+      identity_version: 2,
     });
   }
 
-  const identity = await requireIdentity(request, env);
+  const identity = requireIdentity(request, env);
   if (identity.error) return identity.error;
 
   if (url.pathname === '/api/bootstrap' && request.method === 'GET') {
@@ -129,7 +130,24 @@ async function handleApi(request, env, url) {
     return json({ profile: identity.profile });
   }
 
+  if (url.pathname === '/api/identity-status' && request.method === 'GET') {
+    const config = identityConfigStatus(env);
+    return json({
+      ok: true,
+      profile: identity.profile,
+      configured_profiles: {
+        emrys: config.emrys,
+        hannah: config.hannah,
+      },
+      distinct_emails: config.distinct,
+      identity_version: 2,
+      legacy_profile_gate: false,
+    });
+  }
+
   if (url.pathname === '/api/preference' && request.method === 'POST') {
+    await ensurePreferenceStore(env);
+
     const body = await request.json().catch(() => null);
     const itemKey = String(body?.item_key || '');
     const value = body?.value === null ? null : String(body?.value || '');
@@ -140,19 +158,22 @@ async function handleApi(request, env, url) {
     if (value !== null && !ALLOWED_PREFS.has(value)) {
       return json({ error: 'invalid_preference' }, 400);
     }
+    if (!ALLOWED_PROFILES.has(identity.profile)) {
+      return json({ error: 'invalid_profile' }, 500);
+    }
 
     if (value === null) {
       await env.DB.prepare(
-        'DELETE FROM preferences WHERE user_email = ? AND item_key = ?'
-      ).bind(identity.email, itemKey).run();
+        'DELETE FROM profile_preferences WHERE profile = ? AND item_key = ?'
+      ).bind(identity.profile, itemKey).run();
     } else {
       await env.DB.prepare(`
-        INSERT INTO preferences (user_email, item_key, value, updated_at)
+        INSERT INTO profile_preferences (profile, item_key, value, updated_at)
         VALUES (?, ?, ?, CURRENT_TIMESTAMP)
-        ON CONFLICT(user_email, item_key) DO UPDATE SET
+        ON CONFLICT(profile, item_key) DO UPDATE SET
           value = excluded.value,
           updated_at = CURRENT_TIMESTAMP
-      `).bind(identity.email, itemKey, value).run();
+      `).bind(identity.profile, itemKey, value).run();
     }
 
     return json({ ok: true, item_key: itemKey, value });
@@ -172,7 +193,7 @@ function notConfiguredPage() {
 }
 
 async function serveIndex(request, env) {
-  const identity = await requireIdentity(request, env);
+  const identity = requireIdentity(request, env);
   if (identity.error) {
     const status = identity.error.status;
     if (status === 401) return new Response('Authentication required', { status: 401 });
