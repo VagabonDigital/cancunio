@@ -2,6 +2,7 @@
   "name": "cancunio",
   "main": "src/worker.js",
   "compatibility_date": "2026-10-03",
+  "keep_vars": true,
   "assets": {
     "directory": "./",
     "binding": "ASSETS",
