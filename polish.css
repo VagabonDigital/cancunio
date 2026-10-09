@@ -41,7 +41,11 @@ body {
   box-shadow:0 8px 20px rgba(24,60,53,.16);
 }
 
-/* Rio cover override. Keep destination logic untouched and swap only the visual. */
+/* Destination cover overrides. Keep destination logic untouched and swap only the visuals. */
+body.destination-cancun .destination-photo {
+  background-image:url('https://content.r9cdn.net/rimg/dimg/f2/b1/89e06bf7-city-34713-16ed2f2c7f1.jpg?width=1366&height=768&crop=true') !important;
+}
+
 body.destination-rio .destination-photo {
   background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3yKjwtepogPY66zfyddcRIV3ofCgyEPi2ZADy6aMf9VBcdV1jMdJNHcL6&s=10') !important;
 }
